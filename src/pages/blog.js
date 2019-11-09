@@ -39,13 +39,15 @@ const BlogPage = () => {
         <div>
             <Layout>
               <Head title="Blog"/>
-                <h1>Pear Blog</h1>
-                <InstantSearch indexName="Blog" searchClient={searchClient}>
-                  <div className="right-panel">
-                    <SearchBox />
-                    <Hits hitComponent={PostPreview}/>
-                  </div>
-                </InstantSearch>
+
+                  <h1>Pear Blog</h1>
+                  <InstantSearch indexName="Blog" searchClient={searchClient}>
+                    <div className="right-panel">
+                      <SearchBox />
+                      <Hits hitComponent={PostPreview}/>
+                    </div>
+                  </InstantSearch>
+
                 {/*
                 <ol className={blogStyles.posts}>
                     {data.allContentfulBlogPost.edges.map((edge) => {
