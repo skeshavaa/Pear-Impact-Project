@@ -9,7 +9,7 @@ import blogStyles from './blog.module.scss'
 import algoliasearch from 'algoliasearch/lite'
 import { InstantSearch, SearchBox, Hits } from 'react-instantsearch-dom'
 import PostPreview from '../components/post-preview'
-
+import './blog.css'
 const searchClient = algoliasearch('L62RK6OZ7R', '2598efc467448e3024c6ea87d9bf25a8')
 
 const BlogPage = () => {
@@ -32,6 +32,7 @@ const BlogPage = () => {
         }
       }
     `)
+    
 
 
     return (
@@ -46,12 +47,6 @@ const BlogPage = () => {
                   </div>
                 </InstantSearch>
                 {/*
-                {data.allContentfulBlogPost.edges.map((edge) => {
-                  return (
-                    <PostPreview hit={edge}/>
-                  )
-                })}
-                 */}
                 <ol className={blogStyles.posts}>
                     {data.allContentfulBlogPost.edges.map((edge) => {
                         return (
@@ -64,6 +59,7 @@ const BlogPage = () => {
                         )
                     })}
                 </ol>
+                  */}
             </Layout>
         </div>
     )

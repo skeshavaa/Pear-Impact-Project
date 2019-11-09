@@ -3,16 +3,15 @@ import { Link } from 'gatsby'
 import blogStyles from '../pages/blog.module.scss'
 
 const PostPreview = ({ hit }) => {
-    const qas = encodeURIComponent("en-US")
-    const title = hit.sys.space.sys.type
-    console.log(title)
+    const title = hit.fields.title['en-US']
+    const slug = hit.fields.slug['en-US']
     return (
-        <li className={blogStyles.post}>
-            <Link to={`/blog/`}>
+        <div className={blogStyles.post}>
+            <Link to={`/blog/${slug}`}>
             <h2>{title}</h2>
-            <p></p>
+            <p>{slug}</p>
             </Link>
-        </li>
+        </div>
     )
 }
 
