@@ -25,7 +25,7 @@ const Blog = (props) => {
             <Head title={props.data.contentfulBlogPost.title}/>
             <h1>{props.data.contentfulBlogPost.title}</h1>
             
-            <p>{documentToReactComponents(props.data.contentfulBlogPost.Q1.json)}</p>
+            {documentToReactComponents(props.data.contentfulBlogPost.Q1.json)}
             
         </Layout>
     )
