@@ -38,3 +38,64 @@
     flex-direction: row;
 }
 
+.tagContainer {
+    display: flex;
+    flex-direction: row;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.tagName {
+    h3 {
+        font-family: 'Questrial', sans-serif;
+        font-size: 0.9rem;
+        color: #FF0054;
+        font-weight: lighter;
+    }
+    border: solid 2px #9E0059;
+    border-radius: 0.9rem;
+    display: inline-block;
+    padding: 0.4rem;
+    .tagHeader {
+        color: #9E0059;
+        font-weight: bold;
+    }
+    margin-right: 10px;
+}
+
+.tagCountry {
+    h3 {
+        font-family: 'Questrial', sans-serif;
+        font-size: 0.9rem;
+        color: #585191;
+        font-weight: lighter;
+    }
+    border: solid 2px #4F359B;
+    border-radius: 0.9rem;
+    display: inline-block;
+    padding: 0.4rem;
+    .tagHeader {
+        color: #4F359B;
+        font-weight: bold;
+    }
+    margin-right: 10px;
+}
+
+.tagProf {
+    h3 {
+        font-family: 'Questrial', sans-serif;
+        font-size: 0.9rem;
+        color: #22AED1;
+        font-weight: lighter;
+    }
+    border: solid 2px #016FB9;
+    border-radius: 0.9rem;
+    display: inline-block;
+    padding: 0.4rem;
+    .tagHeader {
+        color: #016FB9;
+        font-weight: bold;
+    }
+    margin-right: 10px;
+}
+
