@@ -21,9 +21,6 @@ query {
         title
         slug
         publishedDate(formatString:"MMM Do, YYYY")
-        body {
-          json
-        }
       }
     }
   }
