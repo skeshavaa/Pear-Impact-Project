@@ -3,22 +3,34 @@
     font-size: 0.9rem;
     margin-right: 1.3rem;
     text-decoration: none;
+    
 }
 
 .header {
-    padding: 1rem 0 3rem;
+    padding: 1rem 0 1rem;
+    position: sticky;
+    top: 0px;
+    background: coral;
+    margin: 0;
+}
+
+.name {
+    text-align: center;
 }
 
 .title {
     color: black;
     font-size: 3rem;
     text-decoration: none;
+    text-align: center;
 }
 
 .nav-list {
     display: flex;
+    justify-content: center;
     list-style-type: none;
     margin: 0;
+    
 }
 
 .nav-item:hover {
@@ -27,4 +39,10 @@
 
 .active-nav-item {
     color: #333333;
+}
+
+.nav {
+    position: sticky;
+    top: 0px;
+    
 }

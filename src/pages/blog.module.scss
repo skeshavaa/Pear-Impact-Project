@@ -21,6 +21,9 @@
 
     h2 {
         margin-bottom: 0;
+        font-family: "Questrial", sans-serif;
+        font-weight: lighter;
+        font-size: 2.5rem;
     }
 
     p {
@@ -43,6 +46,7 @@
     flex-direction: row;
     padding-top: 10px;
     padding-bottom: 10px;
+    flex-wrap: wrap;
 }
 
 .tagName {
@@ -61,6 +65,7 @@
         font-weight: bold;
     }
     margin-right: 10px;
+    margin-bottom: 10px;
 }
 
 .tagCountry {
@@ -79,6 +84,7 @@
         font-weight: bold;
     }
     margin-right: 10px;
+    margin-bottom: 10px;
 }
 
 .tagProf {
@@ -97,5 +103,7 @@
         font-weight: bold;
     }
     margin-right: 10px;
+    margin-bottom: 10px;
+    height: 35.98px;
 }
 

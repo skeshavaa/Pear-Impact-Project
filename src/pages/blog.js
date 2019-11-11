@@ -6,6 +6,7 @@ import Head from '../components/head'
 
 import blogStyles from './blog.module.scss'
 
+
 import algoliasearch from 'algoliasearch/lite'
 import { InstantSearch, SearchBox, Hits } from 'react-instantsearch-dom'
 import PostPreview from '../components/post-preview'
