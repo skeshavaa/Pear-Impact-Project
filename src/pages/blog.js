@@ -43,8 +43,8 @@ const BlogPage = () => {
 
                   <h1>Pear Blog</h1>
                   <InstantSearch indexName="Blog" searchClient={searchClient}>
-                    <div className="right-panel">
-                      <SearchBox />
+                    <div className={blogStyles.search}>
+                      <SearchBox defaultRefinement=" "/>
                       <Hits hitComponent={PostPreview}/>
                     </div>
                   </InstantSearch>

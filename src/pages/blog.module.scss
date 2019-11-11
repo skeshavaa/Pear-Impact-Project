@@ -36,6 +36,10 @@
     }
 }
 
+.search {
+    z-index: -1;
+}
+
 .blog-header {
     display: flex;
     flex-direction: row;
