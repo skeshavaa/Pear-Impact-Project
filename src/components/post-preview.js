@@ -9,7 +9,7 @@ const PostPreview = ({ hit }) => {
     const country = hit.fields.country['en-US']
     const prof = hit.fields.occupation['en-US']
     return (
-        <div className={blogStyles.post}>
+        <div className={blogStyles.post} className={blogStyles.hvrOverlineReveal}>
             <Link to={`/blog/${slug}`}>
             <h2>{title}</h2>
             <div className={blogStyles.tagContainer}>

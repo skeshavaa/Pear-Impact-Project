@@ -1,13 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
-.nav-item {
-    color: #999999;
-    font-size: 1.1rem;
-    font-family: "Roboto", sans-serif;
-    margin-right: 1.3rem;
-    text-decoration: none;
-    padding-top: 0.3rem;
-    border-top: solid 1px grey;
-}
+
 
 .header {
     padding: 1rem 0 1rem;
@@ -16,10 +8,11 @@
     background: linear-gradient(45deg, rgb(139, 59, 210),rgb(47, 30, 152));
     margin: 0;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-around;
     align-items: center;
     margin-bottom: 2rem;
+    flex-wrap: wrap;
 }
 
 .name {
@@ -27,12 +20,12 @@
 }
 
 .title {
-    color: black;
+    color: white;
     font-size: 3rem;
     text-decoration: none;
     text-align: center;
     font-size: 1rem;
-    letter-spacing: 1rem;
+    font-family: "Roboto", sans-serif;
 }
 
 .nav-list {
@@ -45,6 +38,8 @@
 
 .nav-item:hover {
     color: white;
+    border-top: solid 1px white;
+    border-bottom: solid 1px white;
 }
 
 .active-nav-item {
@@ -55,5 +50,44 @@
 .nav {
     position: sticky;
     top: 0px;
-    
 }
+
+.hvr-overline-from-center {
+
+    color: white;
+    font-size: 1.1rem;
+    font-family: "Roboto", sans-serif;
+    margin-right: 1.3rem;
+    text-decoration: none;
+    padding-top: 0.5rem;
+    padding-bottom: 0.3rem;
+
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    overflow: hidden;
+    
+  }
+  .hvr-overline-from-center:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 51%;
+    right: 51%;
+    top: 0;
+    background: #320E3B;
+    height: 4px;
+    -webkit-transition-property: left, right;
+    transition-property: left, right;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+  }
+  .hvr-overline-from-center:hover:before, .hvr-overline-from-center:focus:before, .hvr-overline-from-center:active:before {
+    left: 0;
+    right: 0;
+  }
