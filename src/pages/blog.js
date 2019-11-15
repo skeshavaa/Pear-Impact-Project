@@ -39,17 +39,24 @@ const BlogPage = () => {
     return (
         <div>
             <Layout>
-              <Head title="Blog"/>
+              <InstantSearch indexName="Blog" searchClient={searchClient}>
+                <Head title="Blog"/>
+                  <div className={blogStyles.Header}>
+                    <h1>Pear Blog</h1>
+                    <SearchBox defaultRefinement=" "/>
+                  </div>
 
-                  <h1>Pear Blog</h1>
-                  <InstantSearch indexName="Blog" searchClient={searchClient}>
-                    <div className={blogStyles.search}>
-                      <SearchBox defaultRefinement=" "/>
-                      <Hits hitComponent={PostPreview}/>
-                    </div>
-                  </InstantSearch>
+                  <div className={blogStyles.Hits}>
+                    <Hits hitComponent={PostPreview}/>
+                  </div>
+              </InstantSearch>
+            </Layout>
+        </div>
+    )
+}
 
-                {/*
+//Legacy Code, don't touch please! :)
+{/*
                 <ol className={blogStyles.posts}>
                     {data.allContentfulBlogPost.edges.map((edge) => {
                         return (
@@ -63,9 +70,5 @@ const BlogPage = () => {
                     })}
                 </ol>
                   */}
-            </Layout>
-        </div>
-    )
-}
 
 export default BlogPage
