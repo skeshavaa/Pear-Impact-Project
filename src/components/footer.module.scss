@@ -1,3 +1,78 @@
+@import url('https://fonts.googleapis.com/css?family=Comfortaa|Montserrat|Questrial|Quicksand&display=swap');
+
 .footer {
     margin-top: 3rem;
+    background: black;
+    color: white;
+}
+
+.header {
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 0px;
+    margin-bottom: 10px;
+}
+
+.title {
+    h1 {
+        font-family: "Montserrat", sans-serif;
+        font-size: 30px;
+    }
+}
+
+.icons {
+    img {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-right: 20px;
+    flex-wrap: wrap;
+}
+
+.pages, .info{
+    p {
+        font-weight: bolder;
+        font-family: "Montserrat", sans-serif;
+    }
+
+    ul {
+        font-family: "Quicksand", sans-serif;
+        list-style: none;
+    }
+}
+
+.subscribe {
+    input {
+        background: grey;
+        border: 0px white solid;
+        color: lightgrey;
+        outline: none;
+        font-size: 30px;
+        padding: 5px;
+        font-family: "Quicksand", sans-serif;
+    }
+    h2 {
+        font-family: "Montserrat", sans-serif;
+        margin-bottom: 0;
+        padding-bottom: 7px;
+    }
+    h3 {
+        font-family: "QuickSand", sans-serif;
+        font-weight: lighter;
+    }
+    textarea.focus, input:focus {
+        outline: none;
+    }
 }
