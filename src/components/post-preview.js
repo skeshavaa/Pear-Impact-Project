@@ -3,9 +3,21 @@ import { Link } from 'gatsby'
 import postStyles from '../components/post-preview.module.scss'
 import moment from 'moment'
 
+export const query = graphql`
+    query($slug: String) {
+        contentfulBlogPost(slug: {eq: $slug}) {
+            image1 {
+                fluid {
+                ...GatsbyContentfulFluid
+                }
+            }
+        }
+    }`
+
 const PostPreview = ({ hit }) => {
-    const title = hit.fields.title['en-US']
     const slug = hit.fields.slug['en-US']
+    const title = hit.fields.title['en-US']
+    
     const name = hit.fields.name['en-US']
     const country = hit.fields.country['en-US']
     const prof = hit.fields.occupation['en-US']

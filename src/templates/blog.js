@@ -3,14 +3,20 @@ import { graphql } from 'gatsby'
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import Head from '../components/head'
 import Layout from '../components/layout'
+import Img from "gatsby-image"
 
 export const query = graphql`
   query($slug: String) {
     contentfulBlogPost(slug: {eq: $slug}) {
       title
       publishedDate(formatString: "MMM Do, YYYY")
-      Q1 {
+      content {
         json
+      }
+      image1 {
+        fluid {
+          ...GatsbyContentfulFluid
+        }
       }
     }
     
@@ -19,13 +25,14 @@ export const query = graphql`
 
 
 const Blog = (props) => {
+  console.log(props.data.contentfulBlogPost.image1.fluid.src)
     return (
         <Layout>
             
             <Head title={props.data.contentfulBlogPost.title}/>
             <h1>{props.data.contentfulBlogPost.title}</h1>
-            
-            {documentToReactComponents(props.data.contentfulBlogPost.Q1.json)}
+            <img src={props.data.contentfulBlogPost.image1.fluid.src} />
+            {documentToReactComponents(props.data.contentfulBlogPost.content.json)}
             
         </Layout>
     )

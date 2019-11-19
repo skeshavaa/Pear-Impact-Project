@@ -61,6 +61,7 @@ module.exports = {
         accessToken: process.env.CONTENTFUL_ACCESS_TOKEN
       }
     },
+    
     'gatsby-plugin-sass',
     {
       resolve: 'gatsby-source-filesystem',
