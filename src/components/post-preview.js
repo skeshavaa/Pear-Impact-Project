@@ -1,7 +1,14 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link } from 'gatsby'
 import postStyles from '../components/post-preview.module.scss'
 import moment from 'moment'
+
+const contentful = require('contentful');
+
+const client = contentful.createClient({
+    space: process.env.GATSBY_CONTENTFUL_SPACE_ID,
+    accessToken: process.env.GATSBY_CONTENTFUL_ACCESS_TOKEN,
+});
 
 export const query = graphql`
     query($slug: String) {
@@ -15,6 +22,20 @@ export const query = graphql`
     }`
 
 const PostPreview = ({ hit }) => {
+    const [ image, setImage ] = useState();
+    useEffect(() => {
+        let mounted = true;
+        (async() => {
+            const { fields } = await client.getAsset(hit.fields.image1['en-US'].sys.id);
+            if (mounted) {
+                setImage('https:' + fields.file.url);
+            }
+        })();
+        return () => {
+            mounted = false;
+        };
+    }, [hit]);
+
     const slug = hit.fields.slug['en-US']
     const title = hit.fields.title['en-US']
     
@@ -44,7 +65,7 @@ const PostPreview = ({ hit }) => {
         <div className={postStyles.EventContainer}>
             <Link to={`/blog/${slug}`}>
             <div className={postStyles.ImageContainer}>
-
+                <img src={ image }/>
             </div>
             <div className={postStyles.TextContainer}>
                 <div className={postStyles.EntryDate}>
