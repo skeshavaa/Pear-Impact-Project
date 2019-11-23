@@ -37,20 +37,20 @@ const Footer = () => {
             <div className={footerStyles.pages}>
                 <h1>Pages</h1>
                 <ul>
-                    <li>Home</li>
-                    <li>About</li>
-                    <li>Stories</li>
-                    <li>Contact</li>
+                    <li><a href="www.google.com">Home</a></li>
+                    <li><a href="www.google.com">About</a></li>
+                    <li><a href="www.google.com">Stories</a></li>
+                    <li><a href="www.google.com">Contact</a></li>
                 </ul>
             </div>
 
             <div className={footerStyles.pages}>
                 <h1>More</h1>
                 <ul>
-                    <li>Link 1</li>
-                    <li>Link 2</li>
-                    <li>Link 3</li>
-                    <li>Link 4</li>
+                    <li><a href="www.google.com">Link 1</a></li>
+                    <li><a href="www.google.com">Link 2</a></li>
+                    <li><a href="www.google.com">Link 3</a></li>
+                    <li><a href="www.google.com">Link 4</a></li>
                 </ul>
             </div>
             
