@@ -3,8 +3,8 @@ import { Link } from 'gatsby'
 
 import Layout from '../components/layout'
 import Head from '../components/head'
-
-
+import homeStyles from './home.module.scss'
+import Azhar from '../Icons/Azhar2.png'
 
 
 
@@ -12,9 +12,14 @@ const IndexPage = () => {
     return (
         <Layout>
             <Head title="Home"/>
-            <h1>Hello,</h1>
-            <h2>I'm Keshavaa, a web dev weeb XD</h2>
-            <p>Need a develper <Link to='/contact'>Contact Me,</Link></p>
+            <div className={homeStyles.imageContainer}>
+                <img src={Azhar}/>
+                <div className={homeStyles.overlay}>
+                    <div className={homeStyles.text}>
+                        ABOUT AZHAR AND MIGRANT MOMENTS
+                    </div>
+                </div>
+            </div>
         </Layout>
     )
 
