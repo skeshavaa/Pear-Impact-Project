@@ -20,16 +20,16 @@ const Header = () => {
         <header className={headerStyles.header}>
             <h1 className={headerStyles.name}>
                 <Link className={headerStyles.title}to='/'>
-                    {data.site.siteMetadata.title}
+                    Migrant Moments
                 </Link>
             </h1>
             <nav className={headerStyles.nav}>
                 <ul className={headerStyles.navList}>
                     <li>
-                        <Link className={headerStyles.navItem} className={headerStyles.hvrOverlineFromCenter} activeClassName={headerStyles.activeNavItem} to='/'>Home</Link>
+                        <Link className={headerStyles.navItem} className={headerStyles.hvrOverlineFromCenter} activeClassName={headerStyles.activeNavItem} to='/'>Stories</Link>
                     </li>
                     <li>
-                        <Link className={headerStyles.navItem} className={headerStyles.hvrOverlineFromCenter} activeClassName={headerStyles.activeNavItem} to='/blog'>Blog</Link>
+                        <Link className={headerStyles.navItem} className={headerStyles.hvrOverlineFromCenter} activeClassName={headerStyles.activeNavItem} to='/home'>Home</Link>
                     </li>
                     <li>
                         <Link className={headerStyles.navItem} className={headerStyles.hvrOverlineFromCenter} activeClassName={headerStyles.activeNavItem} to='/about'>About</Link>

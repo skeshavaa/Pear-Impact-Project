@@ -2,7 +2,7 @@ import React from 'react'
 
 import Layout from '../components/layout'
 import Head from '../components/head'
-
+import Azhar from '../Icons/Azhar.png'
 import aboutStyles from './about.module.scss'
 
 const AboutPage = () => {
@@ -10,23 +10,30 @@ const AboutPage = () => {
         <div>
             <Layout>
                 <Head title="About"/>
-                <h1>About Me!</h1>
-                <h2>Hi!!!</h2>
-                <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                </p>
-                <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                </p>
-                <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                </p>
-                <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                </p>
-                <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                </p>
+                <div className={aboutStyles.imgContainer}>
+                    <img src={Azhar}/>
+                </div>
+                <div className={aboutStyles.content}>
+                    <div>
+                    <h1>About Azhar</h1>
+                    <p>
+                        Azhar is a father and husband, social entrepreneur, 
+                        sports nut, teacher and business coach. He has worked in 
+                        the Human Resources industry for over 25 years and held 
+                        senior human resources positions in both South Africa and 
+                        Canada, focusing on strategic planning, total rewards, employee 
+                        relations and diversity. He lives in beautiful Toronto and is a 
+                        published author.  He is currently Professor of Leadership and 
+                        Human Resources at Seneca College in Toronto. Here are some 
+                        interesting things about Azhar.
+                        <br></br><br></br>
+
+                        He has compiled the stories of 100+ Canadian immigrants and 
+                        has posted it here on this blog. Feel free to contact him or any
+                        of the featured interviees!
+                    </p>
+                    </div>
+                </div>
             </Layout>
         </div>
     )
