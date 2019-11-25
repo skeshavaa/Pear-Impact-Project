@@ -1,3 +1,5 @@
+
+
 .text {
     color: white;
     font-size: 20px;
@@ -56,19 +58,19 @@
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+    align-items: center;
 }
 
 
 
 .PImageContainer {
-    max-height: 380px;
     overflow: hidden;
     position: relative;
     overflow: hidden;
-    margin-bottom: 10px;
     display: flex;
     justify-content: center;
     img {
+        width: 350px;
         object-fit: cover;
     }
     z-index: -1;
@@ -134,4 +136,35 @@
     display: flex;
     flex-direction: column;
     
+}
+
+.AzharContent {
+    max-width: 800px;
+    padding: 0 40px;
+    p {
+        font-family: "Montserrat", sans-serif;
+    }
+
+    h1{
+        font-family: "Montserrat", sans-serif;
+        text-align: center;
+    }
+}
+
+.posts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.postTitle {
+    h1 {
+        font-family: "Montserrat", sans-serif;
+        font-size: 30px;
+        color: grey;
+        margin: 0;
+        text-align: center;
+    }
+    padding: 20px 10px;
+    margin-bottom: 10px;
 }

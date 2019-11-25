@@ -17,15 +17,22 @@ const IndexPage = () => {
             fields:publishedDate,
             order:DESC
           }
-          limit: 2
+          limit: 3
         ){
           edges{
             node {
+              name
               title
               slug
               publishedDate(formatString:"MMM Do, YYYY")
+              createdAt
               country
               occupation
+              image1 {
+                    fluid {
+                        src
+                    }
+              }
             }
           }
         }
@@ -38,16 +45,29 @@ const IndexPage = () => {
             <Head title="Home"/>
             <div className={homeStyles.First}>
                 <div className={homeStyles.imageContainer}>
+                    <Link to='/about'>
                     <img src={Azhar}/>
-                    <div className={homeStyles.overlay}>
-                        <div className={homeStyles.text}>
-                            ABOUT AZHAR AND MIGRANT MOMENTS
-                        </div>
-                    </div>
+                    </Link>
                 </div>
                 <div className={homeStyles.AzharContent}>
                     <h1>About Migrant Moments</h1>
+                    <p>
+                        Azhar has compiled the stories of over 100+
+                        Canadian immigrants. He has documented their 
+                        struggles, backgrounds, successes, failures,
+                        current projects and more! 
+
+                        <br/><br/>
+                        Browse through any blog post, at the end will
+                        be a contact form to contact the author of the 
+                        post of you're reading! Feel free to contact Azhar
+                        by clicking the Contact me button above as well!
+                    </p>
                 </div>
+            </div>
+
+            <div className={homeStyles.postTitle}>
+                <h1>LATEST POSTS</h1>
             </div>
             
             <div className={homeStyles.posts}>
@@ -57,11 +77,13 @@ const IndexPage = () => {
                     const name = edge.node.name
                     const prof = edge.node.occupation
                     const country = edge.node.country
-                    const date = edge.node.publishedDate
+                    const date = edge.node.createdAt
+                    const image = edge.node.image1.fluid.src
                     return (
                         <div className={homeStyles.EventContainer}>
                             <Link to={`/blog/${slug}`}>
                             <div className={homeStyles.PImageContainer}>
+                                <img src={image}/>
                             </div>
                             <div className={homeStyles.TextContainer}>
                                 <div className={homeStyles.EntryDate}>
@@ -69,15 +91,6 @@ const IndexPage = () => {
                                 </div>
                                 <div className={homeStyles.EntryTitle}>
                                     <a>{title}</a>
-                                </div>
-                                <div className={homeStyles.EntryExcerpt}>
-                                    <p>
-                                        Lorem ipsum Sed eiusmod esse aliqua sed 
-                                        incididunt aliqua incididunt mollit id et 
-                                        sit proident dolor nulla sed commodo est 
-                                        ad minim elit reprehenderit nisi officia 
-                                        aute incididunt velit sint in aliqua..
-                                    </p>
                                 </div>
                                 <div className={homeStyles.EntryTag}>
                                     <a>Name: <span>{name}</span></a>

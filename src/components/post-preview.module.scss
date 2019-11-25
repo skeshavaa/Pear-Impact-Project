@@ -18,14 +18,14 @@
 
 
 .ImageContainer {
-    max-height: 380px;
     overflow: hidden;
     position: relative;
-    overflow: hidden;
     margin-bottom: 10px;
     display: flex;
     justify-content: center;
     img {
+        width: 350px;
+        max-height: 1000px;
         object-fit: cover;
     }
     z-index: -1;
