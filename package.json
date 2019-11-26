@@ -26,6 +26,7 @@
     "gatsby-source-filesystem": "^2.0.28",
     "gatsby-transformer-remark": "^2.3.8",
     "gatsby-transformer-sharp": "^2.3.5",
+    "masonry-layout": "^4.2.2",
     "moment": "^2.24.0",
     "node-sass": "^4.13.0",
     "react": "^16.11.0",

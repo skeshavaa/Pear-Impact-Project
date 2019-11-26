@@ -39,6 +39,7 @@ const BlogPage = () => {
     return (
         <div>
             <Layout>
+              <script src="/path/to/masonry.pkgd.min.js"></script>
               <InstantSearch indexName="Blog" searchClient={searchClient}>
                 <Head title="Blog"/>
                   <div className={blogStyles.Header}>
