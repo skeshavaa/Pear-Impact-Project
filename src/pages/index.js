@@ -44,7 +44,7 @@ const BlogPage = () => {
                 <Head title="Blog"/>
                   <div className={blogStyles.Header}>
                     <h1>Pear Blog</h1>
-                    <SearchBox defaultRefinement=" "/>
+                    <SearchBox defaultRefinement=""/>
                   </div>
 
                   <div className={blogStyles.Hits}>

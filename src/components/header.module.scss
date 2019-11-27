@@ -22,10 +22,9 @@
 
 .title {
     color: black;
-    font-size: 3rem;
     text-decoration: none;
     text-align: center;
-    font-size: 1rem;
+    font-size: 1.3rem;
     font-family: "Montserrat", sans-serif;
 }
 
@@ -36,11 +35,7 @@
     margin: 0;
 }
 
-.nav-item:hover {
-    color: black;
-    border-top: solid 1px white;
-    border-bottom: solid 1px white;
-}
+
 
 .active-nav-item {
     color: black;
