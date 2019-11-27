@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { Link } from 'gatsby'
 import postStyles from '../components/post-preview.module.scss'
 import moment from 'moment'
+import unknown from '../Icons/unknown.png'
 
 const contentful = require('contentful');
 
@@ -65,7 +66,7 @@ const PostPreview = ({ hit }) => {
         <div className={postStyles.EventContainer}>
             <Link to={`/blog/${slug}`}>
             <div className={postStyles.ImageContainer}>
-                <img src={ image }/>
+                <img src={ image } alt={unknown}/>
             </div>
             <div className={postStyles.TextContainer}>
                 <div className={postStyles.EntryDate}>

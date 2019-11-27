@@ -41,14 +41,14 @@ const BlogPage = () => {
         <div>
             <Layout>
               <MetaTags>
-                <meta name="Migrant Moments" content="100+ Stories of Canadian Immigrants"/>
+                <meta name="description" content="100+ Stories of Canadian Immigrants"/>
                 <meta property="og:title" content="Stories"/>
               </MetaTags>
               <InstantSearch indexName="Blog" searchClient={searchClient}>
                 <Head title="Blog"/>
                   <div className={blogStyles.Header}>
                     <h1>Pear Blog</h1>
-                    <SearchBox defaultRefinement=""/>
+                    <SearchBox label="Search" defaultRefinement=""/>
                   </div>
 
                   <div className={blogStyles.Hits}>

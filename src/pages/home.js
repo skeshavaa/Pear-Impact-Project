@@ -43,7 +43,7 @@ const IndexPage = () => {
     return (
         <Layout>
             <MetaTags>
-                <meta name="Migrant Moments" content="100+ Stories of Canadian Immigrants"/>
+                <meta name="description" content="100+ Stories of Canadian Immigrants"/>
                 <meta property="og:title" content="Home"/>
               </MetaTags>
             <Head title="Home"/>

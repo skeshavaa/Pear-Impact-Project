@@ -10,7 +10,7 @@ const AboutPage = () => {
         <div>
             <Layout>
                 <MetaTags>
-                    <meta name="Migrant Moments" content="100+ Stories of Canadian Immigrants"/>
+                    <meta name="description" content="100+ Stories of Canadian Immigrants"/>
                     <meta property="og:title" content="About"/>
                 </MetaTags>
                 <Head title="About"/>

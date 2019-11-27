@@ -11,7 +11,7 @@ const ContactPage = () => {
             <Head title="Contact"/>
             <Layout>
                 <MetaTags>
-                    <meta name="Migrant Moments" content="100+ Stories of Canadian Immigrants"/>
+                    <meta name="description" content="100+ Stories of Canadian Immigrants"/>
                     <meta property="og:title" content="Contact Me"/>
                 </MetaTags>
                 <div className={contactStyles.title}>
