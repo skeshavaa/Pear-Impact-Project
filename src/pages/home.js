@@ -1,5 +1,5 @@
 import React from 'react'
-
+import MetaTags from 'react-meta-tags'
 import { graphql, useStaticQuery, Link } from 'gatsby'
 import Layout from '../components/layout'
 import Head from '../components/head'
@@ -42,6 +42,10 @@ const IndexPage = () => {
 
     return (
         <Layout>
+            <MetaTags>
+                <meta name="Migrant Moments" content="100+ Stories of Canadian Immigrants"/>
+                <meta property="og:title" content="Home"/>
+              </MetaTags>
             <Head title="Home"/>
             <div className={homeStyles.First}>
                 <div className={homeStyles.imageContainer}>

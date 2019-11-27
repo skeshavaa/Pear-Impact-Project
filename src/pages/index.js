@@ -6,6 +6,7 @@ import Head from '../components/head'
 
 import blogStyles from './blog.module.scss'
 
+import MetaTags from 'react-meta-tags'
 
 import algoliasearch from 'algoliasearch/lite'
 import { InstantSearch, SearchBox, Hits } from 'react-instantsearch-dom'
@@ -39,7 +40,10 @@ const BlogPage = () => {
     return (
         <div>
             <Layout>
-              <script src="/path/to/masonry.pkgd.min.js"></script>
+              <MetaTags>
+                <meta name="Migrant Moments" content="100+ Stories of Canadian Immigrants"/>
+                <meta property="og:title" content="Stories"/>
+              </MetaTags>
               <InstantSearch indexName="Blog" searchClient={searchClient}>
                 <Head title="Blog"/>
                   <div className={blogStyles.Header}>

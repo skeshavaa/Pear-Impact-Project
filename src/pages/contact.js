@@ -1,5 +1,5 @@
 import React from 'react'
-
+import MetaTags from 'react-meta-tags'
 import Layout from '../components/layout'
 import Head from '../components/head'
 
@@ -10,6 +10,10 @@ const ContactPage = () => {
         <div>
             <Head title="Contact"/>
             <Layout>
+                <MetaTags>
+                    <meta name="Migrant Moments" content="100+ Stories of Canadian Immigrants"/>
+                    <meta property="og:title" content="Contact Me"/>
+                </MetaTags>
                 <div className={contactStyles.title}>
                     <h1>Feel Free To Contact Me!</h1>
                     <p>I'd love to hear your questions, thoughts, criticisms and more!</p>

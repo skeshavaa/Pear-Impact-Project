@@ -1,5 +1,5 @@
 import React from 'react'
-
+import MetaTags from 'react-meta-tags'
 import Layout from '../components/layout'
 import Head from '../components/head'
 import Azhar from '../Icons/Azhar.png'
@@ -9,6 +9,10 @@ const AboutPage = () => {
     return (
         <div>
             <Layout>
+                <MetaTags>
+                    <meta name="Migrant Moments" content="100+ Stories of Canadian Immigrants"/>
+                    <meta property="og:title" content="About"/>
+                </MetaTags>
                 <Head title="About"/>
                 <div className={aboutStyles.imgContainer}>
                     <img src={Azhar}/>
