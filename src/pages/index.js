@@ -47,7 +47,7 @@ const BlogPage = () => {
               <InstantSearch indexName="Blog" searchClient={searchClient}>
                 <Head title="Blog"/>
                   <div className={blogStyles.Header}>
-                    <h1>Pear Blog</h1>
+                    <h1>Migrant Stories</h1>
                     <SearchBox label="Search" defaultRefinement=""/>
                   </div>
 

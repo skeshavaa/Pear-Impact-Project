@@ -95,11 +95,11 @@ const IndexPage = () => {
                                 </div>
                                 <div className={homeStyles.EntryTitle}>
                                     <a>{title}</a>
+                                    <p>By: {name}</p>
                                 </div>
                                 <div className={homeStyles.EntryTag}>
-                                    <a>Name: <span>{name}</span></a>
-                                    <a>Country: <span>{country}</span></a>
-                                    <a>Occupation: <span>{prof}</span></a>
+                                    <a>{country}</a>
+                                    <a>{prof}</a>
                                 </div>
                             </div>
                             </Link>

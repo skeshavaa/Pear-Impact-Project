@@ -74,20 +74,17 @@ const PostPreview = ({ hit }) => {
                 </div>
                 <div className={postStyles.EntryTitle}>
                     <a>{title}</a>
+                    <p>By: {name}</p>
                 </div>
                 <div className={postStyles.EntryExcerpt}>
                     <p>
                         Lorem ipsum Sed eiusmod esse aliqua sed 
-                        incididunt aliqua incididunt mollit id et 
-                        sit proident dolor nulla sed commodo est 
-                        ad minim elit reprehenderit nisi officia 
-                        aute incididunt velit sint in aliqua..
+                        incididunt aliqua incididunt mollit id et
                     </p>
                 </div>
                 <div className={postStyles.EntryTag}>
-                    <a>Name: <span>{name}</span></a>
-                    <a>Country: <span>{country}</span></a>
-                    <a>Occupation: <span>{prof}</span></a>
+                    <a>{country}</a>
+                    <a>{prof}</a>
                 </div>
             </div>
             </Link>

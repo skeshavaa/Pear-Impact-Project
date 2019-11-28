@@ -70,7 +70,8 @@
     display: flex;
     justify-content: center;
     img {
-        width: 350px;
+        width: 100%;
+        max-width: 350px;
         object-fit: cover;
     }
     z-index: -1;
@@ -86,7 +87,7 @@
 }
 
 .EntryDate {
-    color: #858585;
+    color: black;
     font-size: 1rem;
     line-height: 1.714;
     margin-bottom: 0.6rem;
@@ -95,15 +96,21 @@
 }
 
 .EntryTitle {
-    font-size: 2.0rem;
-    line-height: 1.375;
-    margin-bottom: 1.1rem;
-    font-family: 'Quicksand', sans-serif;
-    font-weight: bolder;
     a {
+        font-size: 2.0rem;
+        line-height: 1.375;
+        margin-bottom: 1.1rem;
+        font-family: 'Quicksand', sans-serif;
+        font-weight: bolder;
         text-decoration: none;
         line-height: inherit;
         color: #4d3ac9; 
+    }
+
+    p {
+        font-size: 20px;
+        color: black;
+        padding-top: 5px;
     }
 }
 
@@ -127,14 +134,15 @@
     a {
         font-family: 'Questrial', sans-serif;
         font-size: 0.9rem;
-        color: #4030a7;  
+        color:white;  
+        border: 1px solid blue;
+        padding: 5px;
+        margin: 3px 5px;
+        border-radius: 7px;
+        display: inline-block;
+        background: #4030a7;
     }
-
-    span {
-        font-weight: bolder;
-    }
-    display: flex;
-    flex-direction: column;
+    width: inherit;
     
 }
 
