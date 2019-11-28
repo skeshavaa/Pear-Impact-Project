@@ -45,6 +45,13 @@
 .nav {
     position: sticky;
     top: 0px;
+    ul {
+        margin: 0;
+        a {
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+    }
 }
 
 .hvr-overline-from-center {
@@ -85,4 +92,11 @@
   .hvr-overline-from-center:hover:before, .hvr-overline-from-center:focus:before, .hvr-overline-from-center:active:before {
     left: 0;
     right: 0;
+  }
+
+  @media only screen and (max-width: 685px) {
+      .header {
+          flex-direction: column;
+          justify-content: center;
+      }
   }

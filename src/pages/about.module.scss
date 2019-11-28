@@ -2,9 +2,9 @@
 
 
 .imgContainer {
-    max-height: 700px;
-    overflow: hidden;
     .img {
+        max-width: 1200px;
+        width: 100%;
         display: flex;
         justify-content: center;
     }
