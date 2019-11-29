@@ -38,6 +38,14 @@ const AboutPage = () => {
                     </p>
                     </div>
                 </div>
+                <form name="contact" method="post" netlify-honeypot="bot-field" data-netlify="true">
+                                <input type="hidden" name="bot-field" />
+                                <input label="name" type="text"  placeholder="Name"/>
+                                <input label="email" type="text"  placeholder="Email Address"/>
+                                <input label="phone" type="text" placeholder="Phone"/>
+                                <input label="msg" type="text" placeholder="Subject"/>
+                                <button type="submit">Submit</button>
+                           </form>
             </Layout>
         </div>
     )
