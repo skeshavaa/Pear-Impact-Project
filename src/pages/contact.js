@@ -21,7 +21,7 @@ const ContactPage = () => {
                 <div className={contactStyles.wrapper}>
                    <div className={contactStyles.contactForm}>
                        <div className={contactStyles.inputFields}>
-                           <form data-netlify="true">
+                           <form name="contact" data-netlify="true" method="POST">
                                 <input type="text" className={contactStyles.input} placeholder="Name"/>
                                 <input type="text" className={contactStyles.input} placeholder="Email Address"/>
                                 <input type="text" className={contactStyles.input} placeholder="Phone"/>
