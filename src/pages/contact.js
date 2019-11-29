@@ -21,7 +21,7 @@ const ContactPage = () => {
                 <div className={contactStyles.wrapper}>
                    <div className={contactStyles.contactForm}>
                        <div className={contactStyles.inputFields}>
-                           <form name="contact" method="post" netlify-honeypot="bot-field" data-netlify="true">
+                           <form name="contact2" method="POST" netlify-honeypot="bot-field" data-netlify="true">
                                 <input type="hidden" name="bot-field" />
                                 <input label="name" type="text" className={contactStyles.input} placeholder="Name"/>
                                 <input label="email" type="text" className={contactStyles.input} placeholder="Email Address"/>
