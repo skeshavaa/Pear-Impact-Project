@@ -4,6 +4,8 @@ import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import Head from '../components/head'
 import Layout from '../components/layout'
 import Img from "gatsby-image"
+import templateStyles from '../templates/blog.module.scss'
+import MetaTags from 'react-meta-tags'
 
 export const query = graphql`
   query($slug: String) {
@@ -28,12 +30,18 @@ const Blog = (props) => {
   console.log(props.data.contentfulBlogPost.image1.fluid.src)
     return (
         <Layout>
-            
             <Head title={props.data.contentfulBlogPost.title}/>
-            <h1>{props.data.contentfulBlogPost.title}</h1>
-            <img src={props.data.contentfulBlogPost.image1.fluid.src} />
-            {documentToReactComponents(props.data.contentfulBlogPost.content.json)}
-            
+            <MetaTags>
+              <meta name="description" content="100+ Stories of Canadian Immigrants"/>
+              <meta name="og:title" content={props.data.contentfulBlogPost.title}/>
+            </MetaTags>
+            <h1 className={templateStyles.title}>{props.data.contentfulBlogPost.title}</h1>
+            <div className={templateStyles.imageContainer}>
+              <img src={props.data.contentfulBlogPost.image1.fluid.src} />
+            </div>
+            <div className={templateStyles.content}>
+              {documentToReactComponents(props.data.contentfulBlogPost.content.json)}
+            </div>
         </Layout>
     )
 }

@@ -1,0 +1,19 @@
+.image-container {
+    img {
+        max-width: 400px;
+        width: 100%;
+    }
+    display: flex;
+    justify-content: center;
+}
+
+.title {
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+    padding: 5px;
+}
+
+.content {
+    font-family: "Quicksand", sans-serif;
+    padding: 5px;
+}
