@@ -30,7 +30,9 @@ const ContactPage = () => {
                        </div>
                        <div className={contactStyles.msg}>
                            <textarea placeholder="Message"></textarea>
-                           <div className={contactStyles.btn}>Send</div>
+                           <div className={contactStyles.btn}>
+                               <button type="submit">Submit</button>
+                           </div>
                        </div>
                    </div>
                 </div>
