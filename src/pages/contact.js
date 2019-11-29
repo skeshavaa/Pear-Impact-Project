@@ -22,10 +22,10 @@ const ContactPage = () => {
                    <div className={contactStyles.contactForm}>
                        <div className={contactStyles.inputFields}>
                            <form name="contact" data-netlify="true" method="POST">
-                                <input type="text" className={contactStyles.input} placeholder="Name"/>
-                                <input type="text" className={contactStyles.input} placeholder="Email Address"/>
-                                <input type="text" className={contactStyles.input} placeholder="Phone"/>
-                                <input type="text" className={contactStyles.input} placeholder="Subject"/>
+                                <input label="name" type="text" className={contactStyles.input} placeholder="Name"/>
+                                <input label="email" type="text" className={contactStyles.input} placeholder="Email Address"/>
+                                <input label="phone" type="text" className={contactStyles.input} placeholder="Phone"/>
+                                <input label="msg" type="text" className={contactStyles.input} placeholder="Subject"/>
                                 <button type="submit">Submit</button>
                            </form>
                        </div>
