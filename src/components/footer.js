@@ -28,10 +28,10 @@ const Footer = () => {
                 <h2>Stories collected by Azhar Laher</h2>
                 <h2>Toronto, ON</h2>
                 <ul className={footerStyles.icons}>
-                    <li><SocialIcon bgColor="black" fgColor="white" url="http://twitter.com" /></li>
-                    <li><SocialIcon bgColor="black" fgColor="white" url="https://www.facebook.com" /></li>
-                    <li><SocialIcon bgColor="black" fgColor="white" url="https://www.instagram.com" /></li>
-                    <li><SocialIcon bgColor="black" fgColor="white" url="https://www.linkedin.com" /></li>
+                    <li><SocialIcon style={{ height: 25, width: 25 }} bgColor="black" fgColor="white" url="http://twitter.com" /></li>
+                    <li><SocialIcon style={{ height: 25, width: 25 }} bgColor="black" fgColor="white" url="https://www.facebook.com" /></li>
+                    <li><SocialIcon style={{ height: 25, width: 25 }} bgColor="black" fgColor="white" url="https://www.instagram.com" /></li>
+                    <li><SocialIcon style={{ height: 25, width: 25 }} bgColor="black" fgColor="white" url="https://www.linkedin.com" /></li>
                 </ul>
             </div>
             <div className={footerStyles.pages}>
@@ -43,7 +43,7 @@ const Footer = () => {
                     <li><a href="www.google.com">Contact</a></li>
                 </ul>
             </div>
-
+            {/*}
             <div className={footerStyles.pages}>
                 <h1>More</h1>
                 <ul>
@@ -53,6 +53,7 @@ const Footer = () => {
                     <li><a href="www.google.com">Link 4</a></li>
                 </ul>
             </div>
+            */}
             
         </footer>
     )
