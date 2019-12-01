@@ -63,19 +63,6 @@
 
 
 
-.PImageContainer {
-    overflow: hidden;
-    position: relative;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    img {
-        width: 100%;
-        max-width: 350px;
-        object-fit: cover;
-    }
-    z-index: -1;
-}
 
 .TextContainer {
     padding-top: 30px;
