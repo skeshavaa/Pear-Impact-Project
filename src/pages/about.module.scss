@@ -2,14 +2,17 @@
 
 
 .imgContainer {
-    .img {
-        max-width: 1200px;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-    }
+    overflow: hidden;
+    position: relative;
+    overflow: hidden;
     display: flex;
     justify-content: center;
+    img {
+        width: 100%;
+        max-width: 1200px;
+        object-fit: cover;
+    }
+    z-index: -1;
 }
 
 .content {
