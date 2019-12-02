@@ -2,15 +2,17 @@
     display: flex;
     flex-direction: column;
     
-    background: #f2f2f2;
-    color: #2a2a2a;
+    background: black;
+    color: white;
   
-    font-family: -apple-system, Helvetica, Arial, sans-serif;
+    font-family: "Quicksand", sans-serif;
     padding: 2rem;
-  
+    width: 500px;
+
     h2 {
       margin-top: 0;
       margin-bottom: 1rem;
+      font-family: "Montserrat", sans-serif;
     }
   
     .Wrapper {

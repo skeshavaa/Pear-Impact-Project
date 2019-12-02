@@ -4,7 +4,7 @@ import Layout from '../components/layout'
 import Head from '../components/head'
 
 import contactStyles from '../pages/contact.module.scss'
-import EmailListForm from '../components/EmailListForm'
+
 
 const ContactPage = () => {
     return (
@@ -39,7 +39,7 @@ const ContactPage = () => {
                        </div>
                    </div>
                 </div>
-                <EmailListForm/>
+                
             </Layout>
         </div>
     )
