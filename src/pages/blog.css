@@ -13,6 +13,10 @@
     align-items: center;
 }
 
+.ais-Hits-item {
+    flex-grow: 1;
+}
+
 .ais-SearchBox-input {
     font-family: "Quicksand", sans-serif;
     border: none;
