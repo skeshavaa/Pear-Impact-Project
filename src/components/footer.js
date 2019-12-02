@@ -3,11 +3,8 @@ import { graphql, useStaticQuery } from 'gatsby'
 
 import footerStyles from './footer.module.scss'
 import { SocialIcon } from 'react-social-icons';
-import instagram from '../Icons/instagram.png'
-import facebook from '../Icons/facebook.svg'
-import twitter from '../Icons/twitter.png'
-import email from '../Icons/email.png'
-import linkedin from '../Icons/linkedin.png'
+
+import EmailListForm from '../components/EmailListForm'
 
 const Footer = () => {
     const data = useStaticQuery(graphql`
@@ -54,7 +51,7 @@ const Footer = () => {
                 </ul>
             </div>
             */}
-            
+            <EmailListForm/>
         </footer>
     )
 }

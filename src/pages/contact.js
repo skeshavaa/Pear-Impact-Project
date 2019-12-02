@@ -5,6 +5,7 @@ import Head from '../components/head'
 
 import contactStyles from '../pages/contact.module.scss'
 
+
 const ContactPage = () => {
     return (
         <div>
@@ -21,24 +22,23 @@ const ContactPage = () => {
                 <div className={contactStyles.wrapper}>
                    <div className={contactStyles.contactForm}>
                        <div className={contactStyles.inputFields}>
-                           <form name="contact2" action="#" method="POST" netlify-honeypot="bot-field" data-netlify="true">
+                           <form name="contact2" action="#" method="POST" action="/about" netlify-honeypot="bot-field" data-netlify="true">
                                 <input type="hidden" name="bot-field" />
                                 <input label="name" type="text" className={contactStyles.input} placeholder="Name"/>
                                 <input label="email" type="text" className={contactStyles.input} placeholder="Email Address"/>
                                 <input label="phone" type="text" className={contactStyles.input} placeholder="Phone"/>
                                 <input label="msg" type="text" className={contactStyles.input} placeholder="Subject"/>
-                                <button type="submit">Submit</button>
                            </form>
                        </div>
-
                        <div className={contactStyles.msg}>
                            <textarea placeholder="Message"></textarea>
                            <div className={contactStyles.btn}>
-                               <button type="submit">Submit</button>
+                               Submit
                            </div>
                        </div>
                    </div>
                 </div>
+                
             </Layout>
         </div>
     )

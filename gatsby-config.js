@@ -61,7 +61,6 @@ module.exports = {
         accessToken: process.env.GATSBY_CONTENTFUL_ACCESS_TOKEN
       }
     },
-    
     'gatsby-plugin-sass',
     {
       resolve: 'gatsby-source-filesystem',
@@ -70,6 +69,12 @@ module.exports = {
         path: `${__dirname}/src/`
       }
     },
-    'gatsby-transformer-remark'
+    'gatsby-transformer-remark',
+    {
+      resolve: 'gatsby-plugin-mailchimp',
+      options: {
+        endpoint: "https://gmail.us4.list-manage.com/subscribe/post?u=030ab60dbad39723445796fc2&amp;id=5f68f3a93f"
+      }
+    }
   ]
 }
