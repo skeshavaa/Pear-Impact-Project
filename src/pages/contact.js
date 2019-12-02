@@ -30,14 +30,13 @@ const ContactPage = () => {
                                 <button type="submit">Submit</button>
                            </form>
                        </div>
-                       {/*
+
                        <div className={contactStyles.msg}>
                            <textarea placeholder="Message"></textarea>
                            <div className={contactStyles.btn}>
                                <button type="submit">Submit</button>
                            </div>
                        </div>
-                       */}
                    </div>
                 </div>
             </Layout>
