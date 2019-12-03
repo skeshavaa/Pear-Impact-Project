@@ -28,7 +28,7 @@ const ContactPage = () => {
                                 <input label="name" name="name" type="text" className={contactStyles.input} placeholder="Name"/>
                                 <input label="email" name="mail" type="email" className={contactStyles.input} placeholder="Email Address"/>
                                 <input label="msg" name="msg" type="text" className={contactStyles.input} placeholder="Subject"/>
-                           
+                                <button type="submit">Submit</button>
                        </div>
                        <div className={contactStyles.msg}>
                            <textarea placeholder="Message"></textarea>
