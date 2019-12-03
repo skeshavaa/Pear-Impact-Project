@@ -23,7 +23,7 @@ const ContactPage = () => {
                    <div className={contactStyles.contactForm}>
                    
                        <div className={contactStyles.inputFields}>
-                            <form name="contact2" action="#" method="POST" data-netlify-honeypot="bot-field" data-netlify="true" netlify>
+                            <form name="contact3" action="#" method="POST" data-netlify-honeypot="bot-field" data-netlify="true" netlify>
                                 <input type="hidden" name="bot-field" />
                                 <input label="name" name="name" type="text" className={contactStyles.input} placeholder="Name"/>
                                 <input label="email" name="mail" type="email" className={contactStyles.input} placeholder="Email Address"/>
@@ -33,7 +33,7 @@ const ContactPage = () => {
                        </div>
                        <div className={contactStyles.msg}>
                            <textarea placeholder="Message"></textarea>
-                           <div type="submit" className={contactStyles.btn}>
+                           <div className={contactStyles.btn}>
                                Submit
                            </div>
                        </div>
