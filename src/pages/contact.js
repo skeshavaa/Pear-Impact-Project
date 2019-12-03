@@ -33,7 +33,7 @@ const ContactPage = () => {
                        <div className={contactStyles.msg}>
                            <textarea placeholder="Message"></textarea>
                            <div type="submit" className={contactStyles.btn}>
-                               Submit
+                               <button type="submit">Submit</button>
                            </div>
                        </div>
                        </form>
