@@ -28,7 +28,6 @@ const ContactPage = () => {
                                 <input label="email" name="mail" type="text" className={contactStyles.input} placeholder="Email Address"/>
                                 <input label="phone" name="phone" type="text" className={contactStyles.input} placeholder="Phone"/>
                                 <input label="msg" name="msg" type="text" className={contactStyles.input} placeholder="Subject"/>
-                                <button type="submit">Submit</button>
                            </form>
                        </div>
                        <div className={contactStyles.msg}>
@@ -39,16 +38,6 @@ const ContactPage = () => {
                        </div>
                    </div>
                 </div>
-                
-
-                <form name="contactme" netlify>
-                    <p>
-                        <label>Name <input type="text" name="name"/></label>
-                    </p>
-                    <p>
-                        <button type="submit">Send</button>
-                    </p>
-                </form>
             </Layout>
         </div>
     )
