@@ -21,21 +21,22 @@ const ContactPage = () => {
                 </div>
                 <div className={contactStyles.wrapper}>
                    <div className={contactStyles.contactForm}>
+                   <form name="contact2" action="#" method="POST" data-netlify-honeypot="bot-field" data-netlify="true" netlify>
                        <div className={contactStyles.inputFields}>
-                           <form name="contact2" action="#" method="POST" data-netlify-honeypot="bot-field" data-netlify="true" netlify>
+                           
                                 <input type="hidden" name="bot-field" />
                                 <input label="name" name="name" type="text" className={contactStyles.input} placeholder="Name"/>
                                 <input label="email" name="mail" type="email" className={contactStyles.input} placeholder="Email Address"/>
                                 <input label="msg" name="msg" type="text" className={contactStyles.input} placeholder="Subject"/>
-                                <button type="submit">Submit</button>
-                           </form>
+                           
                        </div>
                        <div className={contactStyles.msg}>
                            <textarea placeholder="Message"></textarea>
-                           <div className={contactStyles.btn}>
+                           <div type="submit" className={contactStyles.btn}>
                                Submit
                            </div>
                        </div>
+                       </form>
                    </div>
                 </div>
 
