@@ -41,7 +41,7 @@ const ContactPage = () => {
                 </div>
                 
 
-                <form name="contactme" method="POST" data-netlify="true" netlify action="/about">
+                <form name="contactme" netlify>
                     <p>
                         <label>Name <input type="text" name="name"/></label>
                     </p>
