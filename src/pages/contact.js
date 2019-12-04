@@ -40,30 +40,24 @@ const ContactPage = () => {
                 </div>
 
 
-                <form
-    name="contactsd"
-    method="post"
-    data-netlify="true"
-    data-netlify-honeypot="bot-field"
-  >
-    <input type="hidden" name="bot-field" />
-    <div>
-      <label htmlFor="name">Name</label>
-      <input type="text" name="name" id="name" />
-    </div>
-    <div>
-      <label htmlFor="email">Email</label>
-      <input type="email" name="email" id="email" />
-    </div>
-    <div>
-      <label htmlFor="message">Message</label>
-      <textarea name="message" id="message" rows="6" required />
-    </div>
-    <div>
-      <input type="submit" value="Drop a line" />
-      <input type="reset" value="Eraser" />
-    </div>
-  </form>
+                <form name="contactsd" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
+                    <input type="hidden" name="bot-field" />
+                    <div className={contactStyles.inputs}>
+                        <label htmlFor="name">Name</label>
+                        <input type="text" name="name" id="name" />
+                    </div>
+                    <div className={contactStyles.inputs}>
+                        <label htmlFor="email">Email</label>
+                        <input type="email" name="email" id="email" />
+                    </div>
+                    <div className={contactStyles.inputs}>
+                        <label htmlFor="message">Message</label>
+                        <textarea name="message" id="message" rows="6" required />
+                    </div>
+                    <div>
+                        <input type="submit" value="Drop a line" />
+                    </div>
+                </form>
             </Layout>
         </div>
     )
