@@ -63,3 +63,47 @@
     }
     padding: 10px 10px;
 }
+
+.formwrap {
+    display: flex;
+    justify-content: center;
+}
+
+.inputs {
+    padding: 10px 5px;
+    outline: none;
+    border: none;
+    input, input:focus, textarea {
+        outline: none;
+        padding: 5px;
+        border-top-style: hidden;
+        border-left: hidden;
+        border-right: hidden;
+        border-bottom: 2px solid grey;
+        width: 500px;
+        font-family: "Montserrat", sans-serif;
+    }
+}
+
+
+.btnsend {
+    border: hidden;
+    padding: 10px;
+    height: 70px;
+    width: 70%;
+    background:#4030a7;
+    color: white;
+    border-radius: 10px;
+    font-size: 25px;
+    font-family: "Montserrat", sans-serif;
+}
+
+.btncontainer {
+    display: flex;
+    justify-content: center;
+    
+    :hover{
+        cursor: pointer;
+        background:#2e2088;
+    }
+}
