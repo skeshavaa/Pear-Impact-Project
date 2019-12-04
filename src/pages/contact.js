@@ -57,7 +57,7 @@ const ContactPage = () => {
                         <textarea name="message" id="message" rows="6" placeholder="Message" required />
                     </div>
                     <div className={contactStyles.btncontainer}>
-                        <input classname={contactStyles.btnsend} type="submit" value="Send" />
+                        <button className={contactStyles.btnsend} type="submit">Send</button>
                     </div>
                 </form>
             </div>
