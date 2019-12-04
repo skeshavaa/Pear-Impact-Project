@@ -43,7 +43,7 @@ const ContactPage = () => {
                 </div>
 
 */}
-{/*}
+
             <div className={contactStyles.formwrap}>
                 <form name="contactsd" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
                     <input type="hidden" name="bot-field" />
@@ -61,9 +61,9 @@ const ContactPage = () => {
                     </div>
                 </form>
             </div>
-*/}
 
 
+{/*}
 <div className={contactStyles.formwrap}>
                 <form name="contactsd" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
                     <input type="hidden" name="bot-field" />
@@ -81,6 +81,7 @@ const ContactPage = () => {
                     </div>
                 </form>
             </div>
+            */}
             </Layout>
         </div>
     )
