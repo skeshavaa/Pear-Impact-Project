@@ -19,6 +19,9 @@ const ContactPage = () => {
                     <h1>Feel Free To Contact Me!</h1>
                     <p>I'd love to hear your questions, thoughts, criticisms and more!</p>
                 </div>
+
+{/*
+
                 <div className={contactStyles.wrapper}>
                    <div className={contactStyles.contactForm}>
                        <div className={contactStyles.inputFields}>
@@ -39,6 +42,7 @@ const ContactPage = () => {
                    </div>
                 </div>
 
+*/}
 
                 <form name="contactsd" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
                     <input type="hidden" name="bot-field" />
