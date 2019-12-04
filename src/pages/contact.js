@@ -44,16 +44,16 @@ const ContactPage = () => {
 
 */}
             <div className={contactStyles.formwrap}>
-                <form name="contactsd" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
+                <form name="contactsd" method="post" data-netlify="true" data-netlify-honeypot="bot-field" netlify>
                     <input type="hidden" name="bot-field" />
                     <div className={contactStyles.inputs}>
-                        <input type="text" name="name" id="name" placeholder="Name" />
+                        <input type="text" name="name" id="name" />
                     </div>
                     <div className={contactStyles.inputs}>
-                        <input type="email" name="email" id="email" placeholder="Email" />
+                        <input type="email" name="email" id="email" />
                     </div>
                     <div className={contactStyles.inputs}>
-                        <textarea name="message" id="message" rows="6" placeholder="Message" required />
+                        <textarea name="message" id="message" rows="6" required />
                     </div>
                     <div className={contactStyles.btncontainer}>
                         <input type="submit" value="Send" />
