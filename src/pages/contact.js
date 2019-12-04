@@ -22,7 +22,7 @@ const ContactPage = () => {
                 <div className={contactStyles.wrapper}>
                    <div className={contactStyles.contactForm}>
                        <div className={contactStyles.inputFields}>
-                           <form name="contact2" method="POST" data-netlify-honeypot="bot-field" data-netlify="true" netlify>
+                           <form name="contact2" method="post" data-netlify-honeypot="bot-field" data-netlify="true" netlify>
                                 <input type="hidden" name="bot-field" />
                                 <input label="name" name="name" type="text" className={contactStyles.input} placeholder="Name"/>
                                 <input label="email" name="email" type="email" className={contactStyles.input} placeholder="Email Address"/>
@@ -38,14 +38,6 @@ const ContactPage = () => {
                        </div>
                    </div>
                 </div>
- 
-                <form name="contact5" method="POST" data-netlify-honeypot="bot-field" data-netlify="true" netlify>
-                    <input type="hidden" name="bot-field" />
-                    <input label="name" name="name" type="text" className={contactStyles.input} placeholder="Name"/>
-                    <input label="email" name="email" type="email" className={contactStyles.input} placeholder="Email Address"/>
-                    <input label="msg" name="msg" type="text" className={contactStyles.input} placeholder="Subject"/>
-                    <button type="submit">Submit</button>
-                </form>
 
 
                 <form
