@@ -43,8 +43,29 @@ const ContactPage = () => {
                 </div>
 
 */}
+{/*}
             <div className={contactStyles.formwrap}>
-                <form name="contactsd" method="post" data-netlify="true" data-netlify-honeypot="bot-field" netlify>
+                <form name="contactsd" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
+                    <input type="hidden" name="bot-field" />
+                    <div className={contactStyles.inputs}>
+                        <input type="text" name="name" id="name" placeholder="Name" />
+                    </div>
+                    <div className={contactStyles.inputs}>
+                        <input type="email" name="email" id="email" placeholder="Email" />
+                    </div>
+                    <div className={contactStyles.inputs}>
+                        <textarea name="message" id="message" rows="6" placeholder="Message" required />
+                    </div>
+                    <div className={contactStyles.btncontainer}>
+                        <input type="submit" value="Send" />
+                    </div>
+                </form>
+            </div>
+*/}
+
+
+<div className={contactStyles.formwrap}>
+                <form name="contactsd" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
                     <input type="hidden" name="bot-field" />
                     <div className={contactStyles.inputs}>
                         <input type="text" name="name" id="name" />
@@ -55,8 +76,8 @@ const ContactPage = () => {
                     <div className={contactStyles.inputs}>
                         <textarea name="message" id="message" rows="6" required />
                     </div>
-                    <div className={contactStyles.btncontainer}>
-                        <input type="submit" value="Send" />
+                    <div>
+                        <input type="submit" value="Drop a line" />
                     </div>
                 </form>
             </div>
