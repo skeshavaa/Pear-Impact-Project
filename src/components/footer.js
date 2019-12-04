@@ -1,5 +1,5 @@
 import React from 'react'
-import { graphql, useStaticQuery } from 'gatsby'
+import { Link, graphql, useStaticQuery } from 'gatsby'
 
 import footerStyles from './footer.module.scss'
 import { SocialIcon } from 'react-social-icons';
@@ -34,10 +34,10 @@ const Footer = () => {
             <div className={footerStyles.pages}>
                 <h1>Pages</h1>
                 <ul>
-                    <li><a href="www.google.com">Home</a></li>
-                    <li><a href="www.google.com">About</a></li>
-                    <li><a href="www.google.com">Stories</a></li>
-                    <li><a href="www.google.com">Contact</a></li>
+                    <Link to="/"><li><a href="www.google.com">Stories</a></li></Link>
+                    <Link to="/home"><li><a href="www.google.com">Home</a></li></Link>
+                    <Link to="/about"><li><a href="www.google.com">About</a></li></Link>
+                    <Link to="/contact"><li><a href="www.google.com">Contact</a></li></Link>
                 </ul>
             </div>
             {/*}
