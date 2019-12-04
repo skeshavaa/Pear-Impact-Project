@@ -40,7 +40,7 @@ const Footer = () => {
                     <Link to="/contact"><li><a href="www.google.com">Contact</a></li></Link>
                 </ul>
             </div>
-            {/*}
+            {/*
             <div className={footerStyles.pages}>
                 <h1>More</h1>
                 <ul>

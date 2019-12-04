@@ -54,6 +54,9 @@ const ContactPage = () => {
                         <input type="email" name="email" id="email" placeholder="Email" />
                     </div>
                     <div className={contactStyles.inputs}>
+                        <input type="text" name="subject" id="subject" placeholder="Subject" />
+                    </div>
+                    <div className={contactStyles.inputs}>
                         <textarea name="message" id="message" rows="6" placeholder="Message" required />
                     </div>
                     <div className={contactStyles.btncontainer}>
