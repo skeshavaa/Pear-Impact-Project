@@ -47,16 +47,16 @@ const ContactPage = () => {
                 <form name="contactsd" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
                     <input type="hidden" name="bot-field" />
                     <div className={contactStyles.inputs}>
-                        <input type="text" name="name" id="name" />
+                        <input type="text" name="name" id="name" placeholder="Name" />
                     </div>
                     <div className={contactStyles.inputs}>
-                        <input type="email" name="email" id="email" />
+                        <input type="email" name="email" id="email" placeholder="Email" />
                     </div>
                     <div className={contactStyles.inputs}>
-                        <textarea name="message" id="message" rows="6" required />
+                        <textarea name="message" id="message" rows="6" placeholder="Message" required />
                     </div>
-                    <div>
-                        <input type="submit" value="Drop a line" />
+                    <div className={contactStyles.btncontainer}>
+                        <input className={contactStyles.btnsend} type="submit" value="Send" />
                     </div>
                 </form>
             </div>

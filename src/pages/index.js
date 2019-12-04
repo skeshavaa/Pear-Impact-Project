@@ -50,7 +50,7 @@ const BlogPage = () => {
                   </div>
 
                   <div className={blogStyles.Hits}>
-                    <Hits className='test' hitComponent={PostPreview}/>
+                    <Hits hitComponent={PostPreview}/>
                   </div>
               </InstantSearch>
             </Layout>

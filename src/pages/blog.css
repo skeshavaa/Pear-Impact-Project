@@ -3,7 +3,6 @@
     margin-left: 0;
     display: flex;
     justify-content: center;
-    flex-direction: column wrap;
     flex-wrap: wrap;
     width: 100%;
 }
@@ -13,9 +12,6 @@
     align-items: center;
 }
 
-.ais-Hits-item {
-    flex-grow: 1;
-}
 
 .ais-SearchBox-input {
     font-family: "Quicksand", sans-serif;
