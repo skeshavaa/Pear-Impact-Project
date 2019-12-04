@@ -39,7 +39,7 @@ const ContactPage = () => {
                    </div>
                 </div>
  
-                <form name="contact2" method="POST" data-netlify-honeypot="bot-field" data-netlify="true" netlify>
+                <form name="contact5" method="POST" data-netlify-honeypot="bot-field" data-netlify="true" netlify>
                     <input type="hidden" name="bot-field" />
                     <input label="name" name="name" type="text" className={contactStyles.input} placeholder="Name"/>
                     <input label="email" name="email" type="email" className={contactStyles.input} placeholder="Email Address"/>
