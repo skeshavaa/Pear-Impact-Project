@@ -40,6 +40,8 @@
 .active-nav-item {
     color: black;
     font-weight: bolder;
+    
+    
 }
 
 .nav {
@@ -95,6 +97,7 @@
     -webkit-transition-timing-function: ease-out;
     transition-timing-function: ease-out;
   }
+
   .hvr-overline-from-center:hover:before, .hvr-overline-from-center:focus:before, .hvr-overline-from-center:active:before {
     left: 0;
     right: 0;
