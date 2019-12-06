@@ -47,6 +47,7 @@ const ContactPage = () => {
             <div className={contactStyles.formwrap}>
                 <form name="contactsd" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
                     <input type="hidden" name="bot-field" />
+                    <input type="hidden" name="contactsd" value="Contact Us" />
                     <div className={contactStyles.inputs}>
                         <input type="text" name="name" id="name" placeholder="Name" />
                     </div>
