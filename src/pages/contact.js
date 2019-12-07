@@ -45,7 +45,11 @@ const ContactPage = () => {
 */}
 
             <div className={contactStyles.formwrap}>
-                <form name="contactsd" method="post" data-netlify="true" data-netlify-honeypot="bot-field" action="/about">
+            <form
+        onSubmit={this.submitForm}
+        action="https://formspree.io/moqvpqkp"
+        method="POST"
+      >
                     <input type="hidden" name="bot-field" />
                     <input type="hidden" name="contactsd" value="Contact Us" />
                     <div className={contactStyles.inputs}>
