@@ -50,7 +50,6 @@ const ContactPage = () => {
         method="POST"
       >
                     <input type="hidden" name="bot-field" />
-                    <input type="hidden" name="contactsd" value="Contact Us" />
                     <div className={contactStyles.inputs}>
                         <input type="text" name="name" id="name" placeholder="Name" />
                     </div>
