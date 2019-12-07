@@ -46,7 +46,6 @@ const ContactPage = () => {
 
             <div className={contactStyles.formwrap}>
             <form
-        onSubmit={this.submitForm}
         action="https://formspree.io/moqvpqkp"
         method="POST"
       >
