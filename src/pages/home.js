@@ -24,7 +24,7 @@ const IndexPage = () => {
               name
               title
               slug
-              publishedDate(formatString:"MMM Do, YYYY")
+              publishedDate
               createdAt
               country
               occupation
@@ -91,7 +91,7 @@ const IndexPage = () => {
                             </div>
                             <div className={homeStyles.TextContainer}>
                                 <div className={homeStyles.EntryDate}>
-                                    <a>{date}</a>
+                                    <a>{moment(date).format('LL')}</a>
                                 </div>
                                 <div className={homeStyles.EntryTitle}>
                                     <a>{title}</a>
