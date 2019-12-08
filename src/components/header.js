@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link, graphql, useStaticQuery } from 'gatsby'
 
+import icon from '../../static/favicon.ico'
 
 import headerStyles from './header.module.scss'
 
@@ -22,6 +23,7 @@ const Header = () => {
                 <Link className={headerStyles.title}to='/'>
                     Migrant Moments
                 </Link>
+                
             </h1>
             <nav className={headerStyles.nav}>
                 <ul className={headerStyles.navList}>
