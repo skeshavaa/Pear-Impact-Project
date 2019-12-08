@@ -17,3 +17,11 @@
     font-family: "Quicksand", sans-serif;
     padding: 5px;
 }
+
+@media only screen and (max-width: 600px) {
+    .image-container{
+        img{
+            max-width: 500px;
+        }
+    }
+  }
