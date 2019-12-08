@@ -81,7 +81,7 @@ const IndexPage = () => {
                     const name = edge.node.name
                     const prof = edge.node.occupation
                     const country = edge.node.country
-                    const date = edge.node.createdAt
+                    const date = edge.node.publishedDate
                     const image = edge.node.image1.fluid.src
                     return (
                         <div className={homeStyles.EventContainer}>
