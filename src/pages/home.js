@@ -91,7 +91,7 @@ const IndexPage = () => {
                             </div>
                             <div className={homeStyles.TextContainer}>
                                 <div className={homeStyles.EntryDate}>
-                                    <a>{moment(date).format('LL')}</a>
+                                    <a>{date}</a>
                                 </div>
                                 <div className={homeStyles.EntryTitle}>
                                     <a>{title}</a>
