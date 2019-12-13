@@ -34,11 +34,11 @@
     button {
       display: inline-block;
       border-radius: 0;
+      -webkit-border-radius: 0;
       border: none;
       background-image: none;
       background-color: #DD0505;
       color: white;
-  
       letter-spacing: 1px;
       transition: all 0.1s linear;
       
