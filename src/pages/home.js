@@ -86,7 +86,7 @@ const IndexPage = () => {
                     return (
                         <div className={homeStyles.EventContainer}>
                             <Link to={`/blog/${slug}`}>
-                            <div className={homeStyles.PImageContainer}>
+                            <div className={homeStyles.test}>
                                 <img src={image}/>
                             </div>
                             <div className={homeStyles.TextContainer}>

@@ -10,23 +10,6 @@
     text-align: center;
   }
 
-  .overlay {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 100%;
-    width: 100%;
-    opacity: 0;
-    transition: .5s ease;
-    background-color: black;
-  }
-
-  .imageContainer:hover .overlay {
-    opacity: 0.3;
-  }
-
 .imageContainer {
     position: relative;
     max-width: 33%;
@@ -34,7 +17,6 @@
         display: block;
         width: 100%;
         height: auto;
-        margin-bottom: 10px;
     }
  }
 
@@ -51,7 +33,7 @@
 
     img{
         height: 350px;
-        margin-bottom: 10px;
+        margin: 0;
     }
 }
 
@@ -60,10 +42,12 @@
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    align-items: center;
+    //align-items: center;
 }
 
-
+.test{
+    height: 350px;
+}
 
 
 .TextContainer {
