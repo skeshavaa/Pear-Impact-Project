@@ -12,6 +12,11 @@
     }
 }
 
+.EventContainer:hover{
+    box-shadow: 10px 10px 5px #aaaaaa;
+    transition: ease-in-out 0.1s;
+}
+
 .ImageContainer {
     height: 350px;
     overflow: hidden;
@@ -91,6 +96,11 @@
         display: inline-block;
         background: #4030a7;
     }
-
     width: inherit;
+
+    a:hover {
+        background: white;
+        color: #4030a7;
+        transition: ease-in 0.1s;
+    }
 }
