@@ -39,11 +39,13 @@ const PostPreview = ({ hit }) => {
 
     const slug = hit.fields.slug['en-US']
     const title = hit.fields.title['en-US']
-    
+    const tags = hit.fields.tags['en-US']
+    const listTags = tags.split(",")
     const name = hit.fields.name['en-US']
     const country = hit.fields.country['en-US']
     const prof = hit.fields.occupation['en-US']
     const date = hit.fields.publishedDate['en-US']
+
     {/*
         <div className={blogStyles.post} className={blogStyles.hvrOverlineReveal}>
             <Link to={`/blog/${slug}`}>
@@ -62,6 +64,9 @@ const PostPreview = ({ hit }) => {
             </Link>
         </div>
     */}
+
+    
+
     return (
         <div className={postStyles.EventContainer}>
             <Link to={`/blog/${slug}`}>
@@ -85,6 +90,11 @@ const PostPreview = ({ hit }) => {
                 <div className={postStyles.EntryTag}>
                     <a>{country}</a>
                     <a>{prof}</a>
+                    {listTags.map((tagg) => {
+                        return (
+                        <a>{tagg}</a>
+                        )
+                })}
                 </div>
             </div>
             </Link>
