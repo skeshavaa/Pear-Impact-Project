@@ -12,6 +12,7 @@ export const query = graphql`
     contentfulBlogPost(slug: {eq: $slug}) {
       title
       publishedDate(formatString: "MMM Do, YYYY")
+      tags
       content {
         json
       }
@@ -27,7 +28,9 @@ export const query = graphql`
 
 
 const Blog = (props) => {
-  console.log(props.data.contentfulBlogPost.image1.fluid.src)
+  const tags = props.data.contentfulBlogPost.tags
+  const arrTags = tags.split(",")
+  console.log(arrTags)
     return (
         <Layout>
             <Head title={props.data.contentfulBlogPost.title}/>
@@ -35,9 +38,17 @@ const Blog = (props) => {
               <meta name="description" content="100+ Stories of Canadian Immigrants"/>
               <meta name="og:title" content={props.data.contentfulBlogPost.title}/>
             </MetaTags>
+
             <h1 className={templateStyles.title}>{props.data.contentfulBlogPost.title}</h1>
             <div className={templateStyles.imageContainer}>
               <img src={props.data.contentfulBlogPost.image1.fluid.src} />
+            </div>
+            <div className={templateStyles.tags}>
+              {arrTags.map((tag) => {
+                return (
+                  <a>{tag}</a>
+                )
+              })}
             </div>
             <div className={templateStyles.content}>
               {documentToReactComponents(props.data.contentfulBlogPost.content.json)}
