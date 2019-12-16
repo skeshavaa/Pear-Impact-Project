@@ -2,6 +2,7 @@
     list-style-type: none;
     margin-left: 0;
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
 }
 
@@ -13,6 +14,7 @@
 .ais-Hits{
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .ais-Hits-item{

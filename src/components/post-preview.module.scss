@@ -42,10 +42,10 @@
 
 .EntryDate {
     color: black;
-    font-size: 1rem;
+    font-size: 20px;
     line-height: 1.714;
     margin-bottom: 0.6rem;
-    font-family: 'Questrial', sans-serif;
+    font-family: 'Quicksand', sans-serif;
     font-weight: bolder;
 }
 
@@ -55,7 +55,7 @@
         font-size: 1.7rem;
         line-height: 1.375;
         margin-bottom: 1.1rem;
-        font-family: 'Quicksand', sans-serif;
+        font-family: 'Questrial', sans-serif;
         font-weight: bolder;
         text-decoration: none;
         line-height: inherit;
@@ -66,6 +66,8 @@
         font-size: 20px;
         color: black;
         padding-top: 5px;
+        font-family: "Questrial", sans-serif;
+        font-weight: bold;
     }
 }
 
@@ -78,7 +80,7 @@
         margin-block-end: 1em;
         margin-inline-start: 0px;
         margin-inline-end: 0px;
-        font-size: 1rem;
+        font-size: 20px;
         line-height: 1.8rem;
         margin-bottom: 1.5rem;
         color: black;
@@ -88,7 +90,7 @@
 .EntryTag {
     a {
         font-family: 'Questrial', sans-serif;
-        font-size: 0.9rem;
+        font-size: 18px;
         color:white;  
         padding: 5px;
         margin: 3px 5px 3px 0px;
@@ -103,4 +105,11 @@
         color: #4030a7;
         transition: ease-in 0.1s;
     }
+}
+
+.Hits {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
 }

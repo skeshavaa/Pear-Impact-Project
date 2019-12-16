@@ -4,6 +4,7 @@ import { graphql, useStaticQuery, Link } from 'gatsby'
 import Layout from '../components/layout'
 import Head from '../components/head'
 import homeStyles from './home.module.scss'
+import postStyles from '../components/post-preview.module.scss'
 import Azhar from '../Icons/Azhar2.png'
 import moment from 'moment'
 
@@ -28,6 +29,7 @@ const IndexPage = () => {
               createdAt
               country
               occupation
+              tags
               image1 {
                     fluid {
                         src
@@ -54,7 +56,7 @@ const IndexPage = () => {
                     </Link>
                 </div>
                 <div className={homeStyles.AzharContent}>
-                    <h1>About Migrant Moments</h1>
+                    <h1 href="#asdf">About Migrant Moments</h1>
                     <p>
                         Azhar has compiled the stories of over 100+
                         Canadian immigrants. He has documented their 
@@ -67,16 +69,25 @@ const IndexPage = () => {
                         post of you're reading! Feel free to contact Azhar
                         by clicking the Contact me button above as well!
                     </p>
+
+                    <h2>Scroll down for the latest posts!</h2>
+                    <div class={homeStyles.scrollDowns}>
+                        <div class={homeStyles.mousey}>
+                            <div class={homeStyles.scroller}></div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <div className={homeStyles.postTitle}>
+            <div id="asdf" className={homeStyles.postTitle}>
                 <h1>LATEST POSTS</h1>
             </div>
             
             <div className={homeStyles.posts}>
                 {newPosts.allContentfulBlogPost.edges.map((edge) => {
                     const slug = edge.node.slug
+                    const tagss = edge.node.tags
+                    const arrTags = tagss.split(",")
                     const title = edge.node.title
                     const name = edge.node.name
                     const prof = edge.node.occupation
@@ -90,16 +101,21 @@ const IndexPage = () => {
                                 <img src={image}/>
                             </div>
                             <div className={homeStyles.TextContainer}>
-                                <div className={homeStyles.EntryDate}>
+                                <div className={postStyles.EntryDate}>
                                     <a>{moment(date).format('LL')}</a>
                                 </div>
-                                <div className={homeStyles.EntryTitle}>
+                                <div className={postStyles.EntryTitle}>
                                     <a>{title}</a>
                                     <p>By: {name}</p>
                                 </div>
-                                <div className={homeStyles.EntryTag}>
+                                <div className={postStyles.EntryTag}>
                                     <a>{country}</a>
                                     <a>{prof}</a>
+                                    {arrTags.map((tags) => {
+                                        return (
+                                            <a>{tags}</a>
+                                        )
+                                    })}
                                 </div>
                             </div>
                             </Link>
