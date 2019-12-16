@@ -2,9 +2,7 @@
     list-style-type: none;
     margin-left: 0;
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
-    width: 100%;
 }
 
 .ais-SearchBox-form {
@@ -15,6 +13,11 @@
 .ais-Hits{
     display: flex;
     justify-content: center;
+}
+
+.ais-Hits-item{
+    display: inline-block;
+    width: 350px;
 }
 
 
