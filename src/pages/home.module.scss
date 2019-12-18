@@ -24,8 +24,8 @@
     display: block;
     width: 350px;
     margin-bottom: 3rem;
-    margin-left: 1rem;
-    margin-right: 1rem;
+    //margin-left: 1rem;
+    //margin-right: 1rem;
 
     a {
         text-decoration: none;
@@ -142,7 +142,7 @@
 .posts {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 .postTitle {
@@ -193,4 +193,14 @@
     0% { opacity: 0; }
     10% { transform: translateY(0); opacity: 1; }
     100% { transform: translateY(15px); opacity: 0;}
+  }
+
+  @media only screen and (max-width: 1200px) {
+    .posts {
+        justify-content: center;
+    }
+
+    .EventContainer {
+        margin: 1rem;
+    }
   }
