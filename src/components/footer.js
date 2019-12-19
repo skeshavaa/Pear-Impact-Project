@@ -34,10 +34,10 @@ const Footer = () => {
             <div className={footerStyles.pages}>
                 <h1>Pages</h1>
                 <ul>
-                    <Link to="/"><li><a href="www.google.com">Stories</a></li></Link>
-                    <Link to="/home"><li><a href="www.google.com">Home</a></li></Link>
-                    <Link to="/about"><li><a href="www.google.com">About</a></li></Link>
-                    <Link to="/contact"><li><a href="www.google.com">Contact</a></li></Link>
+                    <Link to="/"><li><a>Home</a></li></Link>
+                    <Link to="/blog"><li><a>Blog</a></li></Link>
+                    <Link to="/about"><li><a>About</a></li></Link>
+                    <Link to="/contact"><li><a>Contact</a></li></Link>
                 </ul>
             </div>
             {/*
