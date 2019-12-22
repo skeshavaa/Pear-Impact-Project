@@ -16,6 +16,7 @@ import { slide as Menu } from "react-burger-menu";
 
 
 
+
 const searchClient = algoliasearch('L62RK6OZ7R', '2598efc467448e3024c6ea87d9bf25a8')
 
 
@@ -44,54 +45,38 @@ const BlogPage = () => {
 
     return (
         <div id="page-wrap">
+          <InstantSearch indexName="Blog" searchClient={searchClient}>
+          <Menu>
+                <RefinementList attribute="fields.occupation.en-US"/>
+                <RefinementList attribute="fields.country.en-US"/>
+            </Menu>
             <Layout>
+
+            
+
+
+
+
               <MetaTags>
                 <meta name="description" content="100+ Stories of Canadian Immigrants"/>
                 <meta property="og:title" content="Stories"/>
               </MetaTags>
-              <InstantSearch indexName="Blog" searchClient={searchClient}>
+              
                 <Head title="Blog"/>
                   <div className={blogStyles.Header}>
                     <h1>Migrant Stories</h1>
-                    <RefinementList attribute="fields.occupation.en-US"/>
-                    <RefinementList attribute="fields.country.en-US"/>
+                    
                     <SearchBox translations={{ placeholder: 'Name, Title, Tags, Country'}} label="Search" defaultRefinement=""/>
-                    <Menu>
-                      <a className="menu-item" href="/">
-                        Home
-                      </a>
-
-                      <a className="menu-item" href="/burgers">
-                        Burgers
-                      </a>
-
-                      <a className="menu-item" href="/pizzas">
-                        Pizzas
-                      </a>
-
-                      <a className="menu-item" href="/desserts">
-                        Desserts
-                      </a>
-                    </Menu>
-
-
-
-
-
-
-
-
-
-
-
+                    
 
                   </div>
 
                   <div className={blogStyles.Hits}>
                     <Hits hitComponent={PostPreview}/>
                   </div>
-              </InstantSearch>
+              
             </Layout>
+            </InstantSearch>
         </div>
     )
 }
