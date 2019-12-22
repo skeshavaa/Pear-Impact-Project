@@ -47,8 +47,8 @@ const BlogPage = () => {
         <div id="page-wrap">
           <InstantSearch indexName="Blog" searchClient={searchClient}>
           <Menu>
-                <RefinementList attribute="fields.occupation.en-US"/>
-                <RefinementList attribute="fields.country.en-US"/>
+                <RefinementList className="fixed" attribute="fields.occupation.en-US"/>
+                <RefinementList className="fixed" attribute="fields.country.en-US"/>
             </Menu>
             <Layout>
 
