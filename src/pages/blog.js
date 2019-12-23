@@ -46,12 +46,12 @@ const BlogPage = () => {
     return (
         <div id="page-wrap">
           <InstantSearch indexName="Blog" searchClient={searchClient}>
-          <Menu>
+            
+            <Layout>
+            <Menu>
                 <RefinementList className="fixed" attribute="fields.occupation.en-US"/>
                 <RefinementList className="fixed" attribute="fields.country.en-US"/>
             </Menu>
-            <Layout>
-
             
 
 
@@ -63,12 +63,11 @@ const BlogPage = () => {
               </MetaTags>
               
                 <Head title="Blog"/>
-                  <div className={blogStyles.Header}>
+                  <div className={blogStyles.Header} >
                     <h1>Migrant Stories</h1>
                     
                     <SearchBox translations={{ placeholder: 'Name, Title, Tags, Country'}} label="Search" defaultRefinement=""/>
                     
-
                   </div>
 
                   <div className={blogStyles.Hits}>
