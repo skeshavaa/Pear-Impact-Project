@@ -37,7 +37,7 @@ const BlogPage = () => {
 
     let sidebar 
     if (sidebarOpen) {
-    sidebar = <Sidebar sidebar={"sidebar"} close={sidebarCloseHandler}/>
+    sidebar = <Sidebar sidebar={"sidebar"} close={sidebarCloseHandler}></Sidebar>
     }
 
 
@@ -69,7 +69,7 @@ const BlogPage = () => {
           
             <Layout>
             {sidebar}
-            <Toggle click={openHandler}/>
+            
               <MetaTags>
                 <meta name="description" content="100+ Stories of Canadian Immigrants"/>
                 <meta property="og:title" content="Stories"/>
@@ -80,7 +80,7 @@ const BlogPage = () => {
                     <h1>Migrant Stories</h1>
                     
                     <SearchBox translations={{ placeholder: 'Name, Title, Tags, Country'}} label="Search" defaultRefinement=""/>
-                    
+                    <Toggle click={openHandler}/>
                   </div>
 
                   <div className={blogStyles.Hits}>

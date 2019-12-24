@@ -18,13 +18,11 @@ const Sidebar = (props) => {
     }
 
     return(
-        <InstantSearch indexName="Blog" searchClient={searchClient}>
         <div className={sidebarClass}>
             <h2>Sidebar</h2>
             <button id="close" onClick={closeHandler}>&times; close</button>
             <RefinementList attribute={"fields.country.en-US"} />
         </div>
-        </InstantSearch>
     )
 }
 
