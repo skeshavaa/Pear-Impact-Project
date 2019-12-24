@@ -113,3 +113,28 @@
     justify-content: center;
     flex-wrap: wrap;
 }
+
+@media only screen and (max-width: 600px) {
+    .EntryDate{
+        font-size: 15px;
+    }
+    .EntryTitle{
+        p{
+            font-size: 15px;
+        }
+        a{
+            font-size: 25px;
+        }
+    }
+    .EntryExcerpt{
+        p{
+            font-size: 15px;
+            line-height: 20px;
+        }
+    }
+    .EntryTag{
+        a{
+            font-size: 12px;
+        }
+    }
+  }

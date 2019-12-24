@@ -204,3 +204,14 @@
         margin: 1rem;
     }
   }
+
+  @media only screen and (max-width: 600px) {
+      .AzharContent{
+          p{
+              font-size: 12px;
+          }
+          h1{
+              font-size: 30px;
+          }
+      }
+  }

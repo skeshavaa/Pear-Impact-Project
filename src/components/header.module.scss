@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css?family=Questrial|Quicksand&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 .header {
-    padding: 0.2rem 0 0.2rem;
+    padding: 0.2rem 0 0rem;
     position: sticky;
     top: 0px;
     background: white;
@@ -11,13 +11,14 @@
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     flex-wrap: wrap;
     z-index: 3;
+    background-color: #EFF6FA;
 }
 
 .name {
-    text-align: center;
+    text-align: left;
 }
 
 .title {

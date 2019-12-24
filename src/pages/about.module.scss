@@ -4,8 +4,10 @@
 .imgContainer {
     img {
         max-width: 100%;
-        width: 100%;
+        width: 80%;
     }
+    display: flex;
+    justify-content: center;
  }
 
 .content {
@@ -29,3 +31,14 @@
     flex-direction: column;
     justify-content: center;
 }
+
+@media only screen and (max-width: 600px) {
+    .content{
+        p {
+            font-size: 12px;
+        }
+        h1{
+            font-size: 30px;
+        }
+    }
+  }
