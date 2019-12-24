@@ -12,7 +12,6 @@ import algoliasearch from 'algoliasearch/lite'
 import { InstantSearch, SearchBox, Hits, RefinementList } from 'react-instantsearch-dom'
 import PostPreview from '../components/post-preview'
 import './blog.css'
-import { slide as Menu } from "react-burger-menu";
 
 
 
@@ -44,36 +43,25 @@ const BlogPage = () => {
     `)
 
     return (
-        <div id="page-wrap">
+        <div>
           <InstantSearch indexName="Blog" searchClient={searchClient}>
-            
             <Layout>
-            <Menu>
-                <RefinementList className="fixed" attribute="fields.occupation.en-US"/>
-                <RefinementList className="fixed" attribute="fields.country.en-US"/>
-            </Menu>
-            
-
-
-
-
+                
               <MetaTags>
                 <meta name="description" content="100+ Stories of Canadian Immigrants"/>
                 <meta property="og:title" content="Stories"/>
               </MetaTags>
-              
+                <RefinementList attribute={"fields.country.en-US"} />
                 <Head title="Blog"/>
                   <div className={blogStyles.Header} >
                     <h1>Migrant Stories</h1>
-                    
                     <SearchBox translations={{ placeholder: 'Name, Title, Tags, Country'}} label="Search" defaultRefinement=""/>
                     
                   </div>
 
                   <div className={blogStyles.Hits}>
                     <Hits hitComponent={PostPreview}/>
-                  </div>
-              
+                  </div>              
             </Layout>
             </InstantSearch>
         </div>
