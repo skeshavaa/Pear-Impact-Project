@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {Fragment, useState} from 'react'
 import { graphql, useStaticQuery, Link } from 'gatsby'
 
 import Layout from '../components/layout'
@@ -12,9 +12,8 @@ import algoliasearch from 'algoliasearch/lite'
 import { InstantSearch, SearchBox, Hits, RefinementList } from 'react-instantsearch-dom'
 import PostPreview from '../components/post-preview'
 import './blog.css'
-
-
-
+import Sidebar from '../components/sidebar'
+import Toggle from '../components/toggle'
 
 const searchClient = algoliasearch('L62RK6OZ7R', '2598efc467448e3024c6ea87d9bf25a8')
 
@@ -22,6 +21,26 @@ const searchClient = algoliasearch('L62RK6OZ7R', '2598efc467448e3024c6ea87d9bf25
 
 
 const BlogPage = () => {
+    const [sidebarOpen, setSidebarOpen] = useState(false)
+
+    const openHandler = () => {
+      if (!sidebarOpen) {
+        setSidebarOpen(true)
+      } else {
+        setSidebarOpen(false)
+      }
+    }
+
+    const sidebarCloseHandler = () => {
+      setSidebarOpen(false)
+    }
+
+    let sidebar 
+    if (sidebarOpen) {
+    sidebar = <Sidebar sidebar={"sidebar"} close={sidebarCloseHandler}/>
+    }
+
+
 
     const data = useStaticQuery(graphql`
     query {
@@ -42,26 +61,32 @@ const BlogPage = () => {
       }
     `)
 
+    //<RefinementList attribute={"fields.country.en-US"} />
+
     return (
         <div>
           <InstantSearch indexName="Blog" searchClient={searchClient}>
+          
             <Layout>
-                
+            {sidebar}
+            <Toggle click={openHandler}/>
               <MetaTags>
                 <meta name="description" content="100+ Stories of Canadian Immigrants"/>
                 <meta property="og:title" content="Stories"/>
               </MetaTags>
-                <RefinementList attribute={"fields.country.en-US"} />
+                
                 <Head title="Blog"/>
                   <div className={blogStyles.Header} >
                     <h1>Migrant Stories</h1>
+                    
                     <SearchBox translations={{ placeholder: 'Name, Title, Tags, Country'}} label="Search" defaultRefinement=""/>
                     
                   </div>
 
                   <div className={blogStyles.Hits}>
                     <Hits hitComponent={PostPreview}/>
-                  </div>              
+                  </div>      
+                       
             </Layout>
             </InstantSearch>
         </div>

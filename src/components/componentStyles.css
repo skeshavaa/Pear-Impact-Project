@@ -1,0 +1,49 @@
+#header-wrapper {
+    width: 100vw;
+    height: 80px;
+    background-color: navy;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+}
+
+#toggle {
+    cursor: pointer;
+    color: black;
+    font-size: 60px;
+    margin-left: 20px;
+    background: transparent;
+    border: none;
+    padding: 10px;
+}
+
+.sidebar {
+    height: 100vh;
+    padding-left: 20px;
+    background-color: navy;
+    opacity: 0.8;
+    color: white;
+    width: 400px;
+    position: fixed;
+    z-index: 200;
+    left: -100%;
+    animation: slide-open 0.5s forwards;
+}
+
+.sidebar.close {
+    left: 0;
+    animation: slide-close 1.0s forwards;
+}
+
+@keyframes slide-open {
+    100%{
+        left: 0;
+    }
+}
+
+@keyframes slide-close {
+    100%{
+        left: -100%;
+    }
+}
