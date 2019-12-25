@@ -92,7 +92,9 @@ const PostPreview = ({ hit }) => {
                     <a>{prof}</a>
                     {listTags.map((tagg) => {
                         return (
-                        <a>{tagg}</a>
+                        <Link to={`/tag/${tagg}`}>
+                        {tagg}
+                        </Link>
                         )
                 })}
                 </div>
