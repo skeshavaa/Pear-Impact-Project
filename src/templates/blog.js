@@ -1,5 +1,5 @@
 import React from 'react'
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import Head from '../components/head'
 import Layout from '../components/layout'
@@ -42,9 +42,10 @@ const Blog = (props) => {
               <img src={props.data.contentfulBlogPost.image1.fluid.src} />
             </div>
             <div className={templateStyles.tags}>
+              <h1>Tags: </h1>
               {arrTags.map((tag) => {
                 return (
-                  <a>{tag}</a>
+                  <Link to={`/tag/${tag}`}>{tag}</Link>
                 )
               })}
             </div>

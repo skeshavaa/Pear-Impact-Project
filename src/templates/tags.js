@@ -1,12 +1,17 @@
 import React from 'react'
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 import Layout from '../components/layout'
+import tagStyles from '../templates/tags.module.scss'
+import unknown from '../Icons/unknown.png'
+import postStyles from '../components/post-preview.module.scss'
+import moment from 'moment'
 
 export const query = graphql`
 query{
     allContentfulBlogPost{
       edges{
         node{
+          slug
           title
           country
           occupation
@@ -37,15 +42,61 @@ const Tags = (props) => {
         }
     })}
     console.log(hits)
+
+    
+
     return(
         <Layout>
+            <h1 className={tagStyles.title}>Blog Post tagged with "{currentTag}"</h1>
+            <div className={tagStyles.wrapper}>
             {hits.map((hit) => {
+                const image = hit.node.image1.fluid.src
+                const slug = hit.node.slug
+                const title = hit.node.title
+                const tags = hit.node.tags
+                const listTags = tags.split(",")
+                const name = hit.node.name
+                const country = hit.node.country
+                const prof = hit.node.occupation
+                const date = hit.node.publishedDate
                 return(
-                    <div>
-                        <h1>{hit.node.title}</h1>
+                    <div className={postStyles.EventContainer}>
+                        <Link to={`/blog/${slug}`}>
+                        <div className={postStyles.ImageContainer}>
+                            <img src={ image } alt={unknown}/>
+                        </div>
+                        <div className={postStyles.TextContainer}>
+                            <div className={postStyles.EntryDate}>
+                                <a>{moment(date).format('LL')}</a>
+                            </div>
+                            <div className={postStyles.EntryTitle}>
+                                <a>{title}</a>
+                                <p>By: {name}</p>
+                            </div>
+                            <div className={postStyles.EntryExcerpt}>
+                                <p>
+                                    Lorem ipsum Sed eiusmod esse aliqua sed 
+                                    incididunt aliqua incididunt mollit id et
+                                </p>
+                            </div>
+                            <div className={postStyles.EntryTag}>
+                                <a>{country}</a>
+                                <a>{prof}</a>
+                                {listTags.map((tagg) => {
+                                    return (
+                                    <Link to={`/tag/${tagg}`}>
+                                    {tagg}
+                                    </Link>
+                                    )
+                            })}
+                            </div>
+                        </div>
+                        </Link>
                     </div>
+                    
                 )
             })}
+            </div>
         </Layout>
     )
 }

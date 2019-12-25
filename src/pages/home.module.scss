@@ -12,7 +12,7 @@
 
 .imageContainer {
     position: relative;
-    max-width: 33%;
+    max-width: 30%;
     img {
         display: block;
         width: 100%;
@@ -40,7 +40,7 @@
 
 .First {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-wrap: wrap;
     //align-items: center;
 }

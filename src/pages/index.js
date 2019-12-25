@@ -113,7 +113,7 @@ const IndexPage = () => {
                                     <a>{prof}</a>
                                     {arrTags.map((tags) => {
                                         return (
-                                            <a>{tags}</a>
+                                            <Link to={`/tag/${tags}`}>{tags}</Link>
                                         )
                                     })}
                                 </div>
