@@ -22,6 +22,7 @@ const Sidebar = (props) => {
             <h2>Sidebar</h2>
             <button id="close" onClick={closeHandler}>&times; close</button>
             <RefinementList attribute={"fields.country.en-US"} />
+            <RefinementList attribute={"fields.occupation.en-US"} />
         </div>
     )
 }

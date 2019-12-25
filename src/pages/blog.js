@@ -35,11 +35,11 @@ const BlogPage = () => {
       setSidebarOpen(false)
     }
 
-    let sidebar 
+    let sidebar
     if (sidebarOpen) {
     sidebar = <Sidebar sidebar={"sidebar"} close={sidebarCloseHandler}></Sidebar>
     }
-
+    console.log(sidebarOpen)
 
 
     const data = useStaticQuery(graphql`
