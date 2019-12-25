@@ -39,14 +39,14 @@
       -webkit-border-radius: 0;
       border: none;
       background-image: none;
-      background-color: #DD0505;
+      background-color: #E5324A;
       color: white;
       letter-spacing: 1px;
       transition: all 0.1s linear;
       
       &:hover {
         cursor: pointer;
-        background: darken(#DD0505, 15%);
+        background: darken(#E5324A, 15%);
       }    
     }
   }

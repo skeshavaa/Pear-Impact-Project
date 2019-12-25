@@ -3,12 +3,14 @@ const path = require('path')
 module.exports.createPages = async ({ graphql, actions }) => {
     const { createPage } = actions
     const blogTemplate = path.resolve('./src/templates/blog.js')
+    const tagTemplate = path.resolve('./src/templates/tags.js')
     const res = await graphql(`
         query {
             allContentfulBlogPost {
                 edges {
                     node {
                         slug
+                        tags
                     }
                 }
             }
@@ -22,6 +24,16 @@ module.exports.createPages = async ({ graphql, actions }) => {
             context: {
                 slug: edge.node.slug
             }
+        })
+        arrTags = edge.node.tags.split(",")
+        arrTags.forEach((tag) => {
+            createPage({
+                component: tagTemplate,
+                path: `/tag/${tag}`,
+                context: {
+                    slug: tag
+                }
+            })
         })
     })
 }

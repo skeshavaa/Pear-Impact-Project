@@ -3,7 +3,6 @@ import { graphql } from 'gatsby'
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import Head from '../components/head'
 import Layout from '../components/layout'
-import Img from "gatsby-image"
 import templateStyles from '../templates/blog.module.scss'
 import MetaTags from 'react-meta-tags'
 
@@ -30,7 +29,6 @@ export const query = graphql`
 const Blog = (props) => {
   const tags = props.data.contentfulBlogPost.tags
   const arrTags = tags.split(",")
-  console.log(arrTags)
     return (
         <Layout>
             <Head title={props.data.contentfulBlogPost.title}/>
