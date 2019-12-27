@@ -1,9 +1,8 @@
 import React, { useState } from "react"
 import "./componentStyles.css"
 import algoliasearch from 'algoliasearch/lite'
-import { InstantSearch, SearchBox, Hits, RefinementList } from 'react-instantsearch-dom'
-
-const searchClient = algoliasearch('L62RK6OZ7R', '2598efc467448e3024c6ea87d9bf25a8')
+import { RefinementList } from 'react-instantsearch-dom'
+import Filters from '../components/filters'
 
 
 const Sidebar = (props) => {
@@ -11,18 +10,12 @@ const Sidebar = (props) => {
 
     const closeHandler = (e) => {
         e.preventDefault()
-        setSidebarClass("sidebar close")
-        setTimeout(() => {
-            props.close()
-        }, 1000)
+        setSidebarClass("sidebar close")    
     }
-
     return(
-        <div className={sidebarClass}>
+        <div className={props.sidebar} >
             <h2>Sidebar</h2>
-            <button id="close" onClick={closeHandler}>&times; close</button>
-            <RefinementList attribute={"fields.country.en-US"} />
-            <RefinementList attribute={"fields.occupation.en-US"} />
+            <Filters />
         </div>
     )
 }

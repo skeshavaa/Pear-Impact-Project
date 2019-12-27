@@ -14,6 +14,7 @@ import PostPreview from '../components/post-preview'
 import './blog.css'
 import Sidebar from '../components/sidebar'
 import Toggle from '../components/toggle'
+import Filters from '../components/filters'
 
 const searchClient = algoliasearch('L62RK6OZ7R', '2598efc467448e3024c6ea87d9bf25a8')
 
@@ -21,7 +22,8 @@ const searchClient = algoliasearch('L62RK6OZ7R', '2598efc467448e3024c6ea87d9bf25
 
 
 const BlogPage = () => {
-    const [sidebarOpen, setSidebarOpen] = useState(false)
+    const [sidebarOpen, setSidebarOpen, sidebarClass, setsidebarClass] = useState(false)
+    
 
     const openHandler = () => {
       if (!sidebarOpen) {
@@ -36,10 +38,12 @@ const BlogPage = () => {
     }
 
     let sidebar
+
     if (sidebarOpen) {
     sidebar = <Sidebar sidebar={"sidebar"} close={sidebarCloseHandler}></Sidebar>
+    } else{
+      sidebar = <Sidebar sidebar={"sidebar close"} close={sidebarCloseHandler}></Sidebar>
     }
-    console.log(sidebarOpen)
 
 
     const data = useStaticQuery(graphql`
