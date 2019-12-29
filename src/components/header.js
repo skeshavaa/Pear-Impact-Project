@@ -2,6 +2,8 @@ import React from 'react'
 import { Link, graphql, useStaticQuery } from 'gatsby'
 
 import ResponsiveMenu from 'react-responsive-navbar';
+import { GiHamburgerMenu } from 'react-icons/gi'
+import { FaTimes } from 'react-icons/fa'
 
 import headerStyles from './header.module.scss'
 
@@ -19,8 +21,8 @@ const Header = () => {
 
     return (
         <ResponsiveMenu
-        menuOpenButton={<div><h1>asdf</h1></div>}
-        menuCloseButton={<div><p className={headerStyles.close}>asdf</p></div>}
+        menuOpenButton={<div className={headerStyles.menuWrap}><GiHamburgerMenu className={headerStyles.hamburger}/><h1>Migrant Moments</h1></div>}
+        menuCloseButton={<div ><FaTimes className={headerStyles.close}/></div>}
         changeMenuOn="800px"
         largeMenuClassName={headerStyles.largeMenuClassname}
         smallMenuClassName={headerStyles.smallMenuClassname}
