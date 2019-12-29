@@ -27,17 +27,31 @@ query{
   }
   ` 
 
-const Tags = (props) => {
+const Country = (props) => {
     const currentTag = props.pageContext.slug
     const hits = []
+
+    var safeCareer
+    var career
+    
     {props.data.allContentfulBlogPost.edges.map((edge) => {
-        const allTags = edge.node.tags
-        const arrTags = allTags.split(",")
-        if (arrTags.includes(currentTag)){
+        career = edge.node.occupation
+        
+        safeCareer = ""
+
+        for (var i = 0; i < career.length; i++){
+            if (career[i] == " "){
+                safeCareer += "-"
+            } else{
+                safeCareer += career[i]
+            }
+        }
+
+
+        if (currentTag == safeCareer){
             hits.push(edge)
         }
     })}
-
     
 
     return(
@@ -76,7 +90,7 @@ const Tags = (props) => {
                             </div>
                             <div className={postStyles.EntryTag}>
                                 <a>{country}</a>
-                                <a>{prof}</a>
+                                <Link to={`/career/${currentTag}`}>{prof}</Link>
                                 {listTags.map((tagg) => {
                                     return (
                                     <Link to={`/tag/${tagg}`}>
@@ -96,4 +110,4 @@ const Tags = (props) => {
     )
 }
 
-export default Tags
+export default Country

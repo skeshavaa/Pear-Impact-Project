@@ -92,3 +92,9 @@
         left: -100%;
     }
 }
+
+@media screen and (max-width: 800px) {
+    .sidebar{
+        margin-top: 53.69px;
+    }
+}

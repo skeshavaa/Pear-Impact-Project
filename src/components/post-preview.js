@@ -89,7 +89,7 @@ const PostPreview = ({ hit }) => {
                 </div>
                 <div className={postStyles.EntryTag}>
                     <a>{country}</a>
-                    <a>{prof}</a>
+                    <Link to={`/career/${prof}`}>{prof}</Link>
                     {listTags.map((tagg) => {
                         return (
                         <Link to={`/tag/${tagg}`}>
