@@ -29,6 +29,7 @@ const EmailListForm = () => {
 
   return (
     <form onSubmit={handleSubmit} className={styles.EmailListForm}>
+      <div className={styles.outerWrapper}>
       <div className={styles.Wrapper}>
         <div><input
           placeholder="Email address"
@@ -37,6 +38,7 @@ const EmailListForm = () => {
           onChange={handleEmailChange}
         /></div>
         <div className={styles.btn}><button type="submit">Subscribe</button></div>
+      </div>
       </div>
     </form>
   );

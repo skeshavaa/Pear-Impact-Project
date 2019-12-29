@@ -115,6 +115,7 @@
     
     :hover{
         cursor: pointer;
-        background:#E5324A;
+        background: darken(#E5324A, 15%);
+        transition: 0.2s;
     }
 }

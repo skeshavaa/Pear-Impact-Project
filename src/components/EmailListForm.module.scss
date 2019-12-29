@@ -15,9 +15,15 @@
       margin-bottom: 1rem;
       font-family: "Montserrat", sans-serif;
     }
+
+    .outer-wrapper{
+      display: flex;
+      justify-content: center;
+      width: 1200px;
+    }
   
     .Wrapper {
-  
+      width: 100%;
       margin-right: 0;
       max-width: 550px;
     }
@@ -28,8 +34,8 @@
       border: none;
       border-bottom: 2px solid grey;
       padding: 5px;
-      margin-bottom: 30px;
-      
+      margin-bottom: 50px;
+      outline: none;
     }
   
     button,
@@ -64,5 +70,11 @@
   }
 
   .btn{
+    display: flex;
+    justify-content: center;
+  }
+
+  .btn button{
     width: 50%;
+    padding: 25px;
   }
