@@ -1,7 +1,5 @@
 import React, { useState } from "react"
 import "./componentStyles.css"
-import algoliasearch from 'algoliasearch/lite'
-import { RefinementList } from 'react-instantsearch-dom'
 import Filters from '../components/filters'
 
 
@@ -14,7 +12,7 @@ const Sidebar = (props) => {
     }
     return(
         <div className={props.sidebar} >
-            <h2>Sidebar</h2>
+            <h2>Filter by:</h2>
             <Filters />
         </div>
     )

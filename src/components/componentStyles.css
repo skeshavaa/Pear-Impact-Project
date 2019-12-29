@@ -19,16 +19,27 @@
 }
 
 .sidebar {
+    margin-top: 73.69px;
     height: 100vh;
     padding-left: 20px;
-    background-color: navy;
+    background-color: #E5324A;
     opacity: 0.8;
     color: white;
-    width: 400px;
+    width: 300px;
     position: fixed;
     z-index: 200;
     left: -100%;
     animation: slide-open 0.5s forwards;
+    padding-left: 10px;
+}
+
+.sidebar h2{
+    font-family: "Montserrat", sans-serif;
+    font-size: 30px;
+    text-align: center;
+    padding: 5px;
+    padding-top: 15px;
+    color: white;
 }
 
 .sidebar.close {

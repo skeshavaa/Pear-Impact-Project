@@ -1,10 +1,12 @@
 import React from 'react'
-import { defaultRefinement ,RefinementList, SortBy } from 'react-instantsearch-dom'
+import { RefinementList } from 'react-instantsearch-dom'
 
 const Filters = () => {
     return(
-        <div>
+        <div className="filters">
+            <h1>Countries</h1>
             <RefinementList attribute={"fields.country.en-US"} />
+            <h1>Occupation</h1>
             <RefinementList attribute={"fields.occupation.en-US"} />
         </div>
     )
