@@ -1,13 +1,14 @@
 .EmailListForm {
+    background: white;
+    color: black;
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+    padding: 10px 5px;
+    width: 100%;
+    max-width: 550px;
     display: flex;
     flex-direction: column;
-    
-    background: black;
-    color: white;
-  
-    font-family: "Quicksand", sans-serif;
-    padding: 10px 50px;
-    width: 500px;
+    justify-content: center;
 
     h2 {
       margin-top: 0;
@@ -16,14 +17,19 @@
     }
   
     .Wrapper {
-      display: flex;
-      flex-direction: row;
+  
+      margin-right: 0;
+      max-width: 550px;
     }
   
     input {
       color: #2a2a2a;
       width: 100%;
       border: none;
+      border-bottom: 2px solid grey;
+      padding: 5px;
+      margin-bottom: 30px;
+      
     }
   
     button,
@@ -31,6 +37,7 @@
       padding: 1rem 1.5rem;
       border-radius: 0;
       -webkit-border-radius: 0;
+      
     }
   
     button {
@@ -43,10 +50,19 @@
       color: white;
       letter-spacing: 1px;
       transition: all 0.1s linear;
-      
+      width: 100%;
+      border-radius: 10px;
+      font-size: 25px;
+      font-family: "Montserrat", sans-serif;
+
+
       &:hover {
         cursor: pointer;
         background: darken(#E5324A, 15%);
       }    
     }
+  }
+
+  .btn{
+    width: 50%;
   }
