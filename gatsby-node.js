@@ -5,6 +5,7 @@ module.exports.createPages = async ({ graphql, actions }) => {
     const blogTemplate = path.resolve('./src/templates/blog.js')
     const tagTemplate = path.resolve('./src/templates/tags.js')
     const careerTemplate = path.resolve('./src/templates/career.js')
+    const countryTemplate = path.resolve('./src/templates/country.js')
 
     const res = await graphql(`
         query {
@@ -29,7 +30,7 @@ module.exports.createPages = async ({ graphql, actions }) => {
                 slug: edge.node.slug
             }
         })
-
+        //Career Page
         const career = edge.node.occupation
         var safeCareer = ""
 
@@ -41,15 +42,36 @@ module.exports.createPages = async ({ graphql, actions }) => {
             }
         }
 
-
         createPage({
             component: careerTemplate,
-            path: `/career/${edge.node.occupation}`,
+            path: `/career/${safeCareer}`,
             context: {
                 slug: safeCareer
             }
         })
 
+        //Country Page
+
+        const country = edge.node.country
+        var safeCountry = ""
+
+        for (var i = 0; i < country.length; i++){
+            if (country[i] == " "){
+                safeCountry += "-"
+            } else{
+                safeCountry += country[i]
+            }
+        }
+
+        createPage({
+            component: countryTemplate,
+            path: `/country/${safeCountry}`,
+            context: {
+                slug: safeCountry
+            }
+        })
+        
+        //Tag Pages
         arrTags = edge.node.tags.split(",")
         arrTags.forEach((tag) => {
             createPage({

@@ -54,6 +54,30 @@ const Tags = (props) => {
                 const country = hit.node.country
                 const prof = hit.node.occupation
                 const date = hit.node.publishedDate
+
+                var safeCareer = ""
+                var safeCountry = ""
+
+                for (var i = 0; i < prof.length; i++){
+                    if (prof[i] == " "){
+                        safeCareer += "-"
+                    } else{
+                        safeCareer += prof[i]
+                    }
+                }
+
+                for (var i = 0; i < country.length; i++){
+                    if (country[i] == " "){
+                        safeCountry += "-"
+                    } else{
+                        safeCountry += country[i]
+                    }
+                }
+
+
+                
+
+
                 return(
                     <div className={postStyles.EventContainer}>
                         <Link to={`/blog/${slug}`}>
@@ -75,8 +99,8 @@ const Tags = (props) => {
                                 </p>
                             </div>
                             <div className={postStyles.EntryTag}>
-                                <a>{country}</a>
-                                <a>{prof}</a>
+                                <Link to={`/country/${safeCountry}`}>{country}</Link>
+                                <Link to={`/career/${safeCareer}`}>{prof}</Link>
                                 {listTags.map((tagg) => {
                                     return (
                                     <Link to={`/tag/${tagg}`}>

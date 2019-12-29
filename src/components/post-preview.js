@@ -46,6 +46,16 @@ const PostPreview = ({ hit }) => {
     const prof = hit.fields.occupation['en-US']
     const date = hit.fields.publishedDate['en-US']
 
+    var safeCareer = ""
+
+    for (var i = 0; i < prof.length; i++){
+        if (prof[i] == " "){
+            safeCareer += "-"
+        } else{
+            safeCareer += prof[i]
+        }
+    }
+
     {/*
         <div className={blogStyles.post} className={blogStyles.hvrOverlineReveal}>
             <Link to={`/blog/${slug}`}>
@@ -89,7 +99,7 @@ const PostPreview = ({ hit }) => {
                 </div>
                 <div className={postStyles.EntryTag}>
                     <a>{country}</a>
-                    <Link to={`/career/${prof}`}>{prof}</Link>
+                    <Link to={`/career/${safeCareer}`}>{prof}</Link>
                     {listTags.map((tagg) => {
                         return (
                         <Link to={`/tag/${tagg}`}>

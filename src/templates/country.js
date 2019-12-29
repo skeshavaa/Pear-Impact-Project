@@ -32,24 +32,24 @@ const Country = (props) => {
     console.log(currentTag)
     const hits = []
 
-    var safeCareer
-    var career
+    var safeCountry
+    var country
     
     {props.data.allContentfulBlogPost.edges.map((edge) => {
-        career = edge.node.occupation
+        country = edge.node.country
         
-        safeCareer = ""
+        safeCountry = ""
 
-        for (var i = 0; i < career.length; i++){
-            if (career[i] == " "){
-                safeCareer += "-"
+        for (var i = 0; i < country.length; i++){
+            if (country[i] == " "){
+                safeCountry += "-"
             } else{
-                safeCareer += career[i]
+                safeCountry += country[i]
             }
         }
 
 
-        if (currentTag == safeCareer){
+        if (currentTag == safeCountry){
             hits.push(edge)
         }
     })}
@@ -70,16 +70,16 @@ const Country = (props) => {
                 const prof = hit.node.occupation
                 const date = hit.node.publishedDate
 
-                var safeCountry = ""
+                var safeProf = ""
 
-                for (var i = 0; i < country.length; i++){
-                    if (country[i] == " "){
-                        safeCountry += "-"
+                for (var i = 0; i < prof.length; i++){
+                    if (prof[i] == " "){
+                        safeProf += "-"
                     } else{
-                        safeCountry += country[i]
+                        safeProf += prof[i]
                     }
                 }
-
+                
                 return(
                     <div className={postStyles.EventContainer}>
                         <Link to={`/blog/${slug}`}>
@@ -101,8 +101,8 @@ const Country = (props) => {
                                 </p>
                             </div>
                             <div className={postStyles.EntryTag}>
-                                <Link to={`/country/${safeCountry}`}>{country}</Link>
-                                <Link to={`/career/${currentTag}`}>{prof}</Link>
+                                <Link to={`/country/${currentTag}`}>{country}</Link>
+                                <Link to={`/career/${safeProf}`}>{prof}</Link>
                                 {listTags.map((tagg) => {
                                     return (
                                     <Link to={`/tag/${tagg}`}>
