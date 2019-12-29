@@ -1,5 +1,5 @@
 import React from 'react'
-import { RefinementList } from 'react-instantsearch-dom'
+import { defaultRefinement ,RefinementList, SortBy } from 'react-instantsearch-dom'
 
 const Filters = () => {
     return(
