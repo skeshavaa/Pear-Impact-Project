@@ -6,14 +6,14 @@ import Head from '../components/head'
 import contactStyles from '../pages/contact.module.scss'
 
 
-const ContactPage = () => {
+const Sub = () => {
     return (
         <div>
-            <Head title="Contact"/>
+            <Head title="Subscribe!"/>
             <Layout>
                 <MetaTags>
                     <meta name="description" content="100+ Stories of Canadian Immigrants"/>
-                    <meta property="og:title" content="Contact Me"/>
+                    <meta property="og:title" content="Subscribe!"/>
                 </MetaTags>
                 <div className={contactStyles.title}>
                     <h1>Feel Free To Contact Me!</h1>
@@ -47,4 +47,4 @@ const ContactPage = () => {
     )
 }
 
-export default ContactPage
+export default Sub

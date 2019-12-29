@@ -3,8 +3,6 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 .header {
     padding: 0.2rem 0 0rem;
-    position: sticky;
-    top: 0px;
     background: white;
     margin: 0;
     display: flex;
@@ -103,9 +101,34 @@
     right: 0;
   }
 
-  @media only screen and (max-width: 685px) {
-      .header {
+  .small-menu-classname{
+    background-color: #F7F7F7;
+    padding: 5px;
+    height: 55px;
+    position: fixed;
+    width: 100vw;
+    top: 0;
+  }
+
+  .close{
+      margin-bottom: 0;
+  }
+
+  .large-menu-classname{
+      background-color: white;
+      position: fixed;
+      width: 100vw;
+      top: 0px;
+      z-index: 5;
+  }
+
+  @media only screen and (max-width: 800px) {
+      .nav-list {
           flex-direction: column;
           justify-content: center;
+      }
+
+      .name{
+          display: none;
       }
   }

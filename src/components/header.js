@@ -20,10 +20,10 @@ const Header = () => {
     return (
         <ResponsiveMenu
         menuOpenButton={<div><h1>asdf</h1></div>}
-        menuCloseButton={<div><h2>asdf</h2></div>}
-        changeMenuOn="500px"
-        largeMenuClassName="large-menu-classname"
-        smallMenuClassName="small-menu-classname"
+        menuCloseButton={<div><p className={headerStyles.close}>asdf</p></div>}
+        changeMenuOn="800px"
+        largeMenuClassName={headerStyles.largeMenuClassname}
+        smallMenuClassName={headerStyles.smallMenuClassname}
         menu={
             <header className={headerStyles.header}>
             <h1 className={headerStyles.name}>
@@ -45,6 +45,9 @@ const Header = () => {
                     </li>
                     <li>
                         <Link className={headerStyles.navItem} className={headerStyles.hvrOverlineFromCenter} activeClassName={headerStyles.activeNavItem} to='/contact'>Contact</Link>
+                    </li>
+                    <li>
+                        <Link className={headerStyles.navItem} className={headerStyles.hvrOverlineFromCenter} activeClassName={headerStyles.activeNavItem} to='/sub'>Subscribe</Link>
                     </li>
                 </ul>
             </nav>
