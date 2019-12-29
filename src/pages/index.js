@@ -79,7 +79,7 @@ const IndexPage = () => {
                 </div>
             </div>
 
-            <div id="asdf" className={homeStyles.postTitle}>
+            <div className={homeStyles.postTitle}>
                 <h1>LATEST POSTS</h1>
             </div>
             

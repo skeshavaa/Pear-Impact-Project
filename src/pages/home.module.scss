@@ -11,13 +11,15 @@
   }
 
 .imageContainer {
-    position: relative;
     max-width: 30%;
     img {
         display: block;
         width: 100%;
         height: auto;
     }
+    display: flex;
+    justify-content: center;
+    
  }
 
  .EventContainer {
@@ -214,5 +216,20 @@
           h1{
               font-size: 30px;
           }
+          h2 {
+            font-size: 20px;
+        }
+      }
+
+      .postTitle{
+          h1{
+            font-size: 25px;
+          }
+      }
+  }
+
+  @media only screen and (max-width: 1200px) {
+      .First{
+          justify-content: center;
       }
   }
