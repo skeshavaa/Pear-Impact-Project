@@ -94,6 +94,28 @@ const IndexPage = () => {
                     const country = edge.node.country
                     const date = edge.node.publishedDate
                     const image = edge.node.image1.fluid.src
+
+
+                    var safeCareer = ""
+
+                    for (var i = 0; i < prof.length; i++){
+                        if (prof[i] == " "){
+                            safeCareer += "-"
+                        } else{
+                            safeCareer += prof[i]
+                        }
+                    }
+
+                    var safeCountry = ""
+
+                    for (var i = 0; i < country.length; i++){
+                        if (country[i] == " "){
+                            safeCountry += "-"
+                        } else{
+                            safeCountry += country[i]
+                        }
+                    }
+
                     return (
                         <div className={homeStyles.EventContainer}>
                             <Link to={`/blog/${slug}`}>
@@ -109,8 +131,8 @@ const IndexPage = () => {
                                     <p>By: {name}</p>
                                 </div>
                                 <div className={postStyles.EntryTag}>
-                                    <a>{country}</a>
-                                    <a>{prof}</a>
+                                    <Link to={`/country/${safeCountry}`}>{country}</Link>
+                                    <Link to={`/career/${safeCareer}`}>{prof}</Link>
                                     {arrTags.map((tags) => {
                                         return (
                                             <Link to={`/tag/${tags}`}>{tags}</Link>

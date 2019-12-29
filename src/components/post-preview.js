@@ -56,6 +56,16 @@ const PostPreview = ({ hit }) => {
         }
     }
 
+    var safeCountry = ""
+
+    for (var i = 0; i < country.length; i++){
+        if (country[i] == " "){
+            safeCountry += "-"
+        } else{
+            safeCountry += country[i]
+        }
+    }
+
     {/*
         <div className={blogStyles.post} className={blogStyles.hvrOverlineReveal}>
             <Link to={`/blog/${slug}`}>
@@ -98,7 +108,7 @@ const PostPreview = ({ hit }) => {
                     </p>
                 </div>
                 <div className={postStyles.EntryTag}>
-                    <a>{country}</a>
+                    <Link to={`/country/${safeCountry}`}>{country}</Link>
                     <Link to={`/career/${safeCareer}`}>{prof}</Link>
                     {listTags.map((tagg) => {
                         return (
