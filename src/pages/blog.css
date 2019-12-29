@@ -32,16 +32,22 @@
     border-bottom: 2px solid lightgrey;
 }
 
+.ais-SearchBox-form{
+    margin: 0;
+}
+
 .ais-SearchBox-submit {
     background: white;
     border: none;
     padding: 0px 0px;
+    margin-left: 5px;
 }
 
 .ais-SearchBox-reset {
     background: white;
     border: none;
     padding: 0;
+    
 }
 
 .ais-SearchBox-submit svg{

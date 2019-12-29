@@ -11,11 +11,23 @@
 #toggle {
     cursor: pointer;
     color: black;
-    font-size: 60px;
-    margin-left: 20px;
+    font-size: 0px;
+    margin-left: 0px;
     background: transparent;
     border: none;
-    padding: 10px;
+    padding: 0px;
+    padding-bottom: 5px;
+    padding-left: 3px;
+    outline: none;
+}
+
+#toggle h1{
+    font-size: 20px;
+    color: #E5324A;
+    border-radius: 10px;
+    padding: 7px;
+    border: 2px solid #E5324A;
+
 }
 
 .sidebar {
