@@ -44,8 +44,13 @@
     left: -100%;
     animation: slide-open 0.5s forwards;
     padding-left: 10px;
-    overflow: scroll;
+    overflow-y: scroll;
+    
+}
 
+::-webkit-scrollbar {
+    width: 0px;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
 }
 
 .sidebar h2{
