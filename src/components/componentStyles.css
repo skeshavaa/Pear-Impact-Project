@@ -32,8 +32,8 @@
 }
 
 .sidebar {
+    min-height: 100vh;
     margin-top: 73.69px;
-    height: 100vh;
     padding-left: 20px;
     background-color: #E5324A;
     opacity: 0.8;
@@ -44,6 +44,8 @@
     left: -100%;
     animation: slide-open 0.5s forwards;
     padding-left: 10px;
+    overflow: scroll;
+
 }
 
 .sidebar h2{
