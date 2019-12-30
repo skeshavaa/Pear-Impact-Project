@@ -1,31 +1,17 @@
 .EmailListForm {
+
     background: white;
     color: black;
     margin: 0;
     font-family: "Montserrat", sans-serif;
     padding: 10px 5px;
     width: 100%;
-    max-width: 550px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-    h2 {
+    margin-right: 0;
+    
+    h2 {  
       margin-top: 0;
       margin-bottom: 1rem;
       font-family: "Montserrat", sans-serif;
-    }
-
-    .outer-wrapper{
-      display: flex;
-      justify-content: center;
-      width: 1200px;
-    }
-  
-    .Wrapper {
-      width: 100%;
-      margin-right: 0;
-      max-width: 550px;
     }
   
     input {
@@ -45,7 +31,6 @@
       -webkit-border-radius: 0;
       
     }
-  
     button {
       display: inline-block;
       border-radius: 0;
@@ -67,6 +52,19 @@
         background: darken(#E5324A, 15%);
       }    
     }
+    
+  }
+
+  .outer-wrapper{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .Wrapper {
+    width: 100%;
+    margin-right: 0;
+    max-width: 550px;
   }
 
   .btn{
