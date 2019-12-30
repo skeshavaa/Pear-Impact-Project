@@ -45,3 +45,15 @@
     }
     padding: 15px;
 }
+
+.outer-wrapper{
+    h1{
+        font-family: "Quicksand", sans-serif;
+        text-align: center;
+    }
+}
+
+.recommended-wrapper{
+    display: flex;
+    justify-content: center;
+}

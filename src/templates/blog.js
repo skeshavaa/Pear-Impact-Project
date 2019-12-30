@@ -4,8 +4,11 @@ import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import Head from '../components/head'
 import Layout from '../components/layout'
 import templateStyles from '../templates/blog.module.scss'
+import postStyles from '../components/post-preview.module.scss'
 import MetaTags from 'react-meta-tags'
 import { Hits } from 'react-instantsearch-dom'
+import unknown from '../Icons/unknown.png'
+import moment from 'moment'
 
 export const query = graphql`
   query($slug: String) {
@@ -30,6 +33,7 @@ export const query = graphql`
           country
           occupation
           tags
+          slug
           image1{
             fluid {
             ...GatsbyContentfulFluid
@@ -42,7 +46,7 @@ export const query = graphql`
 
 
 const Blog = (props) => {
-  const hit = []
+  const hits = []
   const title = props.data.contentfulBlogPost.title
   const country = props.data.contentfulBlogPost.country
   const currentTags = props.data.contentfulBlogPost.tags.split(",")
@@ -52,13 +56,11 @@ const Blog = (props) => {
     const diffTags = edge.node.tags.split(",")
     const found = currentTags.some(r=> diffTags.indexOf(r) >= 0)
 
-    if (edge.node.title != title && edge.node.country == country){
-      hit.push(edge)
-    } else if (found && edge.node.title != title){
-      hit.push(edge)
+    if (edge.node.title != title && edge.node.country == country && hits.length < 4){
+      hits.push(edge)
+    } else if (found && edge.node.title != title && hits.length < 4){
+      hits.push(edge)
     }
-    
-
   })}
 
 
@@ -88,6 +90,88 @@ const Blog = (props) => {
             <div className={templateStyles.content}>
               {documentToReactComponents(props.data.contentfulBlogPost.content.json)}
             </div>
+
+
+
+
+
+
+
+            <div className={templateStyles.outerWrapper}>
+              <h1>Recommended Posts</h1>
+              <div className={templateStyles.recommendedWrapper}>
+              {hits.map((hit) => {
+
+              const slug = hit.node.slug
+              const tagss = hit.node.tags
+              const arrTags = tagss.split(",")
+              const title = hit.node.title
+              const name = hit.node.name
+              const prof = hit.node.occupation
+              const country = hit.node.country
+              const date = hit.node.publishedDate
+              const image = hit.node.image1.fluid.src
+
+              var safeCareer = ""
+
+              for (var i = 0; i < prof.length; i++){
+                  if (prof[i] == " "){
+                      safeCareer += "-"
+                  } else{
+                      safeCareer += prof[i]
+                  }
+              }
+
+              var safeCountry = ""
+
+              for (var i = 0; i < country.length; i++){
+                  if (country[i] == " "){
+                      safeCountry += "-"
+                  } else{
+                      safeCountry += country[i]
+                  }
+              }
+
+                return(
+                  <div className={postStyles.EventContainer}>
+                    <Link to={`/blog/${slug}`}>
+                      <div className={postStyles.ImageContainer}>
+                          <img src={ image } alt={unknown}/>
+                      </div>
+                      <div className={postStyles.TextContainer}>
+                          <div className={postStyles.EntryDate}>
+                              <a>{moment(date).format('LL')}</a>
+                          </div>
+                          <div className={postStyles.EntryTitle}>
+                              <a>{title}</a>
+                              <p>By: {name}</p>
+                          </div>
+                          <div className={postStyles.EntryExcerpt}>
+                              <p>
+                                  Lorem ipsum Sed eiusmod esse aliqua sed 
+                                  incididunt aliqua incididunt mollit id et
+                              </p>
+                          </div>
+                          <div className={postStyles.EntryTag}>
+                              <Link to={`/country/${safeCountry}`}>{country}</Link>
+                              <Link to={`/career/${safeCareer}`}>{prof}</Link>
+                              {arrTags.map((tagg) => {
+                                  return (
+                                  <Link to={`/tag/${tagg}`}>
+                                  {tagg}
+                                  </Link>
+                                  )
+                          })}
+                          </div>
+                      </div>
+                    </Link>
+                </div>
+                )
+              })}
+              </div>
+            </div>
+
+
         </Layout>
     )
 }
