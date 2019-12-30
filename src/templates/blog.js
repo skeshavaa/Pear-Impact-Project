@@ -5,6 +5,7 @@ import Head from '../components/head'
 import Layout from '../components/layout'
 import templateStyles from '../templates/blog.module.scss'
 import MetaTags from 'react-meta-tags'
+import { Hits } from 'react-instantsearch-dom'
 
 export const query = graphql`
   query($slug: String) {
@@ -12,6 +13,7 @@ export const query = graphql`
       title
       publishedDate(formatString: "MMM Do, YYYY")
       tags
+      country
       content {
         json
       }
@@ -21,12 +23,46 @@ export const query = graphql`
         }
       }
     }
-    
+    allContentfulBlogPost{
+      edges{
+        node{
+          title
+          country
+          occupation
+          tags
+          image1{
+            fluid {
+            ...GatsbyContentfulFluid
+            }
+          }
+        }
+      }
+    }
   }`
 
 
-
 const Blog = (props) => {
+  const hit = []
+  const title = props.data.contentfulBlogPost.title
+  const country = props.data.contentfulBlogPost.country
+  const currentTags = props.data.contentfulBlogPost.tags.split(",")
+
+
+  {props.data.allContentfulBlogPost.edges.map((edge) => {
+    const diffTags = edge.node.tags.split(",")
+    const found = currentTags.some(r=> diffTags.indexOf(r) >= 0)
+
+    if (edge.node.title != title && edge.node.country == country){
+      hit.push(edge)
+    } else if (found && edge.node.title != title){
+      hit.push(edge)
+    }
+    
+
+  })}
+
+
+
   const tags = props.data.contentfulBlogPost.tags
   const arrTags = tags.split(",")
     return (
@@ -39,7 +75,7 @@ const Blog = (props) => {
 
             <h1 className={templateStyles.title}>{props.data.contentfulBlogPost.title}</h1>
             <div className={templateStyles.imageContainer}>
-              <img src={props.data.contentfulBlogPost.image1.fluid.src} />
+              <img  src={props.data.contentfulBlogPost.image1.fluid.src} />
             </div>
             <div className={templateStyles.tags}>
               <h1>Tags: </h1>
