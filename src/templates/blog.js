@@ -56,9 +56,9 @@ const Blog = (props) => {
     const diffTags = edge.node.tags.split(",")
     const found = currentTags.some(r=> diffTags.indexOf(r) >= 0)
 
-    if (edge.node.title != title && edge.node.country == country && hits.length < 4){
+    if (edge.node.title != title && edge.node.country == country && hits.length < 3){
       hits.push(edge)
-    } else if (found && edge.node.title != title && hits.length < 4){
+    } else if (found && edge.node.title != title && hits.length < 3){
       hits.push(edge)
     }
   })}
