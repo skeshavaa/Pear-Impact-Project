@@ -119,6 +119,12 @@
 @media screen and (max-width: 800px) {
     .sidebar{
         margin-top: 53.69px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .sidebar{
+        margin-top: 53.69px;
         position: absolute;
         overflow-y: scroll;
         opacity: 1;
