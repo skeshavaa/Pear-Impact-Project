@@ -50,18 +50,33 @@ const Blog = (props) => {
   const title = props.data.contentfulBlogPost.title
   const country = props.data.contentfulBlogPost.country
   const currentTags = props.data.contentfulBlogPost.tags.split(",")
-
+  const titleArr = []
+  const hitTitleArr = []
 
   {props.data.allContentfulBlogPost.edges.map((edge) => {
     const diffTags = edge.node.tags.split(",")
     const found = currentTags.some(r=> diffTags.indexOf(r) >= 0)
-
+    titleArr.push(edge.node.title)
     if (edge.node.title != title && edge.node.country == country && hits.length < 3){
       hits.push(edge)
+      hitTitleArr.push(edge.node.title)
     } else if (found && edge.node.title != title && hits.length < 3){
       hits.push(edge)
+      hitTitleArr.push(edge.node.title)
     }
   })}
+
+  var i
+  var allPosts = props.data.allContentfulBlogPost.edges
+  for (i = 0; i < allPosts.length; i++){
+    if (hitTitleArr.includes(titleArr[i]) == false && titleArr[i] != (title)){
+      hits.push(allPosts[i])
+    }
+    if (hits.length == 3){
+      break
+    }
+  }
+
 
 
 
