@@ -5,6 +5,7 @@ import tagStyles from '../templates/tags.module.scss'
 import unknown from '../Icons/unknown.png'
 import postStyles from '../components/post-preview.module.scss'
 import moment from 'moment'
+import MetaTags from 'react-meta-tags'
 
 export const query = graphql`
 query{
@@ -42,6 +43,12 @@ const Tags = (props) => {
 
     return(
         <Layout>
+            <MetaTags>
+                    <meta name="description" content="100+ Stories of Canadian Immigrants"/>
+                    <meta name="og:title" content={currentTag}/>
+            </MetaTags>
+
+
             <h1 className={tagStyles.title}>Blog Post tagged with "{currentTag}"</h1>
             <div className={tagStyles.wrapper}>
             {hits.map((hit) => {
@@ -73,10 +80,6 @@ const Tags = (props) => {
                         safeCountry += country[i]
                     }
                 }
-
-
-                
-
 
                 return(
                     <div className={postStyles.EventContainer}>
