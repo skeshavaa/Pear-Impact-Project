@@ -48,10 +48,15 @@
     color: white;
     width: 300px;
     position: fixed;
-    z-index: 200;
+    z-index: 3;
     left: -100%;
     animation: slide-open 0.5s forwards;
     padding-left: 10px;
+    border-radius: 0px 10px 10px 0px;
+}
+
+.absolute{
+    height: 100vh;
     overflow-y: scroll;
 }
 
@@ -61,8 +66,8 @@
 }
 
 ::-webkit-scrollbar {
-    width: 0px;  /* Remove scrollbar space */
-    background: transparent;  /* Optional: just make scrollbar invisible */
+    width: 0px; 
+    background: transparent; 
 }
 
 .sidebar h2{
