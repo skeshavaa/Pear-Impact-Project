@@ -6,6 +6,7 @@ import unknown from '../Icons/unknown.png'
 import postStyles from '../components/post-preview.module.scss'
 import moment from 'moment'
 import MetaTags from 'react-meta-tags'
+import Head from '../components/head'
 
 export const query = graphql`
 query{
@@ -43,6 +44,7 @@ const Tags = (props) => {
 
     return(
         <Layout>
+            <Head title={currentTag}/>
             <MetaTags>
                     <meta name="description" content="100+ Stories of Canadian Immigrants"/>
                     <meta name="og:title" content={currentTag}/>
