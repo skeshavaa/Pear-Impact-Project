@@ -52,7 +52,7 @@ const IndexPage = () => {
             <div className={homeStyles.First}>
                 <div className={homeStyles.imageContainer}>
                     <Link to='/about'>
-                    <img src={Azhar}/>
+                    <img src={Azhar} alt={Unknown}/>
                     </Link>
                 </div>
                 <div className={homeStyles.AzharContent}>
@@ -120,7 +120,7 @@ const IndexPage = () => {
                         <div className={homeStyles.EventContainer}>
                             <Link to={`/blog/${slug}`}>
                             <div className={homeStyles.test}>
-                                <img src={image}/>
+                                <img src={image} alt={Unknown}/>
                             </div>
                             <div className={homeStyles.TextContainer}>
                                 <div className={postStyles.EntryDate}>

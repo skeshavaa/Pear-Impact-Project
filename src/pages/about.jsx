@@ -3,6 +3,7 @@ import MetaTags from 'react-meta-tags'
 import Layout from '../components/layout'
 import Head from '../components/head'
 import Azhar from '../images/Azhar.png'
+import Unknown from '../images/Unknown'
 import aboutStyles from './about.module.scss'
 
 const AboutPage = () => {
@@ -16,7 +17,7 @@ const AboutPage = () => {
                 <Head title="About"/>
                 <div className={aboutStyles.cont}>
                     <div className={aboutStyles.imgContainer}>
-                        <img src={Azhar}/>
+                        <img src={Azhar} alt={Unknown}/>
                     </div>
                     <div className={aboutStyles.content}>
                         <div>
