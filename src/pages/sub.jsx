@@ -1,19 +1,18 @@
 import React from 'react'
 import MetaTags from 'react-meta-tags'
-import Layout from '../components/layout'
-import Head from '../components/head'
+import Layout from '../components/layout.jsx'
+import Head from '../components/head.jsx'
 
 import contactStyles from '../pages/contact.module.scss'
 import subStyles from '../pages/sub.module.scss'
 
-import EmailListForm from '../components/EmailListForm'
+import EmailListForm from '../components/EmailListForm.jsx'
 
 
 const Sub = () => {
     return (
-        <div>
-            <Head title="Subscribe!"/>
             <Layout>
+                <Head title="Subscribe"/>
                 <MetaTags>
                     <meta name="description" content="100+ Stories of Canadian Immigrants"/>
                     <meta property="og:title" content="Subscribe!"/>
@@ -26,7 +25,6 @@ const Sub = () => {
                 </div>
                 
             </Layout>
-        </div>
     )
 }
 

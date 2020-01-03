@@ -2,10 +2,10 @@ const path = require('path')
 
 module.exports.createPages = async ({ graphql, actions }) => {
     const { createPage } = actions
-    const blogTemplate = path.resolve('./src/templates/blog.js')
-    const tagTemplate = path.resolve('./src/templates/tags.js')
-    const careerTemplate = path.resolve('./src/templates/career.js')
-    const countryTemplate = path.resolve('./src/templates/country.js')
+    const blogTemplate = path.resolve('./src/templates/blog.jsx')
+    const tagTemplate = path.resolve('./src/templates/tags.jsx')
+    const careerTemplate = path.resolve('./src/templates/career.jsx')
+    const countryTemplate = path.resolve('./src/templates/country.jsx')
 
     const res = await graphql(`
         query {
