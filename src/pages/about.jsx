@@ -3,7 +3,7 @@ import MetaTags from 'react-meta-tags'
 import Layout from '../components/layout'
 import Head from '../components/head'
 import Azhar from '../images/Azhar.png'
-import Unknown from '../images/Unknown'
+import Unknown from '../images/Unknown.png'
 import aboutStyles from './about.module.scss'
 
 const AboutPage = () => {
