@@ -7,7 +7,7 @@ import templateStyles from '../templates/blog.module.scss'
 import postStyles from '../components/post-preview.module.scss'
 import MetaTags from 'react-meta-tags'
 import { Hits } from 'react-instantsearch-dom'
-import unknown from '../Icons/unknown.png'
+import unknown from '../images/unknown.png'
 import moment from 'moment'
 
 export const query = graphql`

@@ -5,7 +5,7 @@ import Layout from '../components/layout.jsx'
 import Head from '../components/head.jsx'
 import homeStyles from './home.module.scss'
 import postStyles from '../components/post-preview.module.scss'
-import Azhar from '../Icons/Azhar2.png'
+import Azhar from '../images/Azhar2.png'
 import moment from 'moment'
 
 
