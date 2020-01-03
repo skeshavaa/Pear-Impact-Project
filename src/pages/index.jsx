@@ -6,7 +6,7 @@ import Head from '../components/head.jsx'
 import homeStyles from './home.module.scss'
 import postStyles from '../components/post-preview.module.scss'
 import Azhar from '../images/Azhar2.png'
-import Uknown from '../images/Uknown'
+import Unknown from '../images/Uknown'
 import moment from 'moment'
 
 
