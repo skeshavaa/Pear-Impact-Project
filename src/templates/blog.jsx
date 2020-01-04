@@ -1,14 +1,18 @@
 import React from 'react'
+//Packages
+import moment from 'moment'
+import MetaTags from 'react-meta-tags'
+//Components
 import { graphql, Link } from 'gatsby'
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
-import Head from '../components/head'
-import Layout from '../components/layout'
+import { Head, Layout } from '@components'
+import { Hits } from 'react-instantsearch-dom'
+//Styles
 import templateStyles from '../templates/blog.module.scss'
 import postStyles from '../components/post-preview.module.scss'
-import MetaTags from 'react-meta-tags'
-import { Hits } from 'react-instantsearch-dom'
+//Pictures
 import unknown from '../images/unknown.png'
-import moment from 'moment'
+
 
 export const query = graphql`
   query($slug: String) {

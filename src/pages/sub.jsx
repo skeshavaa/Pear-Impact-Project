@@ -1,13 +1,10 @@
 import React from 'react'
+//Packages
 import MetaTags from 'react-meta-tags'
-import Layout from '../components/layout.jsx'
-import Head from '../components/head.jsx'
-
-import contactStyles from '../pages/contact.module.scss'
+//Components
+import { Layout, Head, Email } from '@components'
+//Styles
 import subStyles from '../pages/sub.module.scss'
-
-import Email from '../components/email'
-
 
 const Sub = () => {
     return (

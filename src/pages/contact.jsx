@@ -1,8 +1,9 @@
 import React from 'react'
+//Packages
 import MetaTags from 'react-meta-tags'
-import Layout from '../components/layout'
-import Head from '../components/head'
-
+//Components
+import { Layout, Head } from '@components'
+//Styles
 import contactStyles from '../pages/contact.module.scss'
 
 

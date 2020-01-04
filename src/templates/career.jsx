@@ -1,12 +1,15 @@
 import React from 'react'
-import { graphql, Link } from 'gatsby'
-import Layout from '../components/layout'
-import tagStyles from '../templates/tags.module.scss'
-import unknown from '../images/unknown.png'
-import postStyles from '../components/post-preview.module.scss'
+//Packages
 import moment from 'moment'
 import MetaTags from 'react-meta-tags'
-import Head from '../components/head'
+//Components
+import { graphql, Link } from 'gatsby'
+import { Head, Layout } from '@components'
+//Styles
+import tagStyles from '../templates/tags.module.scss'
+import postStyles from '../components/post-preview.module.scss'
+//Pictures
+import unknown from '../images/unknown.png'
 
 export const query = graphql`
 query{

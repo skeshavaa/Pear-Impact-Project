@@ -1,13 +1,17 @@
 import React from 'react'
+//Packages
 import MetaTags from 'react-meta-tags'
+import moment from 'moment'
+//Components
 import { graphql, useStaticQuery, Link } from 'gatsby'
-import Layout from '../components/layout.jsx'
-import Head from '../components/head.jsx'
+import { Head, Layout } from '@components'
+//Styles
 import homeStyles from './home.module.scss'
 import postStyles from '../components/post-preview.module.scss'
+//Pictures
 import Azhar from '../images/Azhar2.png'
 import Unknown from '../images/unknown.png'
-import moment from 'moment'
+
 
 
 const IndexPage = () => {
