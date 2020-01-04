@@ -35,6 +35,7 @@ const queries = [
   }
 ];
 
+const path = require('path')
 
 
 module.exports = {
@@ -77,11 +78,11 @@ module.exports = {
       }
     },
     {
-      resolve: 'gatsby-plugin-module-resolver', 
+      resolve: 'gatsby-plugin-alias-imports', 
       options: {
-        aliases: {
-          '@styles': './src/styles',
-          '@components': './src/components/exports',
+        alias: {
+          '@components': path.resolve(__dirname, './src/components/exports'),
+          '@styles': path.resolve(__dirname, './src/styles')
         }
       }
     }
