@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import "./componentStyles.css"
+import "@compStyles/componentStyles.scss"
 import Filters from './filters'
 
 

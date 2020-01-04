@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link, graphql, useStaticQuery } from 'gatsby'
 
-import footerStyles from './footer.module.scss'
+import footerStyles from '@compStyles/footer.module.scss'
 import { SocialIcon } from 'react-social-icons';
 
 

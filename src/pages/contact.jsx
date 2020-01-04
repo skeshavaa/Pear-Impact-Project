@@ -4,7 +4,7 @@ import MetaTags from 'react-meta-tags'
 //Components
 import { Layout, Head } from '@components'
 //Styles
-import contactStyles from '../pages/contact.module.scss'
+import contactStyles from '@pageStyles/contact.module.scss'
 
 
 const ContactPage = () => {

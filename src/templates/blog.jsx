@@ -8,8 +8,8 @@ import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import { Head, Layout } from '@components'
 import { Hits } from 'react-instantsearch-dom'
 //Styles
-import templateStyles from '@styles/blogPage.scss'
-import postStyles from '../components/post-preview.module.scss'
+import templateStyles from '@templateStyles/blogPage.module.scss'
+import postStyles from '@compStyles/post-preview.module.scss'
 //Pictures
 import unknown from '../images/unknown.png'
 

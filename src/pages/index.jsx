@@ -6,8 +6,8 @@ import moment from 'moment'
 import { graphql, useStaticQuery, Link } from 'gatsby'
 import { Head, Layout } from '@components'
 //Styles
-import homeStyles from './home.module.scss'
-import postStyles from '../components/post-preview.module.scss'
+import homeStyles from '@pageStyles/home.module.scss'
+import postStyles from '@compStyles/post-preview.module.scss'
 //Pictures
 import Azhar from '../images/Azhar2.png'
 import Unknown from '../images/unknown.png'

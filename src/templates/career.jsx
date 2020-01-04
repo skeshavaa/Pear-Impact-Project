@@ -6,8 +6,8 @@ import MetaTags from 'react-meta-tags'
 import { graphql, Link } from 'gatsby'
 import { Head, Layout } from '@components'
 //Styles
-import tagStyles from '@styles/tags.scss'
-import postStyles from '../components/post-preview.module.scss'
+import tagStyles from '@templateStyles/tags.module.scss'
+import postStyles from '@compStyles/post-preview.module.scss'
 //Pictures
 import unknown from '../images/unknown.png'
 

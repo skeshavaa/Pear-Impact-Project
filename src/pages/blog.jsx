@@ -7,8 +7,8 @@ import { Layout, Head, Toggle, Sidebar, PostPreview } from '@components'
 import MetaTags from 'react-meta-tags'
 import algoliasearch from 'algoliasearch/lite'
 //Styles
-import blogStyles from './blog.module.scss'
-import './blog.css'
+import blogStyles from '@pageStyles/blog.module.scss'
+import '@pageStyles/story.scss'
 
 const searchClient = algoliasearch('L62RK6OZ7R', '2598efc467448e3024c6ea87d9bf25a8')
 

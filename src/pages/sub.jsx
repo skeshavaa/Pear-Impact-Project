@@ -4,7 +4,7 @@ import MetaTags from 'react-meta-tags'
 //Components
 import { Layout, Head, Email } from '@components'
 //Styles
-import subStyles from '../pages/sub.module.scss'
+import subStyles from '@pageStyles/subscribe.module.scss'
 
 const Sub = () => {
     return (

@@ -1,6 +1,6 @@
   
 import React, {Fragment} from "react"
-import "./componentStyles.css"
+import "@compStyles/componentStyles.scss"
 
 const Toggle = (props) => {
     return(

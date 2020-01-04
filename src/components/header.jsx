@@ -5,7 +5,7 @@ import ResponsiveMenu from 'react-responsive-navbar';
 import { GiHamburgerMenu } from 'react-icons/gi'
 import { FaTimes } from 'react-icons/fa'
 
-import headerStyles from './header.module.scss'
+import headerStyles from '@compStyles/header.module.scss'
 
 const Header = () => {
     const data = useStaticQuery(graphql`

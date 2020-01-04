@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import * as styles from './EmailListForm.module.scss';
+import * as styles from '@compStyles/EmailListForm.module.scss';
 
 import addToMailchimp from 'gatsby-plugin-mailchimp';
 

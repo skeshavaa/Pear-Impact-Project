@@ -7,7 +7,7 @@ import { Layout, Head } from '@components';
 import Azhar from '../images/Azhar.png'
 import Unknown from '../images/unknown.png'
 //Styles
-import aboutStyles from './about.module.scss'
+import aboutStyles from '@pageStyles/about.module.scss'
 
 const AboutPage = () => {
     return (

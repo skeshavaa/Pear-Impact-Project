@@ -82,7 +82,9 @@ module.exports = {
       options: {
         alias: {
           '@components': path.resolve(__dirname, './src/components/exports'),
-          '@styles': path.resolve(__dirname, './src/styles')
+          '@templateStyles': path.resolve(__dirname, './src/styles/templateStyles'),
+          '@pageStyles': path.resolve(__dirname, './src/styles/pageStyles'),
+          '@compStyles': path.resolve(__dirname, './src/styles/componentStyles')
         }
       }
     }
