@@ -1,5 +1,5 @@
-  
-import React, {Fragment} from "react"
+  import React, {Fragment} from "react"
+  //Styles
 import "@compStyles/componentStyles.scss"
 
 const Toggle = (props) => {

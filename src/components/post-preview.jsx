@@ -1,7 +1,11 @@
 import React, { useEffect, useState } from 'react'
-import { Link } from 'gatsby'
-import postStyles from '@compStyles/post-preview.module.scss'
+//Packages
 import moment from 'moment'
+//Components
+import { Link } from 'gatsby'
+//Styles
+import postStyles from '@compStyles/post-preview.module.scss'
+//Pictures
 import unknown from '../images/unknown.png'
 
 const contentful = require('contentful');

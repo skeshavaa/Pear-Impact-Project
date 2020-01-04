@@ -2,7 +2,7 @@ export { default as Layout } from "./layout";
 export { default as Head } from "./head";
 export { default as Filters } from "./filters";
 export { default as Footer } from "./footer";
-export { default as header } from "./header";
+export { default as Header } from "./header";
 export { default as PostPreview } from "./post-preview";
 export { default as Sidebar } from "./sidebar";
 export { default as Toggle } from "./toggle";

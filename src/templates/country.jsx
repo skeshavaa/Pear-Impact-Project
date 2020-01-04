@@ -17,6 +17,7 @@ query{
     allContentfulBlogPost{
       edges{
         node{
+          name
           slug
           title
           country

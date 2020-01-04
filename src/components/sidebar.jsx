@@ -1,7 +1,8 @@
 import React, { useState } from "react"
+//Components
+import { Filters } from '@components'
+//Styles
 import "@compStyles/componentStyles.scss"
-import Filters from './filters'
-
 
 const Sidebar = (props) => {
     const [sidebarClass, setSidebarClass] = useState(props.sidebar)

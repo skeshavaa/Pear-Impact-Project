@@ -40,7 +40,7 @@ const path = require('path')
 
 module.exports = {
   siteMetadata: {
-    title: 'Pear Impact Project',
+    title: 'Migrant Moments',
     author: 'Keshavaa Shaiskandan'
   },
   plugins: [

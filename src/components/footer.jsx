@@ -1,10 +1,9 @@
 import React from 'react'
+//Components
 import { Link, graphql, useStaticQuery } from 'gatsby'
-
-import footerStyles from '@compStyles/footer.module.scss'
 import { SocialIcon } from 'react-social-icons';
-
-
+//Styles
+import footerStyles from '@compStyles/footer.module.scss'
 
 const Footer = () => {
     const data = useStaticQuery(graphql`

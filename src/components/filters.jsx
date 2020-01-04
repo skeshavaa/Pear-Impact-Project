@@ -1,4 +1,5 @@
 import React from 'react'
+//Components
 import { RefinementList } from 'react-instantsearch-dom'
 
 const Filters = () => {

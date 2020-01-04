@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
+//Packages
+import addToMailchimp from 'gatsby-plugin-mailchimp';
+//Styles
 import * as styles from '@compStyles/EmailListForm.module.scss';
 
-import addToMailchimp from 'gatsby-plugin-mailchimp';
+
 
 const Email = () => {
 

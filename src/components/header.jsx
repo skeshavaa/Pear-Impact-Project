@@ -1,10 +1,11 @@
 import React from 'react'
-import { Link, graphql, useStaticQuery } from 'gatsby'
-
+//Packages
 import ResponsiveMenu from 'react-responsive-navbar';
+//Components
+import { Link, graphql, useStaticQuery } from 'gatsby'
 import { GiHamburgerMenu } from 'react-icons/gi'
 import { FaTimes } from 'react-icons/fa'
-
+//Styles
 import headerStyles from '@compStyles/header.module.scss'
 
 const Header = () => {
