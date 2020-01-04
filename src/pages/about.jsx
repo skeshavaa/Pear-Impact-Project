@@ -1,9 +1,12 @@
 import React from 'react'
+//Packages
 import MetaTags from 'react-meta-tags'
-import Layout from '../components/layout'
-import Head from '../components/head'
+//Components
+import { Layout, Head } from '@components';
+//Pictures
 import Azhar from '../images/Azhar.png'
 import Unknown from '../images/unknown.png'
+//Styles
 import aboutStyles from './about.module.scss'
 
 const AboutPage = () => {

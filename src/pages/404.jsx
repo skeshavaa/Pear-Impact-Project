@@ -1,8 +1,7 @@
 import React from 'react'
-
+//Components
 import { Link } from 'gatsby'
 import Head from '../components/head'
-
 import Layout from '../components/layout'
 
 const NotFound = () => {

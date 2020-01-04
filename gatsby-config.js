@@ -75,6 +75,14 @@ module.exports = {
       options: {
         endpoint: "https://gmail.us4.list-manage.com/subscribe/post?u=030ab60dbad39723445796fc2&amp;id=5f68f3a93f"
       }
+    },
+    {
+      resolve: 'gatsby-plugin-module-resolver',
+      options: {
+        aliases: {
+          '@components': './src/components/exports'
+        }
+      }
     }
   ]
 }

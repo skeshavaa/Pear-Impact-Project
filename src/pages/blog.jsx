@@ -1,6 +1,7 @@
 import React, {Fragment, useState} from 'react'
+//Components
 import { graphql, useStaticQuery, Link } from 'gatsby'
-
+import { InstantSearch, SearchBox, Hits, RefinementList } from 'react-instantsearch-dom'
 import Layout from '../components/layout'
 import Head from '../components/head'
 
@@ -9,7 +10,7 @@ import blogStyles from './blog.module.scss'
 import MetaTags from 'react-meta-tags'
 
 import algoliasearch from 'algoliasearch/lite'
-import { InstantSearch, SearchBox, Hits, RefinementList } from 'react-instantsearch-dom'
+
 import PostPreview from '../components/post-preview'
 import './blog.css'
 import Sidebar from '../components/sidebar'
