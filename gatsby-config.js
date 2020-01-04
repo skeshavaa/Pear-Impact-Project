@@ -77,10 +77,11 @@ module.exports = {
       }
     },
     {
-      resolve: 'gatsby-plugin-module-resolver',
+      resolve: 'gatsby-plugin-module-resolver', 
       options: {
         aliases: {
-          '@components': './src/components/exports'
+          '@styles': './src/styles',
+          '@components': './src/components/exports',
         }
       }
     }

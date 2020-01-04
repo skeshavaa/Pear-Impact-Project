@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css?family=Libre+Franklin|Montserrat&display=swap');
+
+
+.imgContainer {
+    margin-top: 100px;
+    img {
+        max-width: 100%;
+        width: 80%;
+        height: auto;
+    }
+    display: flex;
+    justify-content: center;
+ }
+
+.content {
+    p {
+        font-family: "Montserrat", sans-serif;
+        font-size: 20px;
+        max-width: 1000px;
+    }
+    h1{
+        font-family: "Montserrat", sans-serif;
+        max-width: 1000px;
+        text-align: center;
+    }
+    display: flex;
+    justify-content: center;
+    padding: 0px 20px;
+}
+
+.cont {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+@media only screen and (max-width: 600px) {
+    .content{
+        p {
+            font-size: 12px;
+        }
+        h1{
+            font-size: 30px;
+        }
+    }
+  }
