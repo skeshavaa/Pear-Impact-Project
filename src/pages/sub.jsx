@@ -6,7 +6,7 @@ import Head from '../components/head.jsx'
 import contactStyles from '../pages/contact.module.scss'
 import subStyles from '../pages/sub.module.scss'
 
-import EmailListForm from '../components/email-list-form.jsx/index.js'
+import Email from '../components/email'
 
 
 const Sub = () => {
@@ -21,7 +21,7 @@ const Sub = () => {
                     <h1>Subscribe to Migrant Moments!</h1>
                     <p>Receive updates whenever Azhar updates Migrant Moments with a new story!</p>
 
-                    <div><EmailListForm /></div>
+                    <div><Email /></div>
                 </div>
                 
             </Layout>

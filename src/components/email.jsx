@@ -3,7 +3,7 @@ import * as styles from './EmailListForm.module.scss';
 
 import addToMailchimp from 'gatsby-plugin-mailchimp';
 
-const EmailListForm = () => {
+const Email = () => {
 
   const [email, setEmail] = useState('');
 
@@ -41,4 +41,4 @@ const EmailListForm = () => {
   );
 };
 
-export default EmailListForm;
+export default Email;
