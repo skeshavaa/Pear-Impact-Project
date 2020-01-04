@@ -3,11 +3,11 @@ import React from 'react'
 import MetaTags from 'react-meta-tags'
 //Components
 import { Layout, Head } from '@components';
-//Pictures
-import Azhar from '../images/Azhar.png'
-import Unknown from '../images/unknown.png'
 //Styles
 import aboutStyles from '@pageStyles/about.module.scss'
+//Pictures
+import Azhar from '@images/Azhar.png'
+import Unknown from '@images/unknown.png'
 
 const AboutPage = () => {
     return (

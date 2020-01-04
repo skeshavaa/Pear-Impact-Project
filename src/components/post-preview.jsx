@@ -6,7 +6,7 @@ import { Link } from 'gatsby'
 //Styles
 import postStyles from '@compStyles/post-preview.module.scss'
 //Pictures
-import unknown from '../images/unknown.png'
+import unknown from '@images/unknown.png'
 
 const contentful = require('contentful');
 
@@ -107,8 +107,7 @@ const PostPreview = ({ hit }) => {
                 </div>
                 <div className={postStyles.EntryExcerpt}>
                     <p>
-                        Lorem ipsum Sed eiusmod esse aliqua sed 
-                        incididunt aliqua incididunt mollit id et
+                        
                     </p>
                 </div>
                 <div className={postStyles.EntryTag}>

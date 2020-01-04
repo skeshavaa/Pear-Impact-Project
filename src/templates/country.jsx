@@ -110,8 +110,7 @@ const Country = (props) => {
                             </div>
                             <div className={postStyles.EntryExcerpt}>
                                 <p>
-                                    Lorem ipsum Sed eiusmod esse aliqua sed 
-                                    incididunt aliqua incididunt mollit id et
+                                    
                                 </p>
                             </div>
                             <div className={postStyles.EntryTag}>

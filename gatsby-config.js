@@ -84,7 +84,8 @@ module.exports = {
           '@components': path.resolve(__dirname, './src/components/exports'),
           '@templateStyles': path.resolve(__dirname, './src/styles/templateStyles'),
           '@pageStyles': path.resolve(__dirname, './src/styles/pageStyles'),
-          '@compStyles': path.resolve(__dirname, './src/styles/componentStyles')
+          '@compStyles': path.resolve(__dirname, './src/styles/componentStyles'),
+          '@images': path.resolve(__dirname, './src/images')
         }
       }
     }
