@@ -1,21 +1,14 @@
 import React, {Fragment, useState} from 'react'
 //Components
-import { graphql, useStaticQuery, Link } from 'gatsby'
-import { InstantSearch, SearchBox, Hits, RefinementList } from 'react-instantsearch-dom'
-import Layout from '../components/layout'
-import Head from '../components/head'
-
-import blogStyles from './blog.module.scss'
-
+import { graphql, useStaticQuery } from 'gatsby'
+import { InstantSearch, SearchBox, Hits } from 'react-instantsearch-dom'
+import { Layout, Head, Toggle, Sidebar, PostPreview } from '@components' 
+//Packages
 import MetaTags from 'react-meta-tags'
-
 import algoliasearch from 'algoliasearch/lite'
-
-import PostPreview from '../components/post-preview'
+//Styles
+import blogStyles from './blog.module.scss'
 import './blog.css'
-import Sidebar from '../components/sidebar'
-import Toggle from '../components/toggle'
-import Filters from '../components/filters'
 
 const searchClient = algoliasearch('L62RK6OZ7R', '2598efc467448e3024c6ea87d9bf25a8')
 

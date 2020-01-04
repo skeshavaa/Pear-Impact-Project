@@ -6,7 +6,7 @@ import Head from '../components/head.jsx'
 import contactStyles from '../pages/contact.module.scss'
 import subStyles from '../pages/sub.module.scss'
 
-import EmailListForm from '../components/EmailListForm.jsx'
+import EmailListForm from '../components/emailListForm.jsx'
 
 
 const Sub = () => {
