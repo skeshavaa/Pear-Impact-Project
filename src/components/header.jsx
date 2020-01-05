@@ -16,9 +16,17 @@ const Header = () => {
                     title
                 }
             }
+            allNavJson{
+                edges{
+                    node{
+                        Link
+                        Content
+                    }
+                }
+            }
         }   
     `)
-
+    
 
     return (
         <ResponsiveMenu
@@ -37,21 +45,15 @@ const Header = () => {
             </h1>
             <nav className={headerStyles.nav}>
                 <ul className={headerStyles.navList}>
-                    <li>
-                        <Link className={headerStyles.navItem} className={headerStyles.hvrOverlineFromCenter} activeClassName={headerStyles.activeNavItem} to='/'>Home</Link>
-                    </li>
-                    <li>
-                        <Link className={headerStyles.navItem} className={headerStyles.hvrOverlineFromCenter} activeClassName={headerStyles.activeNavItem} to='/blog'>Stories</Link>
-                    </li>
-                    <li>
-                        <Link className={headerStyles.navItem} className={headerStyles.hvrOverlineFromCenter} activeClassName={headerStyles.activeNavItem} to='/about'>About</Link>
-                    </li>
-                    <li>
-                        <Link className={headerStyles.navItem} className={headerStyles.hvrOverlineFromCenter} activeClassName={headerStyles.activeNavItem} to='/contact'>Contact</Link>
-                    </li>
-                    <li>
-                        <Link className={headerStyles.navItem} className={headerStyles.hvrOverlineFromCenter} activeClassName={headerStyles.activeNavItem} to='/sub'>Subscribe</Link>
-                    </li>
+                    {data.allNavJson.edges.map((edge) => {
+                        const linke = edge.node.Link
+                        const Content = edge.node.Content
+                        return(
+                            <li>
+                                <Link className={headerStyles.navItem} className={headerStyles.hvrOverlineFromCenter} activeClassName={headerStyles.activeNavItem} to={`${linke}`}>{Content}</Link>
+                            </li>
+                        )
+                    })}
                 </ul>
             </nav>
         </header>

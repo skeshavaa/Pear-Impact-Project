@@ -88,6 +88,13 @@ module.exports = {
           '@images': path.resolve(__dirname, './src/images')
         }
       }
+    },
+    `gatsby-transformer-json`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `./src/data/`,
+      },
     }
   ]
 }
