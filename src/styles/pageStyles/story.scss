@@ -1,9 +1,9 @@
-.ais-Hits-list {
+.ais-Hits-list{
     list-style-type: none;
     margin-left: 0;
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .ais-SearchBox-form {
@@ -13,7 +13,7 @@
 
 .ais-Hits{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
 }
 
