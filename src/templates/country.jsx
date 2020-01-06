@@ -36,7 +36,6 @@ query{
 
 const Country = (props) => {
     const currentTag = props.pageContext.slug
-    console.log(currentTag)
     const hits = []
 
     var safeCountry

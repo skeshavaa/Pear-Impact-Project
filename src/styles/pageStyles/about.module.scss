@@ -1,11 +1,18 @@
 @import url('https://fonts.googleapis.com/css?family=Libre+Franklin|Montserrat&display=swap');
 
+.outer-wrapper{
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+}
 
 .imgContainer {
     margin-top: 100px;
+    max-width: 80%;
     img {
-        max-width: 1000px;
-        width: 90%;
+        display: block;
+        width: 100%;
+        height: auto;
     }
     display: flex;
     justify-content: center;

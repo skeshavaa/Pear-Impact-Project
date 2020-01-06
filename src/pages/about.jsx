@@ -37,10 +37,12 @@ const AboutPage = () => {
                 </MetaTags>
                 <Head title="About"/>
                 <div className={aboutStyles.cont}>
+                    <div className={aboutStyles.outerWrapper}>
                     <div className={aboutStyles.imgContainer}>
                         <img src={Azhar} alt={Unknown}/>
                     </div>
-                    
+                    </div>
+
                     <div className={aboutStyles.content}>
                         <div>
                         <h1>About Azhar</h1>
