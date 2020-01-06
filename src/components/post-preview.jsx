@@ -70,27 +70,6 @@ const PostPreview = ({ hit }) => {
         }
     }
 
-    {/*
-        <div className={blogStyles.post} className={blogStyles.hvrOverlineReveal}>
-            <Link to={`/blog/${slug}`}>
-            <h2>{title}</h2>
-            <div className={blogStyles.tagContainer}>
-                <div className={blogStyles.tagName}>
-                    <h3><span className={blogStyles.tagHeader}>Name:</span> {name}</h3>
-                </div>
-                <div className={blogStyles.tagCountry}>
-                    <h3><span className={blogStyles.tagHeader}>Country:</span> {country}</h3>
-                </div>
-                <div className={blogStyles.tagProf}>
-                    <h3><span className={blogStyles.tagHeader}>Occupation:</span> {prof}</h3>
-                </div>
-            </div>
-            </Link>
-        </div>
-    */}
-
-    
-
     return (
         <div className={postStyles.EventContainer}>
             <Link to={`/blog/${slug}`}>
