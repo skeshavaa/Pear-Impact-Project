@@ -97,7 +97,7 @@ const Blog = (props) => {
 
             <h1 className={templateStyles.title}>{props.data.contentfulBlogPost.title}</h1>
             <div className={templateStyles.imageContainer}>
-              <img  src={props.data.contentfulBlogPost.image1.fluid.src} />
+              <img src={props.data.contentfulBlogPost.image1.fluid.src} />
             </div>
             <div className={templateStyles.tags}>
               <h1>Tags: </h1>
