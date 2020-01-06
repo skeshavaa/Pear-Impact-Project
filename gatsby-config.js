@@ -95,6 +95,6 @@ module.exports = {
       options: {
         path: `./src/data/`,
       },
-    }
+    },
   ]
 }

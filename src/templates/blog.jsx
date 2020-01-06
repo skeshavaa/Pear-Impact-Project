@@ -17,6 +17,8 @@ import unknown from '../images/unknown.png'
 export const query = graphql`
   query($slug: String) {
     contentfulBlogPost(slug: {eq: $slug}) {
+      name
+      occupation
       title
       publishedDate(formatString: "MMM Do, YYYY")
       tags
@@ -54,6 +56,28 @@ const Blog = (props) => {
   const hits = []
   const title = props.data.contentfulBlogPost.title
   const country = props.data.contentfulBlogPost.country
+  const career = props.data.contentfulBlogPost.occupation
+  var safeCountry
+  var safeCareer
+  safeCareer = ""
+  for (var i = 0; i < career.length; i++){
+      if (career[i] == " "){
+          safeCareer += "-"
+      } else{
+          safeCareer += career[i]
+      }
+  }
+
+  safeCountry = ""
+  for (var i = 0; i < country.length; i++){
+      if (country[i] == " "){
+          safeCountry += "-"
+      } else{
+          safeCountry += country[i]
+      }
+  }
+
+
   const currentTags = props.data.contentfulBlogPost.tags.split(",")
   const titleArr = []
   const hitTitleArr = []
@@ -84,7 +108,7 @@ const Blog = (props) => {
 
 
 
-
+  console.log(props.data.contentfulBlogPost)
   const tags = props.data.contentfulBlogPost.tags
   const arrTags = tags.split(",")
     return (
@@ -96,11 +120,20 @@ const Blog = (props) => {
             </MetaTags>
 
             <h1 className={templateStyles.title}>{props.data.contentfulBlogPost.title}</h1>
-            <div className={templateStyles.imageContainer}>
-              <img src={props.data.contentfulBlogPost.image1.fluid.src} />
+            <div className={templateStyles.all}>
+              <div className={templateStyles.imageContainer}>
+                <img src={props.data.contentfulBlogPost.image1.fluid.src} />
+              </div>
+              <div className={templateStyles.about}>
+                <p>Author: <span>{props.data.contentfulBlogPost.name}</span></p>
+                <p>Profession: <span>{props.data.contentfulBlogPost.occupation}</span></p>
+                <p>Country: <span>{props.data.contentfulBlogPost.country}</span></p>
+              </div>
             </div>
             <div className={templateStyles.tags}>
               <h1>Tags: </h1>
+              <Link to={`/career/${safeCareer}`}>{safeCareer}</Link>
+              <Link to={`/country/${safeCountry}`}>{safeCountry}</Link>
               {arrTags.map((tag) => {
                 return (
                   <Link to={`/tag/${tag}`}>{tag}</Link>
