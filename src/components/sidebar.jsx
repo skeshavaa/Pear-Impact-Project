@@ -14,9 +14,10 @@ const Sidebar = (props) => {
     return(
         <div className={props.sidebar} >
             <div className="absolute">
-            <h2>Filter by:</h2>
-            <Filters />
-            <div className="btnwrap"><button onClick={props.close}>Close</button></div>
+                <h2>Filter by:</h2>
+                <Filters />
+                <button onClick={props.close}>Close</button>
+                <div className="btnwrap"><button onClick={props.close}>Close</button></div>
             </div>
         </div>
     )
