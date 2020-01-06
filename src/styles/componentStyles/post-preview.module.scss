@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC|Permanent+Marker|Questrial|Quicksand&display=swap');
+
+.EventContainer {
+    display: block;
+    max-width: 350px;
+    margin-bottom: 3rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    flex-grow: 1;
+    a {
+        text-decoration: none;
+    }
+}
+
+.EventContainer:hover{
+    box-shadow: 10px 10px 5px #aaaaaa;
+    transition: ease-in-out 0.1s;
+}
+
+.ImageContainer {
+    height: 350px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    img {
+        width: 100%;
+        max-width: 350px;
+        object-fit: cover;
+        margin-bottom: 0;
+    }
+    z-index: -1;
+}
+
+.TextContainer {
+    padding-top: 30px;
+    padding-left: 28px;
+    padding-right: 28px;
+    padding-bottom: 36px;
+    background-color: #FCFCFC;
+    
+}
+
+.EntryDate {
+    color: black;
+    font-size: 20px;
+    line-height: 1.714;
+    margin-bottom: 0.6rem;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bolder;
+}
+
+.EntryTitle {
+    
+    a {
+        font-size: 1.7rem;
+        line-height: 1.375;
+        margin-bottom: 1.1rem;
+        font-family: 'Questrial', sans-serif;
+        font-weight: bolder;
+        text-decoration: none;
+        line-height: inherit;
+        color: #E5324A; 
+    }
+
+    p {
+        font-size: 20px;
+        color: black;
+        padding-top: 5px;
+        font-family: "Questrial", sans-serif;
+        font-weight: bold;
+    }
+}
+
+.EntryExcerpt {
+    display: block;
+    p {
+        font-family: 'Questrial', sans-serif;
+        display: block;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        font-size: 20px;
+        line-height: 1.8rem;
+        margin-bottom: 1.5rem;
+        color: black;
+    }
+}
+
+.EntryTag {
+    a {
+        font-family: 'Questrial', sans-serif;
+        font-size: 18px;
+        color:white;  
+        padding: 5px;
+        margin: 3px 5px 3px 0px;
+        border-radius: 7px;
+        display: inline-block;
+        background: #E5324A;
+    }
+    width: inherit;
+
+    a:hover {
+        background: white;
+        color: #E5324A;
+        transition: ease-in 0.1s;
+    }
+}
+
+.Hits {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+@media only screen and (max-width: 600px) {
+    .EntryDate{
+        font-size: 15px;
+    }
+    .EntryTitle{
+        p{
+            font-size: 15px;
+        }
+        a{
+            font-size: 25px;
+        }
+    }
+    .EntryExcerpt{
+        p{
+            font-size: 15px;
+            line-height: 20px;
+        }
+    }
+    .EntryTag{
+        a{
+            font-size: 12px;
+        }
+    }
+  }

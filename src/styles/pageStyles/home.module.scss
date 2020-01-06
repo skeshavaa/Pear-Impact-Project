@@ -1,0 +1,235 @@
+.text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+.imageContainer {
+    max-width: 30%;
+    img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+    display: flex;
+    justify-content: center;
+    
+ }
+
+ .EventContainer {
+    display: block;
+    width: 350px;
+    margin-bottom: 3rem;
+    //margin-left: 1rem;
+    //margin-right: 1rem;
+
+    a {
+        text-decoration: none;
+    }
+
+    img{
+        height: 350px;
+        margin: 0;
+    }
+}
+
+
+.First {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 100px;
+    //align-items: center;
+}
+
+.test{
+    height: 350px;
+}
+
+
+.TextContainer {
+    padding-top: 30px;
+    padding-left: 28px;
+    padding-right: 28px;
+    padding-bottom: 36px;
+    background-color: #f2f2f2;
+    
+}
+
+.EntryDate {
+    color: black;
+    font-size: 1rem;
+    line-height: 1.714;
+    margin-bottom: 0.6rem;
+    font-family: 'Questrial', sans-serif;
+    font-weight: bolder;
+}
+
+.EntryTitle {
+    a {
+        font-size: 2.0rem;
+        line-height: 1.375;
+        margin-bottom: 1.1rem;
+        font-family: 'Quicksand', sans-serif;
+        font-weight: bolder;
+        text-decoration: none;
+        line-height: inherit;
+        color: #4d3ac9; 
+    }
+
+    p {
+        font-size: 20px;
+        color: black;
+        padding-top: 5px;
+    }
+}
+
+.EntryExcerpt {
+    display: block;
+    p {
+        font-family: 'Questrial', sans-serif;
+        display: block;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        font-size: 1rem;
+        line-height: 1.8rem;
+        margin-bottom: 1.5rem;
+        color: black;
+    }
+}
+
+.EntryTag {
+    a {
+        font-family: 'Questrial', sans-serif;
+        font-size: 0.9rem;
+        color:white;  
+        border: 1px solid blue;
+        padding: 5px;
+        margin: 3px 5px;
+        border-radius: 7px;
+        display: inline-block;
+        background: #4030a7;
+    }
+    width: inherit;
+    
+}
+
+.AzharContent {
+    max-width: 800px;
+    padding: 0 40px;
+    p {
+        font-family: "Montserrat", sans-serif;
+    }
+
+    h1{
+        font-family: "Montserrat", sans-serif;
+        text-align: center;
+    }
+
+    h2 {
+        font-family: "Montserrat", sans-serif;
+        text-align: center;
+        font-size: 25px;
+        font-weight: lighter;
+    }
+}
+
+.posts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.postTitle {
+    h1 {
+        font-family: "Montserrat", sans-serif;
+        font-size: 30px;
+        color: grey;
+        margin: 0;
+        text-align: center;
+    }
+    padding: 20px 10px;
+    margin-bottom: 10px;
+}
+
+.EventContainer:hover{
+    box-shadow: 10px 10px 5px #aaaaaa;
+    transition: ease-in-out 0.1s;
+}
+
+
+//Scrolling animation CSS
+.scroll-downs {
+    margin: auto;
+    
+    width :34px;
+    height: 55px;
+  }
+  .mousey {
+    width: 3px;
+    padding: 10px 15px;
+    height: 35px;
+    border: 2px solid black;
+    border-radius: 25px;
+    opacity: 0.75;
+    box-sizing: content-box;
+  }
+  .scroller {
+    width: 3px;
+    height: 10px;
+    border-radius: 25%;
+    background-color: black;
+    animation-name: scroll;
+    animation-duration: 2.2s;
+    animation-timing-function: cubic-bezier(.15,.41,.69,.94);
+    animation-iteration-count: infinite;
+  }
+  @keyframes scroll {
+    0% { opacity: 0; }
+    10% { transform: translateY(0); opacity: 1; }
+    100% { transform: translateY(15px); opacity: 0;}
+  }
+
+  @media only screen and (max-width: 1200px) {
+    .posts {
+        justify-content: center;
+    }
+
+    .EventContainer {
+        margin: 1rem;
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+      .AzharContent{
+          p{
+              font-size: 12px;
+          }
+          h1{
+              font-size: 30px;
+          }
+          h2 {
+            font-size: 20px;
+        }
+      }
+
+      .postTitle{
+          h1{
+            font-size: 25px;
+          }
+      }
+  }
+
+  @media only screen and (max-width: 1200px) {
+      .First{
+          justify-content: center;
+      }
+  }

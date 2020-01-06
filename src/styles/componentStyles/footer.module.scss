@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css?family=Comfortaa|Montserrat|Questrial|Quicksand&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+.footer {
+    padding-top: 45px;
+    margin-top: 3rem;
+    background: black;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-bottom: 25px;
+}
+
+.title {
+    padding-left: 15px;
+    h1 {
+        font-family: 'Lato', sans-serif;
+        margin: 0;
+        padding-bottom: 15px;
+    }
+    h2 {
+        font-family: 'Quicksand', sans-serif;
+        margin: 0;
+        padding-bottom: 5px;
+        font-size: 15px;
+        color: grey;
+    }
+}
+
+.pages {
+    h1 {
+        font-family: "Lato", sans-serif;
+        font-size: 25px;
+        border-bottom: 2px solid white;
+        padding-bottom: 7px;
+        margin-right: 20px;
+        margin-bottom: 10px;
+    }
+    width: 300px;
+    ul {
+        a{
+            text-decoration: none;
+            color: white;
+        }
+
+        list-style-type: none;
+        margin: 0;
+        font-family: "Quicksand", sans-serif;
+    }
+
+    ul:hover {
+        a {
+            color: grey;
+            transition: 0.2s;
+        }
+        li:hover {
+            a {
+                color: white;
+            }
+        }
+    }
+
+}
+
+.icons {
+    padding-top: 15px;
+    list-style-type: none;
+    display: inline-block;
+    margin: 0;
+    li {
+        float: left;
+        border: 2px solid white;
+        border-radius: 50%;
+        margin: 5px 7px 5px 0px;
+    }
+
+    li:hover {
+        border: 2px solid grey;
+        transition: 0.3s;
+    }
+
+    
+}
+
+@media only screen and (max-width: 1200px) {
+    .title {
+        width: 900px;
+        padding-left: 50px;
+        padding-bottom: 40px;
+    }
+
+    .pages {
+        padding-left: 50px;
+        width: 40vw;
+    }
+
+    .footer {
+        justify-content: flex-start;
+    }
+}

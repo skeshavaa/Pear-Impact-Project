@@ -1,0 +1,140 @@
+#header-wrapper {
+    width: 100vw;
+    height: 80px;
+    background-color: navy;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+}
+
+#toggle {
+    cursor: pointer;
+    font-size: 0px;
+    margin-left: 0px;
+    background: transparent;
+    border: none;
+    padding: 0px;
+    padding-bottom: 5px;
+    padding-left: 3px;
+    outline: none;
+}
+
+#toggle:hover h1{
+    color: #E5324A;
+    background-color: white;
+    border: 2px solid #E5324A;
+    transition: 0.2s;
+}
+
+#toggle h1{
+    border: 2px solid #E5324A;
+    font-family: "Montserrat", sans-serif;
+    font-weight: lighter;
+    font-size: 20px;
+    background-color: #E5324A;
+    color: white;
+    border-radius: 10px;
+    padding: 7px;
+    margin-bottom: 20px;
+}
+
+.sidebar {
+    min-height: 100vh;
+    margin-top: 73.69px;
+    padding-left: 20px;
+    background-color: #E5324A;
+    opacity: 0.8;
+    color: white;
+    width: 300px;
+    position: fixed;
+    z-index: 3;
+    left: -100%;
+    animation: slide-open 0.5s forwards;
+    padding-left: 10px;
+    border-radius: 0px 10px 10px 0px;
+}
+
+.absolute{
+    height: 100vh;
+    overflow-y: scroll;
+}
+
+.sidebar:hover{
+    opacity: 1;
+    transition: 0.2s;
+}
+
+::-webkit-scrollbar {
+    width: 0px; 
+    background: transparent; 
+}
+
+.sidebar h2{
+    font-family: "Montserrat", sans-serif;
+    font-size: 30px;
+    text-align: center;
+    padding: 5px;
+    padding-top: 15px;
+    color: white;
+}
+
+.btnwrap{
+    display: flex;
+    justify-content: center;
+}
+
+.sidebar button{
+    margin-top: 20px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 25px;
+    background: transparent;
+    border: 2px solid white;
+    border-radius: 10px;
+    padding: 10px;
+    color: white;
+    width: 100px;
+}
+
+.sidebar button:hover{
+    cursor: pointer;
+    background-color: white;
+    border: 2px solid #E5324A;
+    color: #E5324A;
+    transition: 0.2s;
+}
+
+.sidebar.close {
+    left: 0;
+    animation: slide-close 1.0s forwards;
+}
+
+@keyframes slide-open {
+    100%{
+        left: 0;
+    }
+}
+
+@keyframes slide-close {
+    100%{
+        left: -100%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .sidebar{
+        margin-top: 53.69px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .sidebar{
+        margin-top: 53.69px;
+        position: absolute;
+        overflow-y: scroll;
+        opacity: 1;
+        width: 100vw;
+        min-height: 100vh;
+        padding-bottom: 20px;
+    }
+}

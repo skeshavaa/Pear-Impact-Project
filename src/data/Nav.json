@@ -1,0 +1,22 @@
+[
+    {
+        "Link": "/",
+        "Content": "Home"
+    },
+    {
+        "Link": "/blog",
+        "Content": "Stories"
+    },
+    {
+        "Link": "/about",
+        "Content": "About"
+    },
+    {
+        "Link": "/contact",
+        "Content": "Contact"
+    },
+    {
+        "Link": "/sub",
+        "Content": "Subscribe"
+    }
+]
