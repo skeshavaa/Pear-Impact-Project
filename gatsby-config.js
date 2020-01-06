@@ -35,11 +35,12 @@ const queries = [
   }
 ];
 
+const path = require('path')
 
 
 module.exports = {
   siteMetadata: {
-    title: 'Pear Impact Project',
+    title: 'Migrant Moments',
     author: 'Keshavaa Shaiskandan'
   },
   plugins: [
@@ -75,6 +76,25 @@ module.exports = {
       options: {
         endpoint: "https://gmail.us4.list-manage.com/subscribe/post?u=030ab60dbad39723445796fc2&amp;id=5f68f3a93f"
       }
-    }
+    },
+    {
+      resolve: 'gatsby-plugin-alias-imports', 
+      options: {
+        alias: {
+          '@components': path.resolve(__dirname, './src/components/exports'),
+          '@templateStyles': path.resolve(__dirname, './src/styles/templateStyles'),
+          '@pageStyles': path.resolve(__dirname, './src/styles/pageStyles'),
+          '@compStyles': path.resolve(__dirname, './src/styles/componentStyles'),
+          '@images': path.resolve(__dirname, './src/images')
+        }
+      }
+    },
+    `gatsby-transformer-json`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `./src/data/`,
+      },
+    },
   ]
 }
