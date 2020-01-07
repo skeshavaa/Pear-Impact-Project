@@ -66,7 +66,7 @@ const Country = (props) => {
                 <meta name="description" content="100+ Stories of Canadian Immigrants"/>
                 <meta property="og:title" content={career}/>
               </MetaTags>
-            <Head title={career}/>
+            <Head title={currentTag}/>
             <h1 className={tagStyles.title}>Blog Post tagged with "{currentTag}"</h1>
             <div className={tagStyles.wrapper}>
             {hits.map((hit) => {

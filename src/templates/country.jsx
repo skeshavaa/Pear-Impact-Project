@@ -64,7 +64,7 @@ const Country = (props) => {
     return(
         <Layout>
 
-            <Head title={country}/>
+            <Head title={currentTag}/>
             <MetaTags>
                     <meta name="description" content="100+ Stories of Canadian Immigrants"/>
                     <meta name="og:title" content={country}/>
