@@ -33,24 +33,13 @@ const Footer = () => {
             <div className={footerStyles.pages}>
                 <h1>Pages</h1>
                 <ul>
-                    <Link to="/"><li><a>Home</a></li></Link>
-                    <Link to="/blog"><li><a>Blog</a></li></Link>
-                    <Link to="/about"><li><a>About</a></li></Link>
-                    <Link to="/contact"><li><a>Contact</a></li></Link>
-                    <Link to="/sub"><li><a>Subscribe</a></li></Link>
+                    <Link to="/"><li>Home</li></Link>
+                    <Link to="/blog"><li>Blog</li></Link>
+                    <Link to="/about"><li>About</li></Link>
+                    <Link to="/contact"><li>Contact</li></Link>
+                    <Link to="/sub"><li>Subscribe</li></Link>
                 </ul>
             </div>
-            {/*
-            <div className={footerStyles.pages}>
-                <h1>More</h1>
-                <ul>
-                    <li><a href="www.google.com">Link 1</a></li>
-                    <li><a href="www.google.com">Link 2</a></li>
-                    <li><a href="www.google.com">Link 3</a></li>
-                    <li><a href="www.google.com">Link 4</a></li>
-                </ul>
-            </div>
-            */}
         </footer>
     )
 }
