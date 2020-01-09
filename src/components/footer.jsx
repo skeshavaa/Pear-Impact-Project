@@ -19,6 +19,7 @@ const Footer = () => {
     return (
         
         <footer className={footerStyles.footer}>
+            <div className={footerStyles.inner}>
             <div className={footerStyles.title}>
                 <h1>Migrant Moments</h1>
                 <h2>Stories collected by Azhar Laher</h2>
@@ -39,6 +40,7 @@ const Footer = () => {
                     <Link to="/contact"><li>Contact</li></Link>
                     <Link to="/sub"><li>Subscribe</li></Link>
                 </ul>
+            </div>
             </div>
         </footer>
     )

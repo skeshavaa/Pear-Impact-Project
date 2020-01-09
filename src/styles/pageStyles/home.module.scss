@@ -145,7 +145,7 @@
 .posts {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .postTitle {
@@ -230,6 +230,6 @@
 
   @media only screen and (max-width: 1200px) {
       .First{
-          justify-content: center;
+          justify-content: space-around;
       }
   }
