@@ -5,7 +5,7 @@ import { Filters } from '@components'
 import "@compStyles/componentStyles.scss"
 
 const Sidebar = (props) => {
-    const [sidebarClass, setSidebarClass] = useState(props.sidebar)
+    const [sidebarClass, setSidebarClass] = useState('sidebar close');
 
     const closeHandler = (e) => {
         e.preventDefault()

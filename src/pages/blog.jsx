@@ -30,7 +30,7 @@ const BlogPage = () => {
       setSidebarOpen(false)
     }
 
-    let sidebar
+    let sidebar = <Sidebar sidebar={"sidebar close"} close={sidebarCloseHandler}></Sidebar>
 
     if (sidebarOpen) {
     sidebar = <Sidebar sidebar={"sidebar"} close={sidebarCloseHandler}></Sidebar>
@@ -56,7 +56,7 @@ const BlogPage = () => {
           }
         }
       }
-    `)
+    `);
 
     return (
         <div>
@@ -81,7 +81,7 @@ const BlogPage = () => {
 
                   <div className={blogStyles.Hits}>
                     <Hits hitComponent={PostPreview}/>
-                  </div>      
+                  </div>
                        
             </Layout>
             </InstantSearch>

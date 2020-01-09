@@ -27,7 +27,7 @@ export const query = graphql`
     }`
 
 const PostPreview = ({ hit }) => {
-    const [ image, setImage ] = useState();
+    const [ image, setImage ] = useState(unknown);
     useEffect(() => {
         let mounted = true;
         (async() => {
@@ -74,7 +74,7 @@ const PostPreview = ({ hit }) => {
         <div className={postStyles.EventContainer}>
             <Link to={`/blog/${slug}`}>
             <div className={postStyles.ImageContainer}>
-                <img src={ image } alt={unknown}/>
+                <img src={ image }/>
             </div>
             <div className={postStyles.TextContainer}>
                 <div className={postStyles.EntryDate}>
