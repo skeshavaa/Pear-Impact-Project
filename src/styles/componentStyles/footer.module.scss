@@ -35,7 +35,6 @@
         font-size: 25px;
         border-bottom: 2px solid white;
         padding-bottom: 7px;
-        margin-right: 20px;
         margin-bottom: 10px;
         text-align: right;
     }
@@ -45,7 +44,6 @@
             text-decoration: none;
             color: white;
             text-align: right;
-            margin-right: 25px;
         }
         list-style-type: none;
         margin: 0;
@@ -94,6 +92,16 @@
     
 }
 
+@media only screen and (max-width: 1200px) {
+    .title{
+        padding-left:20px;
+    }
+
+    .pages{
+        padding-right: 20px;
+    }
+}
+
 @media only screen and (max-width: 800px) {
     .title {
         padding-bottom: 40px;
@@ -110,7 +118,7 @@
     }
 }
 
-@media only screen and (max-width: 618px) {
+@media only screen and (max-width: 619px) {
     .pages{
         h1{
             text-align: center;
