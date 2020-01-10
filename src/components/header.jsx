@@ -36,6 +36,7 @@ const Header = () => {
         largeMenuClassName={headerStyles.largeMenuClassname}
         smallMenuClassName={headerStyles.smallMenuClassname}
         menu={
+            <div className={headerStyles.outer}>
             <header className={headerStyles.header}>
             <h1 className={headerStyles.name}>
                 <Link className={headerStyles.title}to='/'>
@@ -57,6 +58,7 @@ const Header = () => {
                 </ul>
             </nav>
         </header>
+        </div>
         }
       />
     )
