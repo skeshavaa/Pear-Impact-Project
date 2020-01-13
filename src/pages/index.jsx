@@ -76,11 +76,6 @@ const IndexPage = () => {
                     </p>
 
                     <h2>Scroll down for the latest posts!</h2>
-                    <div class={homeStyles.scrollDowns}>
-                        <div class={homeStyles.mousey}>
-                            <div class={homeStyles.scroller}></div>
-                        </div>
-                    </div>
                 </div>
             </div>
 

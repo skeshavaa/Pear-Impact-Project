@@ -24,16 +24,16 @@ const ContactPage = () => {
                 <div className={contactStyles.formwrap}>
                     <form action="https://formspree.io/moqvpqkp" method="POST">
                         <div className={contactStyles.inputs}>
-                            <input type="text" name="name" id="name" placeholder="Name" />
+                            <input type="text" name="name" id="name" placeholder="Name" className={contactStyles.setback}/>
                         </div>
                         <div className={contactStyles.inputs}>
-                            <input type="email" name="email" id="email" placeholder="Email" />
+                            <input type="email" name="email" id="email" placeholder="Email" className={contactStyles.setback} />
                         </div>
                         <div className={contactStyles.inputs}>
-                            <input type="subject" name="subject" id="subject" placeholder="Subject" />
+                            <input type="subject" name="subject" id="subject" placeholder="Subject" className={contactStyles.setback}/>
                         </div>
                         <div className={contactStyles.inputs}>
-                            <textarea name="message" id="message" rows="6" placeholder="Message" required />
+                            <textarea name="message" id="message" rows="6" placeholder="Message" required className={contactStyles.setback}/>
                         </div>
                         <div className={contactStyles.btncontainer}>
                             <button className={contactStyles.btnsend} type="submit">Send</button>

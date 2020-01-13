@@ -31,11 +31,12 @@ const Email = () => {
     <form onSubmit={handleSubmit} className={styles.EmailListForm}>
       <div className={styles.outerWrapper}>
       <div className={styles.Wrapper}>
-        <div><input
+        <div> <input
           placeholder="Email address"
           name="email"
           type="text"
           onChange={handleEmailChange}
+          className={styles.setback}
         /></div>
         <div className={styles.btn}><button type="submit">Subscribe</button></div>
       </div>

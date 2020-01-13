@@ -20,6 +20,7 @@ query{
           slug
           title
           country
+          publishedDate
           occupation
           tags
           image1{

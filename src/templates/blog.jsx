@@ -37,6 +37,7 @@ export const query = graphql`
         node{
           name
           title
+          publishedDate
           country
           occupation
           tags

@@ -22,6 +22,7 @@ query{
           title
           country
           occupation
+          publishedDate
           tags
           image1{
               fluid {

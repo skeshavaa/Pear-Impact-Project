@@ -77,6 +77,10 @@
     padding: 25px;
   }
 
+.setback::placeholder{
+  z-index: -1;
+}  
+
   @media only screen and (max-width: 800px){
     .EmailListForm{
       button{
@@ -84,3 +88,6 @@
       }
     }
   }
+
+
+
