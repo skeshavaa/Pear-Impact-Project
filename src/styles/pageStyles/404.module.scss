@@ -1,0 +1,30 @@
+.content{
+    margin-top: 100px;
+    
+    h1{
+        font-family: "Montserrat", sans-serif;
+        font-size: 30px;
+    }
+    h2{
+        font-family: "Montserrat", sans-serif;
+        font-size: 25px;
+    }
+
+    a{
+        text-decoration: none;
+        font-size: 25px;
+        padding: 5px;
+        background-color: #E5324A;
+        border: 2px solid #E5324A;
+        color: white;
+        border-radius: 5px;       
+        font-family: "Montserrat", sans-serif;
+    }
+
+    a:hover{
+        color: #E5324A;
+        background-color: white;
+        transition: 0.1s;
+        border: 2px solid #E5324A;
+    }
+}

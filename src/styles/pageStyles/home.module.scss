@@ -16,6 +16,7 @@
         display: block;
         width: 100%;
         height: auto;
+        object-fit: cover;
     }
     display: flex;
     justify-content: center;
@@ -49,7 +50,11 @@
 }
 
 .test{
-    height: 350px;
+    img{
+        height: 350px;
+        width: 350px;
+        object-fit: cover;
+    }
 }
 
 
