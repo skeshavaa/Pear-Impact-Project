@@ -16,7 +16,7 @@ const searchClient = algoliasearch('L62RK6OZ7R', '2598efc467448e3024c6ea87d9bf25
 
 
 const BlogPage = () => {
-    const [sidebarOpen, setSidebarOpen, sidebarClass, setsidebarClass] = useState(false)
+    const [sidebarOpen, setSidebarOpen] = useState(false)
 
     const openHandler = () => {
       if (!sidebarOpen) {

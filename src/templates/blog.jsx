@@ -102,7 +102,7 @@ const Blog = (props) => {
     if (hitTitleArr.includes(titleArr[i]) == false && titleArr[i] != (title)){
       hits.push(allPosts[i])
     }
-    if (hits.length == 3){
+    if (hits.length >= 3){
       break
     }
   }
