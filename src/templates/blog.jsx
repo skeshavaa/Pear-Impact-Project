@@ -99,11 +99,11 @@ const Blog = (props) => {
   var i
   var allPosts = props.data.allContentfulBlogPost.edges
   for (i = 0; i < allPosts.length; i++){
-    if (hitTitleArr.includes(titleArr[i]) == false && titleArr[i] != (title)){
-      hits.push(allPosts[i])
-    }
     if (hits.length == 3){
       break
+    }
+    if (hitTitleArr.includes(titleArr[i]) == false && titleArr[i] != (title)){
+      hits.push(allPosts[i])
     }
   }
 
