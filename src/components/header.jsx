@@ -41,8 +41,7 @@ const Header = () => {
             <h1 className={headerStyles.name}>
                 <Link className={headerStyles.title}to='/'>
                     Migrant Moments
-                </Link>
-                
+                </Link>  
             </h1>
             <nav className={headerStyles.nav}>
                 <ul className={headerStyles.navList}>
