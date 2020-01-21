@@ -1,6 +1,5 @@
-import React, {Fragment, useState} from 'react'
+import React, {useState} from 'react'
 //Components
-import { graphql, useStaticQuery } from 'gatsby'
 import { InstantSearch, SearchBox, Hits } from 'react-instantsearch-dom'
 import { Layout, Head, Toggle, Sidebar, PostPreview } from '@components' 
 //Packages
@@ -11,9 +10,6 @@ import blogStyles from '@pageStyles/blog.module.scss'
 import '@pageStyles/story.scss'
 
 const searchClient = algoliasearch('L62RK6OZ7R', '2598efc467448e3024c6ea87d9bf25a8')
-
-
-
 
 const BlogPage = () => {
     const [sidebarOpen, setSidebarOpen] = useState(false)
@@ -33,30 +29,10 @@ const BlogPage = () => {
     let sidebar = <Sidebar sidebar={"sidebar close"} close={sidebarCloseHandler}></Sidebar>
 
     if (sidebarOpen) {
-    sidebar = <Sidebar sidebar={"sidebar close"} close={sidebarCloseHandler}></Sidebar>
+    sidebar = <Sidebar sidebar={"sidebar"} close={sidebarCloseHandler}></Sidebar>
     } else{
       sidebar = <Sidebar sidebar={"sidebar close"} close={sidebarCloseHandler}></Sidebar>
     }
-
-
-    const data = useStaticQuery(graphql`
-    query {
-        allContentfulBlogPost (
-          sort: {
-            fields:publishedDate,
-            order:DESC
-          }
-        ){
-          edges {
-            node {
-              title
-              slug
-              publishedDate(formatString:"MMM Do, YYYY")
-            }
-          }
-        }
-      }
-    `);
 
     return (
         <div>
