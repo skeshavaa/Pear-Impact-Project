@@ -33,9 +33,9 @@ const BlogPage = () => {
     let sidebar = <Sidebar sidebar={"sidebar close"} close={sidebarCloseHandler}></Sidebar>
 
     if (sidebarOpen) {
-    sidebar = <Sidebar sidebar={"sidebar"} close={openHandler}></Sidebar>
+    sidebar = <Sidebar sidebar={"sidebar close"} close={sidebarCloseHandler}></Sidebar>
     } else{
-      sidebar = <Sidebar sidebar={"sidebar close"} close={openHandler}></Sidebar>
+      sidebar = <Sidebar sidebar={"sidebar close"} close={sidebarCloseHandler}></Sidebar>
     }
 
 
