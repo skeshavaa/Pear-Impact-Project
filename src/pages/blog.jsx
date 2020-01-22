@@ -39,7 +39,7 @@ const BlogPage = () => {
           <InstantSearch indexName="Blog" searchClient={searchClient}>
           
             <Layout>
-            {sidebar}
+            <Sidebar sidebar={"sidebar close"} close={sidebarCloseHandler}></Sidebar>
             
               <MetaTags>
                 <meta name="description" content="100+ Stories of Canadian Immigrants"/>
