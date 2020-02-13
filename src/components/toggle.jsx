@@ -5,7 +5,7 @@ import "@compStyles/componentStyles.scss"
 const Toggle = (props) => {
     return(
         <Fragment>
-            <button id="toggle" onClick={props.click}>&#8801;<h1>Filters</h1></button>
+            <button id="toggle" onClick={props.click}><h1>Filters</h1></button>
         </Fragment>
     )
 }
