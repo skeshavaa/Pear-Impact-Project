@@ -6,7 +6,8 @@ export { default as Header } from "./header";
 export { default as PostPreview } from "./post-preview";
 export { default as Sidebar } from "./sidebar";
 export { default as Toggle } from "./toggle";
-export { default as Email } from './email'
+export { default as Email } from './email';
+export { default as Map } from './map';
 /*
 export * from './EmailListForm'
 export * from './filters'

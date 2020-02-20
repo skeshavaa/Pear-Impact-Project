@@ -79,6 +79,8 @@ const IndexPage = () => {
                 </div>
             </div>
 
+            <Map />
+
             <div className={homeStyles.postTitle}>
                 <h1>LATEST POSTS</h1>
             </div>
