@@ -13,6 +13,10 @@ const Map = () => {
     }
     }`)
 
+    {query.allContentfulBlogPost.edges.map((edge) => {
+        console.log(edge.node.country)
+    })}
+
     return(
         <div><h1>asdfsd</h1></div>
     )
