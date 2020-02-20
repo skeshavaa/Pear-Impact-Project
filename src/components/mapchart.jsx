@@ -58,6 +58,7 @@ const MapChart = () => {
           width: '100%',
           height: '125vh'
         }}
+        projection="geoMercator"
       >
         <Geographies geography={geoUrl}>
           {({ geographies }) =>
