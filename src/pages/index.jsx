@@ -4,7 +4,7 @@ import MetaTags from 'react-meta-tags'
 import moment from 'moment'
 //Components
 import { graphql, useStaticQuery, Link } from 'gatsby'
-import { Head, Layout, Map } from '@components'
+import { Head, Layout, MapChart } from '@components'
 //Styles
 import homeStyles from '@pageStyles/home.module.scss'
 import postStyles from '@compStyles/post-preview.module.scss'
@@ -79,7 +79,7 @@ const IndexPage = () => {
                 </div>
             </div>
 
-            <Map />
+            <MapChart />
 
             <div className={homeStyles.postTitle}>
                 <h1>LATEST POSTS</h1>

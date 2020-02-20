@@ -7,43 +7,40 @@ import {
 } from "react-simple-maps";
 import { useStaticQuery, graphql } from "gatsby"
 
-
-export default function MapChart() {
+const MapChart = () => {
   const geoUrl =
     "https://raw.githubusercontent.com/zcreativelabs/react-simple-maps/master/topojson-maps/world-110m.json";
 
 
   const coordData = useStaticQuery(graphql`
-    {
+      {
         allContentfulBlogPost{
             edges {
               node {
-                  country
+                country
                 }
               }
             }
-          }
-          allCountryCentroidsCsv {
-            edges {
-              node {
-                name
-                Longitude
-                Latitude
-              }
+        allCountryCentroidsCsv{
+          edges{
+            node{
+              name
+              Longitude
+              Latitude
             }
           }
-    }`)
+        }
+  }`)
   const markers = [];
-  coordData.allMarkdownRemark.edges.forEach(({ node }, i) => {
-    let cName = node.frontmatter.country
+  coordData.allContentfulBlogPost.edges.forEach(({ node }, i) => {
+    let cName = node.country
     let countryObj = {}
     const found = markers.some(el => el.country === cName);
     if (!found) {
       countryObj['country'] = cName;
-      let correctNode = coordData.allCountryCentroidsAz8Csv.edges.filter(function (edge) {
+      let correctNode = coordData.allCountryCentroidsCsv.edges.filter(function (edge) {
         return edge.node.name == cName;
       });
-      console.log(correctNode['0'].node.Longitude)
       if (correctNode != []) {
         countryObj['coordinates'] = []
         countryObj['coordinates'].push(correctNode['0'].node.Longitude)
@@ -61,7 +58,6 @@ export default function MapChart() {
           width: '100%',
           height: '125vh'
         }}
-        projection="geoMercator"
       >
         <Geographies geography={geoUrl}>
           {({ geographies }) =>
@@ -96,3 +92,5 @@ export default function MapChart() {
       </ComposableMap>
     </div>)
 }
+
+export default MapChart
