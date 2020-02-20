@@ -77,6 +77,7 @@ module.exports = {
         endpoint: "https://gmail.us4.list-manage.com/subscribe/post?u=030ab60dbad39723445796fc2&amp;id=5f68f3a93f"
       }
     },
+    `gatsby-transformer-csv`,
     {
       resolve: 'gatsby-plugin-alias-imports', 
       options: {
