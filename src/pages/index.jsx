@@ -4,7 +4,7 @@ import MetaTags from 'react-meta-tags'
 import moment from 'moment'
 //Components
 import { graphql, useStaticQuery, Link } from 'gatsby'
-import { Head, Layout } from '@components'
+import { Head, Layout, Map } from '@components'
 //Styles
 import homeStyles from '@pageStyles/home.module.scss'
 import postStyles from '@compStyles/post-preview.module.scss'

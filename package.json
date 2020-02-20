@@ -45,6 +45,7 @@
     "react-responsive-navbar": "^1.0.11",
     "react-reveal": "^1.2.2",
     "react-sidebar": "^3.0.2",
+    "react-simple-maps": "^0.12.1",
     "react-sticky": "^6.0.3"
   },
   "devDependencies": {
