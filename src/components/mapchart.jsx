@@ -5,7 +5,7 @@ import {
   Geography,
   Marker
 } from "react-simple-maps";
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql, Link } from "gatsby"
 
 const MapChart = () => {
   const geoUrl =
@@ -18,6 +18,13 @@ const MapChart = () => {
             edges {
               node {
                 country
+                name
+                slug
+                image1 {
+                  fluid {
+                    src
+                  }
+                }
                 }
               }
             }
@@ -32,7 +39,9 @@ const MapChart = () => {
         }
   }`)
   const markers = [];
+  const data = [];
   coordData.allContentfulBlogPost.edges.forEach(({ node }, i) => {
+    
     let cName = node.country
     let countryObj = {}
     const found = markers.some(el => el.country === cName);
@@ -46,10 +55,10 @@ const MapChart = () => {
         countryObj['coordinates'].push(correctNode['0'].node.Longitude)
         countryObj['coordinates'].push(correctNode['0'].node.Latitude)
         markers.push(countryObj)
+        data.push(node);
       }
     }
   })
-  console.log(markers)
 
   return (
     <div>
@@ -84,8 +93,19 @@ const MapChart = () => {
               strokeLinejoin="round"
               transform="translate(-12, -24)"
             >
-              <circle cx="12" cy="10" r="3" />
-              <path d="M12 21.7C17.3 17 20 13 20 10a8 8 0 1 0-16 0c0 3 2.7 6.9 8 11.7z" />
+              {data.map(node => {
+                if (node.country == country){
+                  console.log(node.image1.fluid.src)
+                  return(
+                    
+                    <Link className="map-pic-border" to={`/blog/${node.slug}`}><image className="map-pic" width="25" height="25" href={node.image1.fluid.src} clip-path="url(#circleView)" /></Link>
+                    //<img src={node.image1.fluid.src} className="map-picture"/>
+                    //<Link to={`/blog/${node.slug}`}><img src={node.image1.fluid.src}/></Link>
+                  )
+                }
+              })}
+              {/*<circle cx="12" cy="10" r="3" />
+              <path d="M12 21.7C17.3 17 20 13 20 10a8 8 0 1 0-16 0c0 3 2.7 6.9 8 11.7z" />*/}
             </g>
           </Marker>
         ))}
