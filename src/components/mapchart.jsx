@@ -95,7 +95,6 @@ const MapChart = () => {
             >
               {data.map(node => {
                 if (node.country == country){
-                  console.log(node.image1.fluid.src)
                   return(
                     
                     <Link className="map-pic-border" to={`/blog/${node.slug}`}><image className="map-pic" width="25" height="25" href={node.image1.fluid.src} clip-path="url(#circleView)" /></Link>
