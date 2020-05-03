@@ -13,27 +13,23 @@ const searchClient = algoliasearch('L62RK6OZ7R', '2598efc467448e3024c6ea87d9bf25
 
 const BlogPage = () => {
     const [sidebarOpen, setSidebarOpen] = useState(false)
-
+    const [sidebarClass, setSidebarClass] = useState("sidebar close")
     const openHandler = () => {
       if (!sidebarOpen) {
         setSidebarOpen(true)
-      } else {
+        setSidebarClass("sidebar")
+      } else if (sidebarOpen) {
         setSidebarOpen(false)
+        setSidebarClass("sidebar close")
       }
     }
 
+  
     const sidebarCloseHandler = () => {
       setSidebarOpen(false)
+      setSidebarClass("sidebar close")
     }
-
-    let sidebar = <Sidebar sidebar={"sidebar close"} close={sidebarCloseHandler}></Sidebar>
-
-    if (sidebarOpen) {
-      sidebar = <Sidebar sidebar={"sidebar"} close={sidebarCloseHandler}></Sidebar>
-    } else{
-      sidebar = <Sidebar sidebar={"sidebar close"} close={sidebarCloseHandler}></Sidebar>
-    }
-
+    let sidebar = <Sidebar sidebar={sidebarClass} close={sidebarCloseHandler}></Sidebar>
     return (
         <div>
           <InstantSearch indexName="Blog" searchClient={searchClient}>
