@@ -4,12 +4,12 @@ import MetaTags from 'react-meta-tags'
 import moment from 'moment'
 //Components
 import { graphql, useStaticQuery, Link } from 'gatsby'
-import { Head, Layout } from '@components'
+import { Head, Layout, MapChart } from '@components'
 //Styles
 import homeStyles from '@pageStyles/home.module.scss'
 import postStyles from '@compStyles/post-preview.module.scss'
 //Pictures
-import Azhar from '@images/Azhar2.png'
+import HomeImage from '@images/homeImage.jpg'
 import Unknown from '@images/unknown.png'
 
 
@@ -54,30 +54,18 @@ const IndexPage = () => {
                 <meta property="og:title" content="Home"/>
               </MetaTags>
             <Head title="Home"/>
-            <div className={homeStyles.First}>
+            {/* <div className={homeStyles.First}>
                 <div className={homeStyles.imageContainer}>
                     <Link to='/about'>
-                    <img src={Azhar} alt={Unknown}/>
+                    <img src={HomeImage} alt={Unknown}/>
                     </Link>
                 </div>
                 <div className={homeStyles.AzharContent}>
-                    <h1 href="#asdf">About Migrant Moments</h1>
-                    <p>
-                        Azhar has compiled the stories of over 100+
-                        Canadian immigrants. He has documented their 
-                        struggles, backgrounds, successes, failures,
-                        current projects and more! 
-
-                        <br/><br/>
-                        Browse through any blog post, at the end will
-                        be a contact form to contact the author of the 
-                        post of you're reading! Feel free to contact Azhar
-                        by clicking the Contact me button above as well!
-                    </p>
-
-                    <h2>Scroll down for the latest posts!</h2>
+                    
                 </div>
-            </div>
+            </div> */}
+
+            <MapChart />
 
             <div className={homeStyles.postTitle}>
                 <h1>LATEST POSTS</h1>
