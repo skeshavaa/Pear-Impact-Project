@@ -129,6 +129,10 @@
     .sidebar{
         margin-top: 53.69px;
     }
+
+    .sidebar.close{
+        opacity: 0;
+    }
 }
 /*
 @media screen and (max-width: 400px) {
