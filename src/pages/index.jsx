@@ -54,7 +54,7 @@ const IndexPage = () => {
                 <meta property="og:title" content="Home"/>
               </MetaTags>
             <Head title="Home"/>
-            <div className={homeStyles.First}>
+            {/* <div className={homeStyles.First}>
                 <div className={homeStyles.imageContainer}>
                     <Link to='/about'>
                     <img src={Azhar} alt={Unknown}/>
@@ -77,7 +77,7 @@ const IndexPage = () => {
 
                     <h2>Scroll down for the latest posts!</h2>
                 </div>
-            </div>
+            </div> */}
 
             <MapChart />
 
