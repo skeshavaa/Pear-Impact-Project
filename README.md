@@ -17,9 +17,9 @@ This project was in collaboration with Professor Azhar. It is a blog using a CMS
 
 ## Collaborators
 
-Lead: [Keshavaa Shaiskandan](https://github.com/skeshavaa)
-Developer: [William](https://github.com/What-Is-A-Username)
-Developer: [Dubem Ogbudibe](https://github.com/Dubem101)
+Lead: [Keshavaa Shaiskandan](https://github.com/skeshavaa)  
+Developer: [William](https://github.com/What-Is-A-Username)  
+Developer: [Dubem Ogbudibe](https://github.com/Dubem101)  
 
 ## Pictures 
 
