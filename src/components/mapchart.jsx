@@ -76,7 +76,7 @@ const MapChart = () => {
                 <Geography
                   key={geo.rsmKey}
                   geography={geo}
-                  fill="#5A0001"
+                  fill="#E5324A"
                   stroke="#22181C"
                   strokeWidth="0.5px"
                 />
