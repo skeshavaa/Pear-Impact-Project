@@ -2,7 +2,9 @@ import React from 'react'
 //Components
 import { RefinementList } from 'react-instantsearch-dom'
 
-const Filters = () => {
+const Filters = (props) => {
+
+    console.log(props.countries)
 
     const [ countryVisibility, setCountryVisibility ] = React.useState('none')
     const onCountryClick = () => setCountryVisibility(countryVisibility === 'block' ? 'none' : 'block')
@@ -17,7 +19,14 @@ const Filters = () => {
                 <h1>{' Country'}</h1>
             </div>
             <div style={{display: countryVisibility, paddingBottom: '15px'}}>
-                <RefinementList attribute={"fields.country.en-US"} />
+                {props.countries.map((country) => {
+                    return(
+                        <div>
+                            <input type="checkbox" id={country} name={country} value={country}/>
+                            <label for={country}>{country}</label>
+                        </div>
+                    )
+                })}
             </div> 
             <div onClick={onOccupationClick} style={{display: 'inline-flex'}}>
                 <h1 style={{marginRight: '3px'}} >{ (occupationVisibility === 'block' ? '▲' : '▼')}</h1>

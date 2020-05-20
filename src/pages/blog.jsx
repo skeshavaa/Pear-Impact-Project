@@ -76,7 +76,7 @@ const BlogPage = () => {
       }
     })
 
-    let sidebar = <Sidebar sidebar={sidebarClass} close={sidebarCloseHandler}></Sidebar>
+    let sidebar = <Sidebar hits={filteredData} sidebar={sidebarClass} close={sidebarCloseHandler}></Sidebar>
     return (
         <div>
           <InstantSearch indexName="Blog" searchClient={searchClient}>
