@@ -8,47 +8,19 @@ import postStyles from '@compStyles/post-preview.module.scss'
 //Pictures
 import unknown from '@images/unknown.png'
 
-const contentful = require('contentful');
-
-const client = contentful.createClient({
-    space: process.env.GATSBY_CONTENTFUL_SPACE_ID,
-    accessToken: process.env.GATSBY_CONTENTFUL_ACCESS_TOKEN,
-});
-
-export const query = graphql`
-    query($slug: String) {
-        contentfulBlogPost(slug: {eq: $slug}) {
-            image1 {
-                fluid {
-                ...GatsbyContentfulFluid
-                }
-            }
-        }
-    }`
-
 const PostPreview = ({ hit }) => {
-    const [ image, setImage ] = useState(unknown);
-    useEffect(() => {
-        let mounted = true;
-        (async() => {
-            const { fields } = await client.getAsset(hit.fields.image1['en-US'].sys.id);
-            if (mounted) {
-                setImage('https:' + fields.file.url);
-            }
-        })();
-        return () => {
-            mounted = false;
-        };
-    }, [hit]);
 
-    const slug = hit.fields.slug['en-US']
-    const title = hit.fields.title['en-US']
-    const tags = hit.fields.tags['en-US']
+    console.log(hit);
+
+    const slug = hit.slug
+    const title = hit.title
+    const tags = hit.tags
     const listTags = tags.split(",")
-    const name = hit.fields.name['en-US']
-    const country = hit.fields.country['en-US']
-    const prof = hit.fields.occupation['en-US']
-    const date = hit.fields.publishedDate['en-US']
+    const name = hit.name
+    const country = hit.country
+    const prof = hit.occupation
+    const date = hit.publishedDate
+    const image = hit.image1.fluid.src
 
     const flagImageRoot = '../images/flags/'
 

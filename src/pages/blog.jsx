@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 //Components
-import { InstantSearch, SearchBox, Hits } from 'react-instantsearch-dom'
+import { useStaticQuery, graphql } from 'gatsby'
+import { InstantSearch, SearchBox } from 'react-instantsearch-dom'
 import { Layout, Head, Toggle, Sidebar, PostPreview } from '@components' 
 //Packages
 import MetaTags from 'react-meta-tags'
@@ -23,12 +24,41 @@ const BlogPage = () => {
         setSidebarClass("sidebar close")
       }
     }
-
-  
     const sidebarCloseHandler = () => {
       setSidebarOpen(false)
       setSidebarClass("sidebar close")
     }
+
+    const hits = useStaticQuery(graphql`
+    query {
+        allContentfulBlogPost (
+          sort: {
+            fields:publishedDate,
+            order:DESC
+          }
+        ){
+          edges{
+            node {
+              name
+              title
+              slug
+              publishedDate
+              createdAt
+              country
+              occupation
+              tags
+              image1 {
+                    fluid {
+                        src
+                    }
+              }
+            }
+          }
+        }
+      }
+    `)
+
+
     let sidebar = <Sidebar sidebar={sidebarClass} close={sidebarCloseHandler}></Sidebar>
     return (
         <div>
@@ -46,13 +76,17 @@ const BlogPage = () => {
                   <div className={blogStyles.Header} >
                     <h1>Migrant Stories</h1>
                     <div className={blogStyles.searchWrapper}>
-                      <SearchBox translations={{ placeholder: 'Name, Title, Tags, Country'}} label="Search" defaultRefinement=""/>
+
                       <Toggle click={openHandler}/>
                     </div>
                   </div>
 
                   <div className={blogStyles.Hits}>
-                    <Hits hitComponent={PostPreview}/>
+                    {hits.allContentfulBlogPost.edges.map((hit) => {
+                      return(
+                        <PostPreview hit={hit.node}/>
+                      )
+                    })}
                   </div>
                        
             </Layout>
