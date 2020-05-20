@@ -14,6 +14,7 @@ const searchClient = algoliasearch('L62RK6OZ7R', '2598efc467448e3024c6ea87d9bf25
 
 const BlogPage = () => {
     const [sidebarOpen, setSidebarOpen] = useState(false)
+    const [searchVal, setSearchVal] = useState("")
     const [sidebarClass, setSidebarClass] = useState("sidebar close")
     const openHandler = () => {
       if (!sidebarOpen) {
@@ -29,35 +30,51 @@ const BlogPage = () => {
       setSidebarClass("sidebar close")
     }
 
+    const setSearch = (e) => {
+      setSearchVal(e.target.value)
+    }
+
     const hits = useStaticQuery(graphql`
-    query {
-        allContentfulBlogPost (
-          sort: {
-            fields:publishedDate,
-            order:DESC
-          }
-        ){
-          edges{
-            node {
-              name
-              title
-              slug
-              publishedDate
-              createdAt
-              country
-              occupation
-              tags
-              image1 {
-                    fluid {
-                        src
-                    }
-              }
+  query BlogPageQuery {
+      allContentfulBlogPost (
+        sort: {
+          fields:publishedDate,
+          order:DESC
+        }
+      ){
+        edges{
+          node {
+            name
+            title
+            slug
+            publishedDate
+            createdAt
+            country
+            occupation
+            tags
+            image1 {
+                  fluid {
+                      src
+                  }
             }
           }
         }
       }
-    `)
+    }
+  `)
 
+    var filteredData = []
+
+    hits.allContentfulBlogPost.edges.map((hit) => {
+      if (
+        hit.node.title.toString().toLowerCase().includes(searchVal.toLowerCase()) ||
+        hit.node.name.toString().toLowerCase().includes(searchVal.toLowerCase()) ||
+        hit.node.country.toString().toLowerCase().includes(searchVal.toLowerCase()) ||
+        hit.node.occupation.toString().toLowerCase().includes(searchVal.toLowerCase())
+        ){
+          filteredData.push(hit)
+      }
+    })
 
     let sidebar = <Sidebar sidebar={sidebarClass} close={sidebarCloseHandler}></Sidebar>
     return (
@@ -76,13 +93,13 @@ const BlogPage = () => {
                   <div className={blogStyles.Header} >
                     <h1>Migrant Stories</h1>
                     <div className={blogStyles.searchWrapper}>
-
+                      <input type="text" onChange={(e) => setSearch(e)}></input>
                       <Toggle click={openHandler}/>
                     </div>
                   </div>
 
                   <div className={blogStyles.Hits}>
-                    {hits.allContentfulBlogPost.edges.map((hit) => {
+                    {filteredData.map((hit) => {
                       return(
                         <PostPreview hit={hit.node}/>
                       )
@@ -94,5 +111,6 @@ const BlogPage = () => {
         </div>
     )
 }
+
 
 export default BlogPage

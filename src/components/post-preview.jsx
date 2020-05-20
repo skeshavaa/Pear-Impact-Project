@@ -10,8 +10,6 @@ import unknown from '@images/unknown.png'
 
 const PostPreview = ({ hit }) => {
 
-    console.log(hit);
-
     const slug = hit.slug
     const title = hit.title
     const tags = hit.tags
