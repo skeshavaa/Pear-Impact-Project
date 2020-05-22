@@ -13,6 +13,7 @@ import '@pageStyles/story.scss'
 const searchClient = algoliasearch('L62RK6OZ7R', '2598efc467448e3024c6ea87d9bf25a8')
 
 const BlogPage = () => {
+    
     const [sidebarOpen, setSidebarOpen] = useState(false)
     const [searchVal, setSearchVal] = useState("")
     const [sidebarClass, setSidebarClass] = useState("sidebar close")
@@ -62,21 +63,38 @@ const BlogPage = () => {
       }
     }
   `)
-
-    var filteredData = []
+    var searchData = [];
 
     hits.allContentfulBlogPost.edges.map((hit) => {
+      
       if (
         hit.node.title.toString().toLowerCase().includes(searchVal.toLowerCase()) ||
         hit.node.name.toString().toLowerCase().includes(searchVal.toLowerCase()) ||
         hit.node.country.toString().toLowerCase().includes(searchVal.toLowerCase()) ||
         hit.node.occupation.toString().toLowerCase().includes(searchVal.toLowerCase())
         ){
-          filteredData.push(hit)
+          searchData.push(hit);
       }
     })
 
-    let sidebar = <Sidebar hits={filteredData} sidebar={sidebarClass} close={sidebarCloseHandler}></Sidebar>
+    const [data, setData] = useState(searchData);
+    
+
+    function filterData(bool, country){
+      if (bool){
+        const filteredData = hits.filter(function (hit) {
+          return hit.node.country.toString() == country;
+        })
+        setData(filteredData)
+      } else{
+
+      }
+      
+    }
+
+    console.log(data);
+
+    let sidebar = <Sidebar hits={hits.allContentfulBlogPost.edges} sidebar={sidebarClass} close={sidebarCloseHandler} handleFilter={filterData}></Sidebar>
     return (
         <div>
           <InstantSearch indexName="Blog" searchClient={searchClient}>
@@ -99,7 +117,7 @@ const BlogPage = () => {
                   </div>
 
                   <div className={blogStyles.Hits}>
-                    {filteredData.map((hit) => {
+                    {data.map((hit) => {
                       return(
                         <PostPreview hit={hit.node}/>
                       )

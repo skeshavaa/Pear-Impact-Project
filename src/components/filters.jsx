@@ -4,7 +4,6 @@ import { RefinementList } from 'react-instantsearch-dom'
 
 const Filters = (props) => {
 
-    console.log(props.countries)
 
     const [ countryVisibility, setCountryVisibility ] = React.useState('none')
     const onCountryClick = () => setCountryVisibility(countryVisibility === 'block' ? 'none' : 'block')
@@ -22,7 +21,7 @@ const Filters = (props) => {
                 {props.countries.map((country) => {
                     return(
                         <div>
-                            <input type="checkbox" id={country} name={country} value={country}/>
+                            <input type="checkbox" id={country} name={country} value={country} onChange={props.handleFilter}/>
                             <label for={country}>{country}</label>
                         </div>
                     )
