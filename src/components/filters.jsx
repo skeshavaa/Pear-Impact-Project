@@ -11,39 +11,10 @@ var index = searchClient.initIndex('Blog')
 
 const Filters = (props) => {
 
-    const handler1 = () => {
-        index.setSettings({
-            ranking: [
-              'desc(sys.createdAt)',
-              'typo',
-              'geo',
-              'words',
-              'filters',
-              'proximity',
-              'attribute',
-              'exact',
-              'custom'
-            ]
-          })
-          return props.handleChange;
+    const handler = () => {
+        return props.handleChange;
     }
 
-    const handler2 = () => {
-        index.setSettings({
-            ranking: [
-              'asc(sys.createdAt)',
-              'typo',
-              'geo',
-              'words',
-              'filters',
-              'proximity',
-              'attribute',
-              'exact',
-              'custom'
-            ]
-          })
-          return props.handleChange;
-    }
 
     const [ countryVisibility, setCountryVisibility ] = React.useState('none')
     const onCountryClick = () => setCountryVisibility(countryVisibility === 'block' ? 'none' : 'block')
@@ -67,8 +38,8 @@ const Filters = (props) => {
             <div style={{display: occupationVisibility, paddingBottom: '15px'}}>
                 <RefinementList attribute={"fields.occupation.en-US"}/>
             </div> 
-            <button onClick={handler1}>sdf</button>
-            <button onClick={handler2}>sdf</button>
+            <button onClick={handler}>sdf</button>
+            <button onClick={handler}>sdf</button>
         </div>
     )
 }

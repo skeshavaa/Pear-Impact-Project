@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 //Components
 import { InstantSearch, SearchBox, Hits } from 'react-instantsearch-dom'
 import { Layout, Head, Toggle, Sidebar, PostPreview } from '@components' 
@@ -31,8 +31,6 @@ const BlogPage = () => {
       setFlip(!flip);
     }
 
-    console.log(flip)
-
     const handler1 = () => {
       index.setSettings({
           ranking: [
@@ -47,7 +45,7 @@ const BlogPage = () => {
             'custom'
           ]
         })
-        setFlip(!flip)
+        setFlip(true);
   }
 
   const handler2 = () => {
@@ -64,9 +62,14 @@ const BlogPage = () => {
             'custom'
           ]
         })
-        setFlip(!flip)
+        setFlip(true)
   }
 
+  useEffect(() => {
+    setFlip(false)
+  }, [flip]);
+
+    console.log(flip);
 
     const sidebarCloseHandler = () => {
       setSidebarOpen(false)
@@ -75,7 +78,7 @@ const BlogPage = () => {
     let sidebar = <Sidebar sidebar={sidebarClass} close={sidebarCloseHandler} rerender={rerender}></Sidebar>
     return (
         <div>
-          <InstantSearch indexName="Blog" searchClient={searchClient} index={index}>
+          <InstantSearch indexName="Blog" searchClient={searchClient} index={index} refresh={flip}>
           
             <Layout>
             {sidebar}
@@ -97,7 +100,7 @@ const BlogPage = () => {
                   </div>
 
                   <div className={blogStyles.Hits}>
-                    {rerender ? <Hits hitComponent={PostPreview}/> : <Hits hitComponent={PostPreview}/>}
+                  <Hits hitComponent={PostPreview} key={flip}/>
                   </div>
                        
             </Layout>
