@@ -4,14 +4,17 @@ import { InstantSearch, SearchBox, Hits } from 'react-instantsearch-dom'
 import { Layout, Head, Toggle, Sidebar, PostPreview } from '@components' 
 //Packages
 import MetaTags from 'react-meta-tags'
-import algoliasearch from 'algoliasearch/lite'
+import algoliasearch from 'algoliasearch'
 //Styles
 import blogStyles from '@pageStyles/blog.module.scss'
 import '@pageStyles/story.scss'
 
-const searchClient = algoliasearch('L62RK6OZ7R', '2598efc467448e3024c6ea87d9bf25a8')
+var searchClient = algoliasearch('L62RK6OZ7R', '15a379a9961f8ee6878adeccd35a474f', {protocol: 'https:'});
+
+var index = searchClient.initIndex('Blog')
 
 const BlogPage = () => {
+    const [flip, setFlip] = useState(false)
     const [sidebarOpen, setSidebarOpen] = useState(false)
     const [sidebarClass, setSidebarClass] = useState("sidebar close")
     const openHandler = () => {
@@ -24,15 +27,55 @@ const BlogPage = () => {
       }
     }
 
-  
+    const rerender = () => {
+      setFlip(!flip);
+    }
+
+    console.log(flip)
+
+    const handler1 = () => {
+      index.setSettings({
+          ranking: [
+            'desc(sys.createdAt)',
+            'typo',
+            'geo',
+            'words',
+            'filters',
+            'proximity',
+            'attribute',
+            'exact',
+            'custom'
+          ]
+        })
+        setFlip(!flip)
+  }
+
+  const handler2 = () => {
+      index.setSettings({
+          ranking: [
+            'asc(sys.createdAt)',
+            'typo',
+            'geo',
+            'words',
+            'filters',
+            'proximity',
+            'attribute',
+            'exact',
+            'custom'
+          ]
+        })
+        setFlip(!flip)
+  }
+
+
     const sidebarCloseHandler = () => {
       setSidebarOpen(false)
       setSidebarClass("sidebar close")
     }
-    let sidebar = <Sidebar sidebar={sidebarClass} close={sidebarCloseHandler}></Sidebar>
+    let sidebar = <Sidebar sidebar={sidebarClass} close={sidebarCloseHandler} rerender={rerender}></Sidebar>
     return (
         <div>
-          <InstantSearch indexName="Blog" searchClient={searchClient}>
+          <InstantSearch indexName="Blog" searchClient={searchClient} index={index}>
           
             <Layout>
             {sidebar}
@@ -48,11 +91,13 @@ const BlogPage = () => {
                     <div className={blogStyles.searchWrapper}>
                       <SearchBox translations={{ placeholder: 'Name, Title, Tags, Country'}} label="Search" defaultRefinement=""/>
                       <Toggle click={openHandler}/>
+                      <button onClick={handler1}>hi</button>
+                      <button onClick={handler2}>hi</button>
                     </div>
                   </div>
 
                   <div className={blogStyles.Hits}>
-                    <Hits hitComponent={PostPreview}/>
+                    {rerender ? <Hits hitComponent={PostPreview}/> : <Hits hitComponent={PostPreview}/>}
                   </div>
                        
             </Layout>

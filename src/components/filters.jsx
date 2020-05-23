@@ -1,8 +1,49 @@
 import React from 'react'
 //Components
-import { RefinementList } from 'react-instantsearch-dom'
+import algoliasearch from 'algoliasearch'
+import { RefinementList, SortBy } from 'react-instantsearch-dom'
 
-const Filters = () => {
+var searchClient = algoliasearch('L62RK6OZ7R', '15a379a9961f8ee6878adeccd35a474f', {protocol: 'https:'});
+
+
+var index = searchClient.initIndex('Blog')
+
+
+const Filters = (props) => {
+
+    const handler1 = () => {
+        index.setSettings({
+            ranking: [
+              'desc(sys.createdAt)',
+              'typo',
+              'geo',
+              'words',
+              'filters',
+              'proximity',
+              'attribute',
+              'exact',
+              'custom'
+            ]
+          })
+          return props.handleChange;
+    }
+
+    const handler2 = () => {
+        index.setSettings({
+            ranking: [
+              'asc(sys.createdAt)',
+              'typo',
+              'geo',
+              'words',
+              'filters',
+              'proximity',
+              'attribute',
+              'exact',
+              'custom'
+            ]
+          })
+          return props.handleChange;
+    }
 
     const [ countryVisibility, setCountryVisibility ] = React.useState('none')
     const onCountryClick = () => setCountryVisibility(countryVisibility === 'block' ? 'none' : 'block')
@@ -26,6 +67,8 @@ const Filters = () => {
             <div style={{display: occupationVisibility, paddingBottom: '15px'}}>
                 <RefinementList attribute={"fields.occupation.en-US"}/>
             </div> 
+            <button onClick={handler1}>sdf</button>
+            <button onClick={handler2}>sdf</button>
         </div>
     )
 }
