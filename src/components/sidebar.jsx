@@ -12,7 +12,6 @@ const Sidebar = (props) => {
     }, [props.sidebar])
 
     function handleChange(){
-        console.log('hi')
         return props.rerender;
     }
 

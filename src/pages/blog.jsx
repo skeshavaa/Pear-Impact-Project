@@ -45,6 +45,7 @@ const BlogPage = () => {
             'custom'
           ]
         })
+        
         setFlip(true);
   }
 
@@ -62,20 +63,20 @@ const BlogPage = () => {
             'custom'
           ]
         })
+        
         setFlip(true)
   }
 
   useEffect(() => {
     setFlip(false)
+    console.log(flip)
   }, [flip]);
-
-    console.log(flip);
 
     const sidebarCloseHandler = () => {
       setSidebarOpen(false)
       setSidebarClass("sidebar close")
     }
-    let sidebar = <Sidebar sidebar={sidebarClass} close={sidebarCloseHandler} rerender={rerender}></Sidebar>
+    let sidebar = <Sidebar sidebar={sidebarClass} close={sidebarCloseHandler}></Sidebar>
     return (
         <div>
           <InstantSearch indexName="Blog" searchClient={searchClient} index={index} refresh={flip}>
@@ -100,7 +101,7 @@ const BlogPage = () => {
                   </div>
 
                   <div className={blogStyles.Hits}>
-                  <Hits hitComponent={PostPreview} key={flip}/>
+                    <Hits hitComponent={PostPreview}/> 
                   </div>
                        
             </Layout>
