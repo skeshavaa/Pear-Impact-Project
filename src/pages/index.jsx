@@ -64,6 +64,14 @@ const IndexPage = () => {
                     
                 </div>
             </div> */}
+            <div className={homeStyles.container}>
+                <div className={homeStyles.image}>
+                    <img src={HomeImage}/>
+                </div>
+                <div>
+                    <h1>Scroll down for more!</h1>
+                </div>
+            </div>
 
             <MapChart />
 
