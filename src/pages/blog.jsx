@@ -73,15 +73,11 @@ const BlogPage = () => {
       }
 
       if (flip[1] == "asc"){
-        asc()
+        asc().then(() => setFlip([true, flip[1]]))
       } else{
-        desc()
+        desc().then(() => setFlip([true, flip[1]]))
       }
-
-      return (() => {
-        setFlip([true, flip[1]])
-      })
-    }, [flip[0]]);
+    }, [flip[1]]);
 
     console.log(index)
 
