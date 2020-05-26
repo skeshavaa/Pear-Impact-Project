@@ -14,7 +14,7 @@ var searchClient = algoliasearch('L62RK6OZ7R', '15a379a9961f8ee6878adeccd35a474f
 var index = searchClient.initIndex('Blog')
 
 const BlogPage = () => {
-    const [flip, setFlip] = useState(false)
+    const [flip, setFlip] = useState([false, 'asc'])
     const [sidebarOpen, setSidebarOpen] = useState(false)
     const [sidebarClass, setSidebarClass] = useState("sidebar close")
     const openHandler = () => {
@@ -27,12 +27,35 @@ const BlogPage = () => {
       }
     }
 
-    const rerender = () => {
-      setFlip(!flip);
+    const handler1 = () => {
+      setFlip([false, 'asc']);
     }
 
-    const handler1 = () => {
-      index.setSettings({
+    const handler2 = () => {
+      setFlip([false, 'desc'])
+    }
+
+    useEffect(() => {
+      const asc = async() => {
+        await index.setSettings({
+          ranking: [
+            'asc(sys.createdAt)',
+            'typo',
+            'geo',
+            'words',
+            'filters',
+            'proximity',
+            'attribute',
+            'exact',
+            'custom'
+          ]
+        }).then(resp => {
+          setFlip([true, flip[1]])
+        })
+      }
+
+      const desc = async() => {
+        await index.setSettings({
           ranking: [
             'desc(sys.createdAt)',
             'typo',
@@ -45,32 +68,22 @@ const BlogPage = () => {
             'custom'
           ]
         })
-        
-        setFlip(true);
-  }
 
-  const handler2 = () => {
-      index.setSettings({
-          ranking: [
-            'asc(sys.createdAt)',
-            'typo',
-            'geo',
-            'words',
-            'filters',
-            'proximity',
-            'attribute',
-            'exact',
-            'custom'
-          ]
-        })
         
-        setFlip(true)
-  }
+      }
 
-  useEffect(() => {
-    setFlip(false)
-    console.log(flip)
-  }, [flip]);
+      if (flip[1] == "asc"){
+        asc()
+      } else{
+        desc()
+      }
+
+      return (() => {
+        setFlip([true, flip[1]])
+      })
+    }, [flip[0]]);
+
+    console.log(index)
 
     const sidebarCloseHandler = () => {
       setSidebarOpen(false)
@@ -79,7 +92,7 @@ const BlogPage = () => {
     let sidebar = <Sidebar sidebar={sidebarClass} close={sidebarCloseHandler}></Sidebar>
     return (
         <div>
-          <InstantSearch indexName="Blog" searchClient={searchClient} index={index} refresh={flip}>
+          <InstantSearch indexName="Blog" searchClient={searchClient} index={index} refresh={flip[0]}>
           
             <Layout>
             {sidebar}
