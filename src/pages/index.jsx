@@ -9,7 +9,7 @@ import { Head, Layout, MapChart } from '@components'
 import homeStyles from '@pageStyles/home.module.scss'
 import postStyles from '@compStyles/post-preview.module.scss'
 //Pictures
-import HomeImage from '@images/homeImage.jpg'
+import HomeImage from '@images/homeImage.png'
 import Unknown from '@images/unknown.png'
 
 
