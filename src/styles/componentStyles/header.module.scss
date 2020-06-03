@@ -12,14 +12,14 @@
     z-index: 3;
     max-width: 1200px;
     width: 100%;
-    background-color: #F7F7F7;
+    background-color: black;
 }
 
 .outer{
     width: 100vw;
     display: flex;
     justify-content: center;
-    background-color: #F7F7F7;
+    background-color: black;
     z-index: 3;
 }
 
@@ -28,7 +28,7 @@
 }
 
 .title {
-    color: black;
+    color: white;
     text-decoration: none;
     text-align: center;
     font-size: 1.3rem;
@@ -40,6 +40,7 @@
     justify-content: center;
     list-style-type: none;
     margin: 0;
+    
 }
 
 
@@ -62,6 +63,7 @@
             text-align: center;
             margin: 0;
             margin: 0 15px;
+            color: white;
         }
         li {
             text-align: center;
@@ -111,11 +113,12 @@
   }
 
   .small-menu-classname{
-    background-color: #F7F7F7;
+    background-color: black;
     padding: 5px;
     height: 55px;
     position: fixed;
     width: 100vw;
+    
     top: 0;
     z-index: 5;
   }
@@ -132,7 +135,7 @@
     display: flex;
     justify-content: center;
     padding: 0.2rem 0 0rem;
-    background-color: #F7F7F7;
+    background-color: black;
   }
 
   .menu-wrap{
@@ -145,6 +148,10 @@
         font-family: "Montserrat", sans-serif;
         padding-top: 6px;
         padding-left: 5px;
+        color: white;
+      }
+      svg{
+          color: white;
       }
   }
 
@@ -159,7 +166,7 @@
       width: 25px;
   }
 
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: 940px) {
       .nav-list {
           flex-direction: column;
           justify-content: center;
