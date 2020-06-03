@@ -88,22 +88,7 @@ const PostPreview = ({ hit }) => {
                     <a>{title}</a>
                     <p>By: {name}</p>
                 </div>
-                <div className={postStyles.EntryExcerpt}>
-                    <p>
-                        
-                    </p>
-                </div>
-                <div className={postStyles.EntryTag}>
-                    <Link to={`/country/${safeCountry}`}>{country}</Link>
-                    <Link to={`/career/${safeCareer}`}>{prof}</Link>
-                    {listTags.map((tagg) => {
-                        return (
-                        <Link to={`/tag/${tagg}`}>
-                        {tagg}
-                        </Link>
-                        )
-                })}
-                </div>
+
             </div>
             </Link>
         </div>

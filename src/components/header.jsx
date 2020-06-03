@@ -40,7 +40,7 @@ const Header = () => {
             <header className={headerStyles.header}>
             <h1 className={headerStyles.name}>
                 <Link className={headerStyles.title}to='/'>
-                    Migrant Moments
+                    Stories of New Canadians
                 </Link>  
             </h1>
             <nav className={headerStyles.nav}>
@@ -62,32 +62,5 @@ const Header = () => {
       />
     )
 }
-
-{/*
-<header className={headerStyles.header}>
-            <h1 className={headerStyles.name}>
-                <Link className={headerStyles.title}to='/'>
-                    Migrant Moments
-                </Link>
-                
-            </h1>
-            <nav className={headerStyles.nav}>
-                <ul className={headerStyles.navList}>
-                    <li>
-                        <Link className={headerStyles.navItem} className={headerStyles.hvrOverlineFromCenter} activeClassName={headerStyles.activeNavItem} to='/'>Home</Link>
-                    </li>
-                    <li>
-                        <Link className={headerStyles.navItem} className={headerStyles.hvrOverlineFromCenter} activeClassName={headerStyles.activeNavItem} to='/blog'>Stories</Link>
-                    </li>
-                    <li>
-                        <Link className={headerStyles.navItem} className={headerStyles.hvrOverlineFromCenter} activeClassName={headerStyles.activeNavItem} to='/about'>About</Link>
-                    </li>
-                    <li>
-                        <Link className={headerStyles.navItem} className={headerStyles.hvrOverlineFromCenter} activeClassName={headerStyles.activeNavItem} to='/contact'>Contact</Link>
-                    </li>
-                </ul>
-            </nav>
-        </header>
-*/}
 
 export default Header
