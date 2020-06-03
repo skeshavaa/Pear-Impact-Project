@@ -64,13 +64,13 @@ const IndexPage = () => {
                     
                 </div>
             </div> */}
-            <div className={homeStyles.container}>
-                <div className={homeStyles.image}>
-                    <img src={HomeImage}/>
-                </div>
-                <div>
-                    <h1>Scroll down for more!</h1>
-                </div>
+
+           <div className={homeStyles.container}>
+            <img src={HomeImage} className={homeStyles.homepage}/>
+           </div>
+            <div className={homeStyles.imagetext}>
+                <h1>Title</h1>
+                <p>lorem ipsum .... </p>
             </div>
 
             <MapChart />
@@ -130,15 +130,7 @@ const IndexPage = () => {
                                     <a>{title}</a>
                                     <p>By: {name}</p>
                                 </div>
-                                <div className={postStyles.EntryTag}>
-                                    <Link to={`/country/${safeCountry}`}>{country}</Link>
-                                    <Link to={`/career/${safeCareer}`}>{prof}</Link>
-                                    {arrTags.map((tags) => {
-                                        return (
-                                            <Link to={`/tag/${tags}`}>{tags}</Link>
-                                        )
-                                    })}
-                                </div>
+                                
                             </div>
                             </Link>
                         </div>
