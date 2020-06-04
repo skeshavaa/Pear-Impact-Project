@@ -64,11 +64,9 @@
     transition: 0.2s;
 }
 
-.sidebar{
-    ::-webkit-scrollbar {
-        width: 0px; 
-        background: transparent; 
-    }
+::-webkit-scrollbar {
+    width: 0px; 
+    background: transparent; 
 }
 
 .sidebar h2{
