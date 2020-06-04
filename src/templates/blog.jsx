@@ -87,10 +87,10 @@ const Blog = (props) => {
     const diffTags = edge.node.tags.split(",")
     const found = currentTags.some(r=> diffTags.indexOf(r) >= 0)
     titleArr.push(edge.node.title)
-    if (edge.node.title != title && edge.node.country == country && hits.length < 4){
+    if (edge.node.title != title && edge.node.country == country && hits.length < 3){
       hits.push(edge)
       hitTitleArr.push(edge.node.title)
-    } else if (found && edge.node.title != title && hits.length < 4){
+    } else if (found && edge.node.title != title && hits.length < 3){
       hits.push(edge)
       hitTitleArr.push(edge.node.title)
     }
@@ -99,7 +99,7 @@ const Blog = (props) => {
   var i
   var allPosts = props.data.allContentfulBlogPost.edges
   for (i = 0; i < allPosts.length; i++){
-    if (hits.length == 4){
+    if (hits.length == 3){
       break
     }
     if (hitTitleArr.includes(titleArr[i]) == false && titleArr[i] != (title)){
@@ -199,6 +199,22 @@ const Blog = (props) => {
                           <div className={postStyles.EntryTitle}>
                               <a>{title}</a>
                               <p>By: {name}</p>
+                          </div>
+                          <div className={postStyles.EntryExcerpt}>
+                              <p>
+
+                              </p>
+                          </div>
+                          <div className={postStyles.EntryTag}>
+                              <Link to={`/country/${safeCountry}`}>{country}</Link>
+                              <Link to={`/career/${safeCareer}`}>{prof}</Link>
+                              {arrTags.map((tagg) => {
+                                  return (
+                                  <Link to={`/tag/${tagg}`}>
+                                  {tagg}
+                                  </Link>
+                                  )
+                          })}
                           </div>
                       </div>
                     </Link>
