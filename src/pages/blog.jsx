@@ -58,10 +58,7 @@ const BlogPage = () => {
 
     const CustomHits = time ? connectHits(Hiis) : connectHits(Rev);
 
-    const handler = (e) => {
-      e.preventDefault();
-      setTime(!time);
-    }
+    console.log(time);
 
     return (
         <div>
@@ -81,7 +78,7 @@ const BlogPage = () => {
                     <div className={blogStyles.searchWrapper}>
                       <SearchBox translations={{ placeholder: 'Name, Title, Tags, Country'}} label="Search" defaultRefinement=""/>
                       <Toggle click={openHandler}/>
-                      <button onClick={() => {setTime(!time)}}>hi</button>
+                      <button onClick={() => setTime(!time)}>hi</button>
                     </div>
                   </div>
 
