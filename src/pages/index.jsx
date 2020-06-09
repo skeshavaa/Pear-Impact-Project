@@ -54,6 +54,7 @@ const IndexPage = () => {
                 <meta property="og:title" content="Home"/>
               </MetaTags>
             <Head title="Home"/>
+            
             <div className={homeStyles.imagetext}>
                 <h1>Title</h1>
                 <p>lorem ipsum .... </p>
