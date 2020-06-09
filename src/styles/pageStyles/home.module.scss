@@ -31,7 +31,7 @@
 
  .EventContainer {
     display: block;
-    width: 350px;
+    width: 250px;
     margin-bottom: 3rem;
     //margin-left: 1rem;
     //margin-right: 1rem;
@@ -52,14 +52,14 @@
 
 .test{
     img{
-        height: 350px;
-        width: 350px;
+        height: 250px;
+        width: 250px;
         object-fit: cover;
     }
 }
 
 .ImageContainerParent {
-    height: 350px;
+    height: 250px;
     overflow: hidden;
     position: relative;
     display: flex;
@@ -71,8 +71,8 @@
     position: relative;
     top: 0;
     left: 0;
-    height: 350px;
-    width: 350px;
+    height: 250px;
+    width: 250px;
     object-fit: cover;
     object-fit: cover;
     margin-bottom: 0;
