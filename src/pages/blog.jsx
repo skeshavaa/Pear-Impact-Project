@@ -33,7 +33,7 @@ const BlogPage = () => {
 
     const Hiis = ({ hits }) => {
       return(
-        <div>
+        <div className="ais-Hits">
           {hits.map((hit) => {
             return(
               <PostPreview hit={hit} />
@@ -46,7 +46,7 @@ const BlogPage = () => {
     const Rev = ({ hits }) => {
       hits = hits.reverse();
       return(
-        <div>
+        <div className="ais-Hits">
           {hits.map((hit) => {
             return(
               <PostPreview hit={hit} />
@@ -78,13 +78,14 @@ const BlogPage = () => {
                     <div className={blogStyles.searchWrapper}>
                       <SearchBox translations={{ placeholder: 'Name, Title, Tags, Country'}} label="Search" defaultRefinement=""/>
                       <Toggle click={openHandler}/>
-                      <button onClick={() => setTime(!time)}>hi</button>
+                      <button id="toggle" onClick={() => setTime(!time)}><h1>{time ? "Descending" : "Ascending"}</h1></button>
                     </div>
                   </div>
 
                   <div className={blogStyles.Hits}>
                     {/* <Hits hitComponent={PostPreview}/>  */}
-                    <CustomHits />
+                    
+                      <CustomHits />
                   </div>
                        
             </Layout>
