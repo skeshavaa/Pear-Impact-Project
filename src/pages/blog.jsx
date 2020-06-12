@@ -83,8 +83,6 @@ const BlogPage = () => {
                   </div>
 
                   <div className={blogStyles.Hits}>
-                    {/* <Hits hitComponent={PostPreview}/>  */}
-                    
                       <CustomHits />
                   </div>
                        
