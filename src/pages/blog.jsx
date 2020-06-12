@@ -74,7 +74,7 @@ const BlogPage = () => {
                 
                 <Head title="Blog"/>
                   <div className={blogStyles.Header} >
-                    <h1>Migrant Stories</h1>
+                    <h1>Stories of New Canadians</h1>
                     <div className={blogStyles.searchWrapper}>
                       <SearchBox translations={{ placeholder: 'Name, Title, Tags, Country'}} label="Search" defaultRefinement=""/>
                       <Toggle click={openHandler}/>

@@ -132,6 +132,10 @@ const Blog = (props) => {
                 <p>Country: <span>{props.data.contentfulBlogPost.country}</span></p>
               </div>
             </div>
+            
+            <div className={templateStyles.content}>
+              {documentToReactComponents(props.data.contentfulBlogPost.content.json)}
+            </div>
             <div className={templateStyles.tags}>
               <h1>Tags: </h1>
               <Link to={`/career/${safeCareer}`}>{safeCareer}</Link>
@@ -141,9 +145,6 @@ const Blog = (props) => {
                   <Link to={`/tag/${tag}`}>{tag}</Link>
                 )
               })}
-            </div>
-            <div className={templateStyles.content}>
-              {documentToReactComponents(props.data.contentfulBlogPost.content.json)}
             </div>
 
 
