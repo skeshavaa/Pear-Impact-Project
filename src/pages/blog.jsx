@@ -77,8 +77,10 @@ const BlogPage = () => {
                     <h1>Stories of New Canadians</h1>
                     <div className={blogStyles.searchWrapper}>
                       <SearchBox translations={{ placeholder: 'Name, Title, Tags, Country'}} label="Search" defaultRefinement=""/>
+                      <div>
                       <Toggle click={openHandler}/>
                       <button id="toggle" onClick={() => setTime(!time)}><h1>{time ? "Descending" : "Ascending"}</h1></button>
+                      </div>
                     </div>
                   </div>
 

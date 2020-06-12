@@ -6,7 +6,7 @@ import {
   Marker
 } from "react-simple-maps";
 import { useStaticQuery, graphql, Link } from "gatsby"
-
+import '@compStyles/componentStyles.scss'
 const MapChart = () => {
   const geoUrl =
     "https://raw.githubusercontent.com/zcreativelabs/react-simple-maps/master/topojson-maps/world-110m.json";
