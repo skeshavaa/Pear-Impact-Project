@@ -56,8 +56,8 @@ const IndexPage = () => {
             <Head title="Home"/>
             
             <div className={homeStyles.imagetext}>
-                <h1>Title</h1>
-                <p>lorem ipsum .... </p>
+                <h1>Documenting Stories of New Canadians and Refugees to Inspire Hope!</h1>
+                <p>See our stories from around the world below!</p>
             </div>
 
             <MapChart />
