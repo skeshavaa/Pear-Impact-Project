@@ -15,8 +15,8 @@ const Sub = () => {
                     <meta property="og:title" content="Subscribe!"/>
                 </MetaTags>
                 <div className={subStyles.title}>
-                    <h1>Subscribe to Migrant Moments!</h1>
-                    <p>Receive updates whenever Azhar updates Migrant Moments with a new story!</p>
+                    <h1>Subscribe to Stories of New Canadians!</h1>
+                    <p>Receive updates whenever Azhar updates Stories of New Canadians with a new story!</p>
 
                     <div><Email /></div>
                 </div>

@@ -21,7 +21,7 @@ const Footer = () => {
         <footer className={footerStyles.footer}>
             <div className={footerStyles.inner}>
             <div className={footerStyles.title}>
-                <h1>Migrant Moments</h1>
+                <h1>Stories of New Canadians</h1>
                 <h2>Stories collected by Azhar Laher</h2>
                 <h2>Toronto, ON</h2>
                 <ul className={footerStyles.icons}>

@@ -40,7 +40,7 @@ const path = require('path')
 
 module.exports = {
   siteMetadata: {
-    title: 'Migrant Moments',
+    title: 'Stories of New Canadians',
     author: 'Keshavaa Shaiskandan'
   },
   plugins: [

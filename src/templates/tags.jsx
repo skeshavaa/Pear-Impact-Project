@@ -97,12 +97,12 @@ const Tags = (props) => {
                             <Link to={`/blog/${slug}`}>
                                 <div className={postStyles.ImageContainerParent}>
                                     <img className={homeStyles.StoryImageContainer} src={image} />
-                                    {getCode("", country) != '' ?
-                                        <img className={homeStyles.FlagImageContainer} src={require('../images/flags/' + getCode("", country) + '.svg')} alt={getCode("", country)} /> : null}
                                 </div>
                                 <div className={postStyles.TextContainer}>
                                     <div className={postStyles.EntryDate}>
                                         <a>{moment(date).format('LL')}</a>
+                                        {getCode("", country) != '' ?
+                                        <img className={postStyles.FlagImageContainer} src={require('../images/flags/' + getCode("", country) + '.svg')} alt={getCode("", country)} /> : null}
                                     </div>
                                     <div className={postStyles.EntryTitle}>
                                         <a>{title}</a>
