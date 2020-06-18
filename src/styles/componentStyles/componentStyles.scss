@@ -148,15 +148,28 @@
 }
 */
 
+.map-container{
+    display: flex;
+    justify-content: center;
+}
+
 .map-pic{
     clip-path: circle();
     background-size: cover;
+    border: 10px;
 }
 
 .map-pic-border{
-    border: 20px solid #F45B69;
+    border: 25px solid #F45B69;
 }
 
 .rsm-svg{
     height: auto !important;
+    fill: white;
+    stroke: white;
+}
+
+.rsm-geography{
+    fill: white;
+    stroke: #F45B69;
 }

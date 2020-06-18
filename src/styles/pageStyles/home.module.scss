@@ -18,31 +18,6 @@
     }
 }
 
-.text {
-    color: white;
-    font-size: 20px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    text-align: center;
-  }
-
-.imageContainer {
-    max-width: 30%;
-    img {
-        display: block;
-        width: 100%;
-        height: auto;
-        object-fit: cover;
-    }
-    display: flex;
-    justify-content: center;
-    
- }
-
  .EventContainer {
     display: block;
     width: 250px;
@@ -56,21 +31,6 @@
 }
 
 
-.First {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    margin-top: 100px;
-    //align-items: center;
-}
-
-.test{
-    img{
-        height: 250px;
-        width: 250px;
-        object-fit: cover;
-    }
-}
 
 .ImageContainerParent {
     height: 250px;

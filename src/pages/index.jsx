@@ -56,8 +56,12 @@ const IndexPage = () => {
             <Head title="Home"/>
             
             <div className={homeStyles.imagetext}>
-                <h1>Documenting Stories of New Canadians and Refugees to Inspire Hope!</h1>
-                <p>See our stories from around the world below!</p>
+                <h1>Documenting Stories of New Canadians to Inspire Hope!</h1>
+                <p>This site is a space where courageous women, men and families 
+                    have shared their journeys of moving to Canada. Their journeys have not always been easy,
+                    but at the heart of every experience is a story of hard work, hope, patience
+                    and perserverance.
+                </p>
             </div>
 
             <MapChart />
