@@ -72,7 +72,7 @@ const BlogPage = () => {
                 <meta property="og:title" content="Stories"/>
               </MetaTags>
                 
-                <Head title="Blog"/>
+                <Head title="Stories"/>
                   <div className={blogStyles.Header} >
                     <h1>Stories of New Canadians</h1>
                     <div className={blogStyles.searchWrapper}>

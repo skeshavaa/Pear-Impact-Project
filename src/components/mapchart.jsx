@@ -63,10 +63,8 @@ const MapChart = () => {
   return (
     <div className="map-container">
       <ComposableMap
-        style={{
-          width: '80%',
-        }}
         projection="geoMercator"
+        className="map"
       >
         <Geographies geography={geoUrl}>
           {({ geographies }) =>

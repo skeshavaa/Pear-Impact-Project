@@ -148,6 +148,16 @@
 }
 */
 
+.map{
+    width: 80%;
+}
+
+@media only screen and (max-width: 800px) {
+    .map{
+        width: 100%;
+    }
+  }
+
 .map-container{
     display: flex;
     justify-content: center;
