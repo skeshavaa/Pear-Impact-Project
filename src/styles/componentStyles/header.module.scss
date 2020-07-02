@@ -47,8 +47,6 @@
 .active-nav-item {
     color: white;
     font-weight: bolder;
-    
-
 }
 
 .nav {
@@ -80,7 +78,7 @@
     vertical-align: middle;
     -webkit-transform: perspective(1px) translateZ(0);
     transform: perspective(1px) translateZ(0);
-    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    box-shadow: 0 0 1px rgba(243, 13, 13, 0);
     position: relative;
     overflow: hidden;
 
@@ -92,7 +90,7 @@
     left: 51%;
     right: 51%;
     top: 0;
-    background: black;
+    background: white;
     height: 4px;
     -webkit-transition-property: left, right;
     transition-property: left, right;
@@ -114,6 +112,7 @@
     width: 100vw;
     top: 0;
     z-index: 5;
+    justify-content: left;
   }
 
   .close{
@@ -160,12 +159,26 @@
   @media only screen and (max-width: 940px) {
       .nav-list {
           flex-direction: column;
-          justify-content: center;
+          text-align: left;
+          justify-content: left;
       }
 
       .header{
-          justify-content: center;
+          justify-content: left;
       }
+
+      .nav {
+        ul {
+            text-align: left;
+            
+            a {
+                text-align: left;
+            }
+            li {
+                text-align: left;
+            }
+        }
+    }
 
       .name{
           display: none;
