@@ -24,12 +24,12 @@ const Footer = () => {
                 <h1>Stories of New Canadians</h1>
                 <h2>Stories collected by Azhar Laher</h2>
                 <h2>Toronto, ON</h2>
-                <ul className={footerStyles.icons}>
+                {/* <ul className={footerStyles.icons}>
                     <li><SocialIcon style={{ height: 25, width: 25 }} bgColor="black" fgColor="white" url="http://twitter.com" /></li>
                     <li><SocialIcon style={{ height: 25, width: 25 }} bgColor="black" fgColor="white" url="https://www.facebook.com" /></li>
                     <li><SocialIcon style={{ height: 25, width: 25 }} bgColor="black" fgColor="white" url="https://www.instagram.com" /></li>
                     <li><SocialIcon style={{ height: 25, width: 25 }} bgColor="black" fgColor="white" url="https://www.linkedin.com" /></li>
-                </ul>
+                </ul> */}
             </div>
             <div className={footerStyles.pages}>
                 <h1>Pages</h1>

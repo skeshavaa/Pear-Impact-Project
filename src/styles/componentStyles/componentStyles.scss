@@ -65,13 +65,20 @@
     transition: 0.2s;
 }
 
+.sidebarfilters{
+    h1{
+        font-family: 'Questrial';
+        font-size: 18px;
+    }
+}
+
 ::-webkit-scrollbar {
     width: 0px; 
     background: transparent; 
 }
 
 .sidebar h2{
-    font-family: "Montserrat", sans-serif;
+    font-family: 'Questrial', sans-serif;
     font-size: 30px;
     text-align: center;
     padding: 5px;
@@ -90,8 +97,8 @@
 
 .sidebar button{
     margin-top: 10px;
-    font-family: "Montserrat", sans-serif;
-    font-size: 25px;
+    font-family: 'Questrial', sans-serif;
+    font-size: 18px;
     background: transparent;
     border: 2px solid white;
     border-radius: 10px;
@@ -182,4 +189,5 @@
 .rsm-geography{
     fill: white;
     stroke: #F45B69;
+    outline: none;
 }

@@ -27,29 +27,27 @@ const Filters = (props) => {
 
     return(
         <div className="filters">
-            <div onClick={onCountryClick} style={{display: 'inline-flex'}}>
+            <div onClick={onCountryClick} style={{display: 'inline-flex'}} className="sidebarfilters">
                 <h1 style={{marginRight: '3px'}}>{ (countryVisibility === 'block' ? '▲' : '▼')}</h1>
                 <h1>{' Country'}</h1>
             </div>
             <div style={{display: countryVisibility, paddingBottom: '15px'}}>
                 <RefinementList attribute={"fields.country.en-US"} />
             </div> 
-            <div onClick={onOccupationClick} style={{display: 'inline-flex'}}>
+            <div onClick={onOccupationClick} style={{display: 'inline-flex'}} className="sidebarfilters">
                 <h1 style={{marginRight: '3px'}} >{ (occupationVisibility === 'block' ? '▲' : '▼')}</h1>
                 <h1>{' Occupation'}</h1>
             </div>
             <div style={{display: occupationVisibility, paddingBottom: '15px'}}>
                 <RefinementList attribute={"fields.occupation.en-US"}/>
             </div> 
-            <div onClick={onContinentClick} style={{display: 'inline-flex'}}>
+            <div onClick={onContinentClick} style={{display: 'inline-flex'}} className="sidebarfilters">
                 <h1 style={{marginRight: '3px'}}>{ (countryVisibility === 'block' ? '▲' : '▼')}</h1>
                 <h1>{' Continent'}</h1>
             </div>
             <div style={{display: continentVisibility, paddingBottom: '15px'}}>
                 <RefinementList attribute={"fields.continent.en-US"} />
             </div> 
-            <button onClick={handler}>sdf</button>
-            <button onClick={handler}>sdf</button>
         </div>
     )
 }

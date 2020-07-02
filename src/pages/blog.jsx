@@ -79,7 +79,7 @@ const BlogPage = () => {
                       <SearchBox translations={{ placeholder: 'Name, Title, Tags, Country'}} label="Search" defaultRefinement=""/>
                       <div>
                       <Toggle click={openHandler}/>
-                      <button id="toggle" onClick={() => setTime(!time)}><h1>{time ? "Descending" : "Ascending"}</h1></button>
+                      <button id="toggle" onClick={() => setTime(!time)}><h1>{time ? "Latest" : "Earliest"}</h1></button>
                       </div>
                     </div>
                   </div>
