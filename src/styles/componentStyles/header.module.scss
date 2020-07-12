@@ -165,6 +165,11 @@
 
       .header{
           justify-content: left;
+          padding: 10px;
+      }
+
+      .menu-wrap{
+         padding-top: 10px;
       }
 
       .nav {
@@ -186,6 +191,7 @@
 
       .large-menu-classname{
           display: none;
+          padding: 5px;
       }
 
   }

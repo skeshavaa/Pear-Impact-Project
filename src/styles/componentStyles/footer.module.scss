@@ -118,18 +118,22 @@
     }
 }
 
-@media only screen and (max-width: 619px) {
+@media only screen and (max-width: 800px) {
     .pages{
         h1{
-            text-align: center;
+            text-align: left;
             margin: 0;
         }
         ul{
             li{
-                text-align: center;
+                text-align: left;
                 margin-right: 0;
             }
         }
         padding: 0;
+    }
+
+    .title{
+        padding-left: 40px;
     }
 }

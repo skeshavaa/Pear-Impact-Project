@@ -104,7 +104,7 @@ const IndexPage = () => {
                     }
 
                     return (
-                        <div className={homeStyles.EventContainer}>
+                        <div className={postStyles.EventContainer}>
                             <Link to={`/blog/${slug}`}>
 
                             <div className={postStyles.ImageContainerParent}>
@@ -112,9 +112,9 @@ const IndexPage = () => {
                                 
                             </div>
                             
-                            <div className={homeStyles.TextContainer}>
+                            <div className={postStyles.TextContainer}>
                                 <div className={postStyles.EntryDate}>
-                                    <a>{moment(date).format('LL')}</a>
+                                    {/* <a>{moment(date).format('LL')}</a> */}
                                     {   getCode("", country) != '' ? 
                                 <img className={postStyles.FlagImageContainer} src={require('../images/flags/'+ getCode("", country) + '.svg')} alt={getCode("", country)}/> : null }
                                 </div>
