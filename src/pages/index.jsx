@@ -66,7 +66,7 @@ const IndexPage = () => {
 
             <MapChart />
 
-            <div className={homeStyles.postTitle}>
+            <div className={homeStyles.imagetext}>
                 <h1>LATEST POSTS</h1>
             </div>
             

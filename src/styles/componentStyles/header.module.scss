@@ -15,6 +15,16 @@
     background-color: black;
 }
 
+.title-with-flag{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flag{
+    margin-bottom: 15px;
+}
+
 .outer{
     width: 100vw;
     display: flex;
@@ -163,6 +173,10 @@
           justify-content: left;
       }
 
+      .title-with-flag{
+          display: none;
+      }
+
       .header{
           justify-content: left;
           padding: 10px;
@@ -198,6 +212,6 @@
 
   @media only screen and (max-width: 1200px) {
       .title{
-          padding-left: 25px;
+          padding-left: 5px;
       }
   }

@@ -5,6 +5,7 @@ import ResponsiveMenu from 'react-responsive-navbar';
 import { Link, graphql, useStaticQuery } from 'gatsby'
 import { GiHamburgerMenu } from 'react-icons/gi'
 import { FaTimes } from 'react-icons/fa'
+import Flag from '@images/canadaflag.png'
 //Styles
 import headerStyles from '@compStyles/header.module.scss'
 
@@ -38,11 +39,15 @@ const Header = () => {
         menu={
             <div className={headerStyles.outer}>
             <header className={headerStyles.header}>
-            <h1 className={headerStyles.name}>
-                <Link className={headerStyles.title}to='/'>
-                    Stories of New Canadians
-                </Link>  
-            </h1>
+            <div className={headerStyles.titleWithFlag}>
+                <img src={Flag} height="50px" width="100px" className={headerStyles.flag}/>
+                <h1 className={headerStyles.name}>
+                    
+                    <Link className={headerStyles.title}to='/'>
+                        Stories of New Canadians
+                    </Link>  
+                </h1>
+            </div>
             <nav className={headerStyles.nav}>
                 <ul className={headerStyles.navList}>
                     {data.allNavJson.edges.map((edge) => {
