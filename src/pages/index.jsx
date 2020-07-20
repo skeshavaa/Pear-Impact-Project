@@ -9,8 +9,8 @@ import { Head, Layout, MapChart } from '@components'
 import homeStyles from '@pageStyles/home.module.scss'
 import postStyles from '@compStyles/post-preview.module.scss'
 //Pictures
-import HomeImage from '@images/homeImage.png'
-import Unknown from '@images/unknown.png'
+import mappic from '@images/mapPicture.png'
+
 
 
 
@@ -65,6 +65,9 @@ const IndexPage = () => {
             </div>
 
             <MapChart />
+            <div className={homeStyles.mapPicture}>
+                <img src={mappic}/>
+            </div>
 
             <div className={homeStyles.imagetext}>
                 <h1>LATEST POSTS</h1>

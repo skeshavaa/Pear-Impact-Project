@@ -174,7 +174,21 @@
     transition: ease-in-out 0.1s;
 }
 
+.map-picture{
+    display: flex;
+    justify-content: center;
+    img{
+        width: 80%;
+    }
+    display: none;
+    
+}
 
+_::-webkit-full-page-media, _:future, :root .safari_only {
+    .map-picture{
+        display: block;
+    }
+}
 
   @media only screen and (max-width: 1200px) {
     .posts {
