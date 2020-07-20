@@ -183,6 +183,13 @@
     border: 10px;
 }
 
+
+_::-webkit-full-page-media, _:future, :root .safari_only {
+    .map-container{
+        display: none;
+    }
+}
+
 .map-pic-border{
     border: 25px solid #F45B69;
 }
