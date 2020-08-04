@@ -64,10 +64,7 @@ const IndexPage = () => {
                 </p>
             </div>
 
-            <MapChart />
-            <div className={homeStyles.mapPicture}>
-                <img src={mappic}/>
-            </div>
+            //https://source.unsplash.com/user/keshavaa
 
             <div className={homeStyles.imagetext}>
                 <h1>LATEST POSTS</h1>
