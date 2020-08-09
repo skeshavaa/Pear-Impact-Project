@@ -60,7 +60,7 @@ const IndexPage = () => {
                 <p>This site is a space where courageous women, men and families 
                     have shared their journeys of moving to Canada. Their experiences have not always been easy,
                     but at the heart of every experience is a story of hard work, hope, patience
-                    and perserverance.
+                    and perserverance. yeah
                 </p>
             </div>
 
