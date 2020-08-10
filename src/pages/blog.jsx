@@ -62,7 +62,7 @@ const BlogPage = () => {
 
     return (
         <div>
-          <InstantSearch indexName="Blog" searchClient={searchClient}>
+          <InstantSearch searchClient={searchClient}>
           
             <Layout>
             {sidebar}
