@@ -55,9 +55,7 @@ const IndexPage = () => {
               </MetaTags>
             <Head title="Home"/>
 
-            <div className={homeStyles.homePicture}>
-                <img src="https://source.unsplash.com/featured/?Canada"/>
-            </div>
+
             
             <div className={homeStyles.imagetext}>
                 <h1>Stories of New Canadians to Inspire Hope!</h1>
@@ -66,6 +64,10 @@ const IndexPage = () => {
                     but at the heart of every experience is a story of hard work, hope, patience
                     and perserverance. yeah
                 </p>
+            </div>
+
+            <div className={homeStyles.homePicture}>
+                <img src="https://source.unsplash.com/featured/?Canada"/>
             </div>
 
 
