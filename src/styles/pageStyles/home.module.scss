@@ -4,6 +4,15 @@
     width: 100%;
 }
 
+.home-picture{
+    img{
+        max-width: 80%;
+    }
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
 .imagetext{
     margin-top: 100px;
     padding: 20px;
