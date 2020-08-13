@@ -54,6 +54,10 @@ const IndexPage = () => {
                 <meta property="og:title" content="Home"/>
               </MetaTags>
             <Head title="Home"/>
+
+            <div className={homeStyles.homePicture}>
+                <img src="https://source.unsplash.com/featured/?Canada"/>
+            </div>
             
             <div className={homeStyles.imagetext}>
                 <h1>Stories of New Canadians to Inspire Hope!</h1>
@@ -64,7 +68,6 @@ const IndexPage = () => {
                 </p>
             </div>
 
-            //https://source.unsplash.com/user/keshavaa
 
             <div className={homeStyles.imagetext}>
                 <h1>LATEST POSTS</h1>

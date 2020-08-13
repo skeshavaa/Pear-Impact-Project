@@ -6,9 +6,6 @@ import { RefinementList, SortBy } from 'react-instantsearch-dom'
 var searchClient = algoliasearch('L62RK6OZ7R', '15a379a9961f8ee6878adeccd35a474f', {protocol: 'https:'});
 
 
-var index = searchClient.initIndex('Blog')
-
-
 const Filters = (props) => {
 
     const handler = () => {
