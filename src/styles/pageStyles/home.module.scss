@@ -4,15 +4,15 @@
     width: 100%;
 }
 
-.home-picture{
-    img{
-        max-width: 80%;
-        height: auto;
-        object-fit: contain;
-    }
+.outer-wrapper{
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
 }
+
+.imgContainer {
+    margin-top: 30px;
+    max-width: 700px;
+ }
 
 .imagetext{
     margin-top: 100px;

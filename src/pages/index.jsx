@@ -87,8 +87,8 @@ const IndexPage = () => {
                 and perserverance. yeah
                 </p>
             </div>
-            <div className={aboutStyles.outerWrapper}>
-                <div className={aboutStyles.imgContainer}>
+            <div className={homeStyles.outerWrapper}>
+                <div className={homeStyles.imgContainer}>
                     <img src={images[gen()]} />
                 </div>
             </div>
