@@ -10,6 +10,7 @@ import homeStyles from '@pageStyles/home.module.scss'
 import postStyles from '@compStyles/post-preview.module.scss'
 //Pictures
 import mappic from '@images/mapPicture.png'
+import Axios from 'axios'
 
 
 
@@ -36,7 +37,11 @@ const IndexPage = () => {
         , integer: true
     })
 
-    const index = Math.floor((Math.random() * 10));
+    var index = null;
+    Axios.get("https://www.random.org/integers/?num=10&min=1&max=6&col=1&base=10&format=plain&rnd=new")
+        .then((resp) => {
+            console.log(resp);
+        })
     const newPosts = useStaticQuery(graphql`
     query {
         allContentfulBlogPost (
