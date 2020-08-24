@@ -29,6 +29,13 @@ const IndexPage = () => {
         "https://images.unsplash.com/photo-1490623970972-ae8bb3da443e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1049&q=80"
     ]
 
+    var rn = require('random-number');
+    var gen = rn.generator({
+        min: 0
+        , max: 9
+        , integer: true
+    })
+
     const index = Math.floor((Math.random() * 10));
     const newPosts = useStaticQuery(graphql`
     query {
@@ -64,31 +71,31 @@ const IndexPage = () => {
     return (
         <Layout>
             <MetaTags>
-                <meta name="description" content="100+ Stories of Canadian Immigrants"/>
-                <meta property="og:title" content="Home"/>
-              </MetaTags>
-            <Head title="Home"/>
+                <meta name="description" content="100+ Stories of Canadian Immigrants" />
+                <meta property="og:title" content="Home" />
+            </MetaTags>
+            <Head title="Home" />
 
 
-            
+
             <div className={homeStyles.imagetext}>
                 <h1>Stories of New Canadians to Inspire Hope!</h1>
-                <p>This site is a space where courageous women, men and families 
-                    have shared their journeys of moving to Canada. Their experiences have not always been easy,
-                    but at the heart of every experience is a story of hard work, hope, patience
-                    and perserverance. yeah
+                <p>This site is a space where courageous women, men and families
+                have shared their journeys of moving to Canada. Their experiences have not always been easy,
+                but at the heart of every experience is a story of hard work, hope, patience
+                and perserverance. yeah
                 </p>
             </div>
 
             <div className={homeStyles.homePicture}>
-                <img src={images[index]}/>
+                <img src={gen()} />
             </div>
 
 
             <div className={homeStyles.imagetext}>
                 <h1>LATEST POSTS</h1>
             </div>
-            
+
             <div className={homeStyles.posts}>
                 {newPosts.allContentfulBlogPost.edges.map((edge) => {
                     const slug = edge.node.slug
@@ -104,20 +111,20 @@ const IndexPage = () => {
 
                     var safeCareer = ""
 
-                    for (var i = 0; i < prof.length; i++){
-                        if (prof[i] == " "){
+                    for (var i = 0; i < prof.length; i++) {
+                        if (prof[i] == " ") {
                             safeCareer += "-"
-                        } else{
+                        } else {
                             safeCareer += prof[i]
                         }
                     }
 
                     var safeCountry = ""
 
-                    for (var i = 0; i < country.length; i++){
-                        if (country[i] == " "){
+                    for (var i = 0; i < country.length; i++) {
+                        if (country[i] == " ") {
                             safeCountry += "-"
-                        } else{
+                        } else {
                             safeCountry += country[i]
                         }
                     }
@@ -126,23 +133,23 @@ const IndexPage = () => {
                         <div className={postStyles.EventContainer}>
                             <Link to={`/blog/${slug}`}>
 
-                            <div className={postStyles.ImageContainerParent}>
-                                <img className={homeStyles.StoryImageContainer} src={ image } />
-                                
-                            </div>
-                            
-                            <div className={postStyles.TextContainer}>
-                                <div className={postStyles.EntryDate}>
-                                    {/* <a>{moment(date).format('LL')}</a> */}
-                                    {   getCode("", country) != '' ? 
-                                <img className={postStyles.FlagImageContainer} src={require('../images/flags/'+ getCode("", country) + '.svg')} alt={getCode("", country)}/> : null }
+                                <div className={postStyles.ImageContainerParent}>
+                                    <img className={homeStyles.StoryImageContainer} src={image} />
+
                                 </div>
-                                <div className={postStyles.EntryTitle}>
-                                    <a>{title}</a>
-                                    <p>By: {name}</p>
+
+                                <div className={postStyles.TextContainer}>
+                                    <div className={postStyles.EntryDate}>
+                                        {/* <a>{moment(date).format('LL')}</a> */}
+                                        {getCode("", country) != '' ?
+                                            <img className={postStyles.FlagImageContainer} src={require('../images/flags/' + getCode("", country) + '.svg')} alt={getCode("", country)} /> : null}
+                                    </div>
+                                    <div className={postStyles.EntryTitle}>
+                                        <a>{title}</a>
+                                        <p>By: {name}</p>
+                                    </div>
+
                                 </div>
-                                
-                            </div>
                             </Link>
                         </div>
                     )
@@ -155,19 +162,17 @@ const IndexPage = () => {
 
 export default IndexPage
 
-function getCode(countryCode, countryName)
-{
-    if (countryCode === null || countryCode.length != 2) 
-    {
-        if (countryName != null && countryName != "") { 
+function getCode(countryCode, countryName) {
+    if (countryCode === null || countryCode.length != 2) {
+        if (countryName != null && countryName != "") {
             let code = CountryKey[Object.keys(CountryKey).find(keyName => keyName.toLowerCase() === countryName.toLowerCase())]
-            if (code != null) return code.toLowerCase();  
+            if (code != null) return code.toLowerCase();
         }
         return '';
     }
     else {
         countryCode = countryCode.toUpperCase()
-        for (var key in CountryKey) { 
+        for (var key in CountryKey) {
             if (CountryKey[key] == countryCode)
                 return countryCode.toLowerCase();
         }
@@ -288,8 +293,8 @@ export const CountryKey = {
     'Kazakhstan': 'KZ',
     'Kenya': 'KE',
     'Kiribati': 'KI',
-    'Korea, DPR': 'KP', 
-    'Korea, Republic of': 'KR', 
+    'Korea, DPR': 'KP',
+    'Korea, Republic of': 'KR',
     'Kuwait': 'KW',
     'Kyrgyzstan': 'KG',
     "Laos": 'LA',
@@ -404,7 +409,7 @@ export const CountryKey = {
     'Uganda': 'UG',
     'Ukraine': 'UA',
     'United Arab Emirates': 'AE',
-    'United Kingdom': 'GB', 
+    'United Kingdom': 'GB',
     'United States': 'US',
     'Uruguay': 'UY',
     'Uzbekistan': 'UZ',
@@ -417,4 +422,4 @@ export const CountryKey = {
     'Yemen': 'YE',
     'Zambia': 'ZM',
     'Zimbabwe': 'ZW',
-  }
+}
