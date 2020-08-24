@@ -8,7 +8,7 @@ import { Head, Layout, MapChart } from '@components'
 //Styles
 import homeStyles from '@pageStyles/home.module.scss'
 import postStyles from '@compStyles/post-preview.module.scss'
-import aboutStyles from '@compStyles/about.module.scss'
+import aboutStyles from '@pageStyles/about.module.scss'
 //Pictures
 import mappic from '@images/mapPicture.png'
 import Axios from 'axios'
