@@ -88,7 +88,7 @@ const IndexPage = () => {
             </div>
 
             <div className={homeStyles.homePicture}>
-                <img src={gen()} />
+                <img src={image[gen()]} />
             </div>
 
 
