@@ -114,7 +114,8 @@
     }
 
     .inner {
-        justify-content: center;
+        flex-direction: column;
+        justify-content: start;
     }
 }
 
