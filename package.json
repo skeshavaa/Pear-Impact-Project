@@ -36,7 +36,7 @@
     "gatsby-transformer-sharp": "^2.3.5",
     "masonry-layout": "^4.2.2",
     "moment": "^2.24.0",
-    "node-sass": "^4.13.0",
+    "node-sass": "^7.0.0",
     "random-number": "0.0.9",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
